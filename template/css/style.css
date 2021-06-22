@@ -1,0 +1,103 @@
+{% snippet "shared/libs/variables_css" %}
+{% snippet "shared/libs/bootstrap_css" %}
+{% snippet "shared/libs/forms_css" %}
+
+/* GLOBAL */
+
+@font-face{
+	font-family: 'Jost';
+	font-weight: 400;
+	font-style: normal;
+    src: url(https://cloud.modyocdn.com/uploads/76a0afe0-8f3a-4674-ac51-9996bcf49334/original/Jost-400-Book.otf)
+}
+
+@font-face{
+	font-family: 'Jost';
+	font-weight: 400;
+	font-style: italic;
+    src: url(https://cloud.modyocdn.com/uploads/27fec775-f81a-4c3f-a927-9843a845f321/original/Jost-400-BookItalic.otf)
+}
+
+@font-face{
+	font-family: 'Jost';
+	font-weight: 600;
+	font-style: normal;
+    src: url(https://cloud.modyocdn.com/uploads/efd220dd-0973-42ad-90b8-07b274e6d3a2/original/Jost-600-Semi.otf)
+}
+
+@font-face{
+	font-family: 'Jost';
+	font-weight: 600;
+	font-style: italic;
+    src: url(https://cloud.modyocdn.com/uploads/45712e90-4270-4508-a0b6-22925f16180b/original/Jost-600-SemiItalic.otf)
+}
+
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizelegibility; font-family: 'Jost', sans-serif; }
+img { max-width: 100%; }
+
+/* HEADER */
+
+.collapse.navbar-collapse { border: 0; padding: 0; background: none; }
+.navbar-nav > li > a { padding: .5rem; }
+.navbar-nav > li:hover .dropdown-menu { display: block; }
+.navbar-brand { align-items: center; display: flex; }
+.navbar-brand img { height: 40px; }
+.navbar-nav { margin-left: auto; }
+
+.breadcrumb { background: {{ gray | lighten: 35 }} }
+
+/* SESSION BAR */
+
+.session-bar .dropdown-menu { width: 300px; }
+
+/* JUMBOTRON */
+
+#jumbotron h1 { font-size: 3.5rem !important; font-weight: bold; line-height: 1; }
+#jumbotron .h4 { font-weight: normal; opacity: .5; }
+#about-us .h4 { font-weight: normal; opacity: .5; }
+
+/* buttons */
+
+.btn { border-radius: 50px; padding-left: 1.25rem; padding-right: 1.25rem; }
+.btn-group-lg>.btn, .btn-lg { padding-left: 2rem; padding-right: 2rem; }
+.btn-group-sm>.btn, .btn-sm { padding-left: 1rem; padding-right: 1rem; }
+
+
+/* BOX LIST */
+
+.box-list .no-cover { height: 240px; }
+.box-list .no-cover svg { width: 50% !important; height: 50% !important; opacity: .2; }
+.box-list { background: #FFF; border: 0 !important; box-shadow: 1px 1px 1px rgba(0,0,0,.1);}
+.box-list-cover { margin: -1rem; margin-bottom: 1rem; }
+.box-list-cover img { width: 100%; }
+
+
+/* PAGINATION */
+
+.pagination { background: #FFF; justify-content: flex-end; }
+.pagination a,
+.pagination span,
+.pagination em {
+    display: block;
+    padding: .5rem;
+}
+
+.pagination em { font-style: normal; font-weight: 700;}
+
+/* WIDGET GLOBAL */
+
+.widget { padding: 2rem 0; }
+
+/* RESPONSIVE */
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+
+@media (max-width: 979px) {
+    .navbar-brand img {
+        width: 200px;
+    }
+}
