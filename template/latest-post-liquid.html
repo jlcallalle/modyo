@@ -1,0 +1,25 @@
+<!-- Your code -->
+<div class="container">
+  <div class="row">
+
+		{% assign entries = spaces['retail'].types['Post'].entries %}
+		{% for entry in entries limit:3  %}
+			<div class="col-md-4">
+				<div class="card mb-4 box-shadow">
+					<div class="card-body">
+						<p class="card-text">  {{ entry.meta.title }} </p>
+						<time>Date: {{ entry.published_at | format_date }}</time>
+						<div class="description">
+							{{ entry.description }}
+						</div>
+						<img src="https://placeimg.com/640/480/any" alt="">
+						<span class="url">
+							<a href="{{request.url}}">{{request.url}}</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+		
+  </div>
+</div>

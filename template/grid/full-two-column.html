@@ -1,0 +1,34 @@
+<div id="home-wrap-first">
+    <div class="home-wrap-first-inner">
+      <div id="main" role="main">
+        <div class="main-inner">
+          {% for widget in page_grid.main_widgets %}
+          {% snippet widget %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="home-wrap-second">
+    <div class="container home-wrap-second-inner">
+      <div class="row">
+        <div id="col1" class="col-md-6">
+          <div class="inner">
+            {% for widget in page_grid.col1_widgets %}
+            {% snippet widget %}
+            {% endfor %}
+          </div>
+        </div>
+  
+        <div id="col2" class="col-md-6">
+          <div class="inner">
+            {% for widget in page_grid.col2_widgets %}
+            {% snippet widget %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

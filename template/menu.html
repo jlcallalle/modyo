@@ -1,0 +1,24 @@
+<ul class="nav navbar-nav">
+    {% assign items_to_show = menu.items | visible_items %}
+    {% for item in items_to_show %}
+        {% assign active = item.url | active_page: request.url %}
+        {% assign children_to_show = item.child_items | visible_items %}
+        {% if children_to_show.size > 0 %}
+        <li class="nav-item nav-item-{{ item.parameterized_label }} dropdown menu-item{{ active }}">
+            <a target="{{ item.target }}" rel="{{ item.target | item_rel}}" class="nav-link dropdown-toggle"
+               href="{{ item.url | resolve_url: site.base_url }}">
+                {{ item.label }}</a>
+            <div class='submenu-{{ forloop.index0 }} dropdown-menu'>
+                {% for child in children_to_show %}
+                    <a target="{{ child.target }}" rel="{{ child.target | item_rel}}" class='dropdown-item' href="{{ child.url }}">
+                        <span>{{ child.label }}</span>
+                    </a>
+                {% endfor %}
+            </div>
+        {% else %}
+            <li class="nav-item nav-item-{{ item.parameterized_label }}{{ active }}">
+            <a target="{{ item.target }}" class="nav-link" rel="{{ item.target | item_rel}}" href="{{ item.url }}">{{ item.label }}</a>
+        {% endif %}
+        </li>
+    {% endfor %}
+</ul>
