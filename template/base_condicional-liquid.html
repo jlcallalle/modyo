@@ -1,0 +1,24 @@
+{% html5 %} <!-- HTML header with browser directives -->
+<head>
+  {% snippet 'shared/general/head' %}
+</head>
+
+{% body %} <!-- Body with automatic context classes -->
+{% snippet 'shared/general/body_tag_manager' %}
+<div id="modyo-site-alert-wrapper"></div>
+{% snippet 'shared/general/header' %}
+
+{{ site.breadcrumb }}
+<div id="main-layout">
+	{% if request.url contains "/frontend-devs" %}
+	{% snippet "campaign_html" %}
+	{% endif %}
+{{ content_for_layout }}
+</div>
+
+<script>{% snippet "shared/serviceworker/register_js" %}</script>
+{% snippet 'shared/general/footer' %}
+
+{% endbody %}
+
+{% endhtml5 %}

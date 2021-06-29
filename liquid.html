@@ -1,0 +1,25 @@
+
+Liquid Sintaxis:
+
+<p>Site: {{ site.name }}</p>
+<p>Length: {{ site.name | size }}</p>
+<p>Upcase: {{ site.name | upcase }}</p>
+<p>Url: {{ site.url }}</p>
+<p>Fecha: {{ 'now' | date: "%Y %h" }}</p>
+
+{{ entries | paginate: '10' }}  ver
+
+
+new Date()
+Thu Jun 24 2021 09:46:21 GMT-0500 (hora estándar de Perú), es poco legible, 2 ultimos digitos del año (parsear)
+
+Site: Front-end Dev
+Site Upcase: FRONT-END DEV
+Url: https://vass.modyo.cloud/front-end-dev
+Fecha: 2021 Jun
+
+// Condicional cuando uno esta logeado:
+{% if user %}
+Bienvenido {{ user.name }}
+{% endif %}
+

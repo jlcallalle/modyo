@@ -1,0 +1,10 @@
+<!-- Content view example -->
+
+<div>
+<h1 class="title">{{ entry.meta.name }}</h1>
+<time>{{ entry.meta.published_at | format_date }}</time>
+<span class="url">
+<a href="{{ request.url }}">{{ request.url }}</a>
+</span>
+</div>
+

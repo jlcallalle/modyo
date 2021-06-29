@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "uuid": "f81d27d7-e4ff-42d6-8d63-dd40c997ac37",
+    "space": "retail",
+    "name": "Tips Comida Sana",
+    "slug": "tips-comida-sana",
+    "type": "post",
+    "category": "tips/super-tips",
+    "updated_at": "2021-06-23T17:02:24.000-04:00",
+    "created_at": "2021-06-18T11:22:03.000-04:00",
+    "published_at": "2021-06-23T17:02:23.000-04:00",
+    "unpublished_at": null,
+    "tags": [],
+    "available_locales": [
+      "es"
+    ],
+    "locale": "es",
+    "targets": [],
+    "private": false,
+    "version_type": "editable",
+    "author": {}
+  },
+  "fields": {
+    "Button": "Link",
+    "covers": [],
+    "description": "<p>hola esto es una descripción</p>",
+    "except": "texto except",
+    "Imagen Alternate Text": "",
+    "sharing_enabled": false,
+    "slug": "comida-sana",
+    "title": "Comida Sana"
+  }
+}
+
+link API: https://vass.modyo.cloud/api/content/spaces/retail/types/post/entries/f81d27d7-e4ff-42d6-8d63-dd40c997ac37

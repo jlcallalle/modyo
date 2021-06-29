@@ -1,0 +1,33 @@
+{
+    "meta": {
+        "name": "Tips Comida Sana",
+        "slug": "tips-comida-sana",
+        "tags": [],
+        "type": "post",
+        "uuid": "f81d27d7-e4ff-42d6-8d63-dd40c997ac37",
+        "space": "retail",
+        "author": {},
+        "locale": "es",
+        "private": false,
+        "targets": [],
+        "category": "tips/super-tips",
+        "created_at": "2021-06-18T11:22:03.000-04:00",
+        "updated_at": "2021-06-23T17:02:23.000-04:00",
+        "published_at": "2021-06-23T17:02:23.000-04:00",
+        "version_type": "current",
+        "unpublished_at": null,
+        "available_locales": [
+            "es"
+        ]
+    },
+    "fields": {
+        "slug": "comida-sana",
+        "title": "Comida Sana",
+        "Button": "Link",
+        "covers": [],
+        "except": "texto except",
+        "description": "<p>hola esto es una descripción</p>",
+        "sharing_enabled": false,
+        "Imagen Alternate Text": ""
+    }
+}
