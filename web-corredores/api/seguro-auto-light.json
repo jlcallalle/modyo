@@ -1,0 +1,44 @@
+{
+    "meta": {
+        "name": "Seguro Auto Light",
+        "slug": "6-seguro-auto-light-2",
+        "tags": [],
+        "type": "cobertura-planes-vehiculo",
+        "uuid": "36626f0e-7ac9-475a-868a-da1e2da46a56",
+        "space": "web-corredores",
+        "author": {},
+        "locale": "es-cl",
+        "private": false,
+        "targets": [],
+        "category": "cobertura-planes-vehiculo",
+        "created_at": "2020-11-19T18:54:59.000Z",
+        "updated_at": "2020-11-19T18:59:33.000Z",
+        "published_at": "2020-11-19T18:59:33.000Z",
+        "version_type": "current",
+        "unpublished_at": null,
+        "available_locales": [
+            "es-cl"
+        ]
+    },
+    "fields": {
+        "Robo de Accesorios": "10% del valor comercial con máximo UF 20",
+        "Deducible Inteligente": "Si",
+        "Responsabilidad Civil": "Límite único y combinado de UF 500",
+        "Asistencia de Vehículos": "VDR = 10 días, copago $4.000",
+        "Robo, Hurto, uso No Autorizado": "Valor Comercial",
+        "Condición de Daño para Pérdida Total": "70%",
+        "Daños a Terceros Causados por la Carga": "No",
+        "Defensa Penal y Constitución de Fianzas": "UF 50 independientes",
+        "Daños Materiales a Consecuencia de Sismo": "Valor Comercial",
+        "Daños Materiales al Vehículo Motorizado": "Valor Comercial",
+        "Daños Materiales a Consecuencia de Granizo": "Valor Comercial",
+        "Daños Materiales Causados por la Propia Carga": "No",
+        "Daños al Vehículo durante Viajes al Extranjero": "Valor Comercial",
+        "Asiento Pasajeros de Veh Mot Muerte e Incapacidad": "Plan A y B: UF 100 pp\nTope UF 300",
+        "Daños Materiales a Consecuencia de Actos Maliciosos": "Valor Comercial",
+        "Daños Materiales a Consecuencia de Huelga y Terrorismo": "Valor Comercial",
+        "Daños Materiales a Consecuencia de Riesgos de la Naturaleza": "Valor Comercial",
+        "Taller de Marca para vehículos nuevos hasta 2 años después de comprado": "Si",
+        "Reposición vehículo nuevo hasta 1 año después de comprado por pérdida total": "Si"
+    }
+}

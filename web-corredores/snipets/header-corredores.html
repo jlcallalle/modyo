@@ -1,0 +1,148 @@
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+	{% snippet "right_drawer_js" %}
+</script>
+<script>
+	{% snippet "session_controller_js" %}
+</script>
+{% snippet "session_controller_modal_html" %}
+<header id="header" class="header mb-12">
+	<div class="container-corp mx-auto h-100 flex-centered-separated">
+		<a href="{{ site.url }}" class="link-logo">
+			{% if site.logo %}
+			<img src="{{site.logo | asset_url}}" class="h-100" alt="consorcio"/>
+			{% endif  %}
+			<img src="https://d17mh033okktwq.cloudfront.net/uploads/ba664c18-cfb4-4c4e-8efc-5a022eea95cf/original/Logo_Consorcio_seguros-_descriptores_RGB_-01_1.svg" class="h-100" alt="consorcio"/>
+		</a>
+		<button class="btn btn-unstyled btn-ejecutivo" @click="openSlidePanel">
+			<span class="pr-4 text-left">
+				<span class="d-block c-primary-b font-main-bold fs-3">
+					<span class="pr-2">{{ user.custom_fields._ucf_nombrecorredor }}</span> {{ 'e1d718bd-c109-41b2-a430-d4b8ead0e518' | asset_image }}
+				</span>
+				<span class="d-block c-primary-b mini-text"><strong>Hola!</strong> {{user.name}}</span>
+			</span>
+		</button>
+	</div>
+	<!-- TODO esto debe venir desde un servicio -->
+	<p class="text-center mini-text c-max-light bg-basic-b py-1">
+		Valor UF: $${valor} - ${fecha}
+	</p>
+	{% snippet "right_drawer" %}
+</header>
+
+<script>
+	var vm = new Vue({
+		components: {
+			mSlideOutPanel: MDrawer,
+		},
+		delimiters: ['${', '}'],
+		data: function() {
+			return {
+				fecha: '',
+				valor: '',
+				admin: true,
+      	ulogs:true,
+      	simulacion:true,
+				rol: '',
+			};
+		},
+		mounted: function() {
+			this.getIndicadores();
+			this.isRol('{{ user.custom_fields._ucf_perfilusuario }}');
+		},
+		methods: {
+
+			isRol: function( rol ) {
+			const self = this;
+			const rolLimpio = rol.replace(/["\][\\]/g, '').replace(/&quot;/g,'');
+			self.rol = rolLimpio;
+			var axios_api = axios.create({ //https://z7iw6n4w8f.execute-api.us-east-1.amazonaws.com/v1
+					baseURL: 'https://pvvf7jfn80.execute-api.us-east-1.amazonaws.com/v1',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+				});
+				var axios_auth = axios.create();
+				axios_auth.defaults.baseURL = '{{site.baseUrl}}' + '/api/profile/me';
+				var injectTokenVar = async function injectToken(config) {
+					try {
+						var response = await axios_auth.get();
+						var newConfig = config;
+						newConfig.headers = {
+							Authorization: "Bearer " + response.data.delegated_token.access_token,
+							'Content-Type': 'application/json',
+						};
+						return newConfig;
+					} catch (error) {
+						throw new Error('Unauthorized');
+					}
+				};
+				axios_api.interceptors.request.use(injectTokenVar);
+				axios_api.get('/roles/'+rolLimpio).then(function (response) {
+					var permisos = response.data.permisos;
+					if(permisos !== undefined) {
+						const permiso_admin = permisos.find((per) => per.nombrePermiso === 'mantenedores');
+						const permiso_simula = permisos.find((per) => per.nombrePermiso === 'simulacion_vehiculo');
+						const permiso_simula_CNS = permisos.find((per) => per.nombrePermiso === 'flujo_vehiculo_cns');
+						const permiso_logs = permisos.find((per) => per.nombrePermiso === 'logs');
+						self.admin = permiso_admin !== undefined;
+						self.simulacion = permiso_simula !== undefined || permiso_simula_CNS !== undefined;
+						self.ulogs = permiso_logs !== undefined;
+						if(self.simulacion === true){
+								if(window.location.href === "{{ site.url }}/logs" || window.location.href === "{{ site.url }}/logs#/" || window.location.href === "{{ site.url }}/mantenedor-categorias-roles#/" || window.location.href === "{{ site.url }}/mantenedor-categorias-roles"){
+									window.location.href = "{{ site.url }}/not-found";
+								 }
+						}
+						let URLsearch = window.location.search;
+						if(self.admin === true){
+							if( window.location.href === "{{ site.url }}/panel-productos" || window.location.href === "{{ site.url }}/datos-vehiculo"+URLsearch || window.location.href === "{{ site.url }}/planes"+URLsearch || window.location.href === "{{ site.url }}/datos-personales"+URLsearch || window.location.href === "{{ site.url }}/buscador-simulacion-poliza-vehiculo" || window.location.href === "{{ site.url }}/resultado-buscador-simulacion-poliza-vehiculo"){
+								window.location.href = "{{ site.url }}/not-found";
+						 	}
+						}
+					}
+				});
+		},
+			openSlidePanel: function (){
+				this.$refs.slidePanel.openDrawer()
+			},
+			getIndicadores: function () {
+				var self = this;
+		
+				var data = JSON.stringify({});
+				var axios_api = axios.create({ //0972vjesll
+					baseURL: 'https://xrr8zq3x1e.execute-api.us-east-1.amazonaws.com/v1/passthrough-gate/dev-api-indicadores-economicos/v1',
+					headers: {
+						'Content-Type': 'application/json'
+						
+					},
+					data : data
+				});
+				var axios_auth = axios.create();
+				axios_auth.defaults.baseURL = '{{site.baseUrl}}' + '/api/profile/me';
+
+				var injectToken = async function injectToken(config) {
+					try {
+						var response = await axios_auth.get();
+						var newConfig = config;
+						newConfig.headers = {
+							Authorization: "Bearer " + response.data.delegated_token.access_token,
+							'Content-Type': 'application/json'
+						};
+						return newConfig;
+					} catch (error) {
+						throw new Error('Unauthorized');
+					}
+				};
+
+				axios_api.interceptors.request.use(injectToken);
+				axios_api.post('/indices-economicos', data).then(function (response) {
+					self.fecha = response.data.DTORetornoIndicesEconomicos.fecha_sistema;
+					self.valor = response.data.DTORetornoIndicesEconomicos.valor_uf;
+				});
+
+			},
+		}
+	}).$mount('#header')
+</script>
+

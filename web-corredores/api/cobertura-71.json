@@ -1,0 +1,216 @@
+{
+    "id": 71,
+    "name": "Cobertura Planes vehículo",
+    "uid": "cobertura-planes-vehiculo",
+    "fields": [
+        {
+            "id": 252,
+            "name": "Daños Materiales al Vehículo Motorizado",
+            "hint": "danos-materiales-al-vehiculo-motorizado",
+            "type": "text",
+            "multi": false,
+            "position": 0,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 253,
+            "name": "Robo, Hurto, uso No Autorizado",
+            "hint": "robo-hurto-uso-no-autorizado",
+            "type": "text",
+            "multi": false,
+            "position": 1,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 254,
+            "name": "Daños Materiales a Consecuencia de Riesgos de la Naturaleza",
+            "hint": "danos-materiales-a-consecuencia-de-riesgos-de-la-naturaleza",
+            "type": "text",
+            "multi": false,
+            "position": 2,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 255,
+            "name": "Daños Materiales a Consecuencia de Actos Maliciosos",
+            "hint": "danos-materiales-a-consecuencia-de-actos-maliciosos",
+            "type": "text",
+            "multi": false,
+            "position": 3,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 256,
+            "name": "Daños Materiales a Consecuencia de Granizo",
+            "hint": "danos-materiales-a-consecuencia-de-granizo",
+            "type": "text",
+            "multi": false,
+            "position": 4,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 257,
+            "name": "Daños Materiales a Consecuencia de Huelga y Terrorismo",
+            "hint": "danos-materiales-a-consecuencia-de-huelga-y-terrorismo",
+            "type": "text",
+            "multi": false,
+            "position": 5,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 258,
+            "name": "Daños Materiales a Consecuencia de Sismo",
+            "hint": "danos-materiales-a-consecuencia-de-sismo",
+            "type": "text",
+            "multi": false,
+            "position": 6,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 259,
+            "name": "Robo de Accesorios",
+            "hint": "robo-de-accesorios",
+            "type": "text",
+            "multi": false,
+            "position": 7,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 260,
+            "name": "Defensa Penal y Constitución de Fianzas",
+            "hint": "defensa-penal-y-constitucion-de-fianzas",
+            "type": "text",
+            "multi": false,
+            "position": 8,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 261,
+            "name": "Asistencia de Vehículos",
+            "hint": "asistencia-de-vehiculos",
+            "type": "text",
+            "multi": false,
+            "position": 9,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 262,
+            "name": "Asiento Pasajeros de Veh Mot Muerte e Incapacidad",
+            "hint": "asiento-pasajeros-de-veh-mot-muerte-e-incapacidad",
+            "type": "text",
+            "multi": false,
+            "position": 10,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 263,
+            "name": "Daños al Vehículo durante Viajes al Extranjero",
+            "hint": "danos-al-vehiculo-durante-viajes-al-extranjero",
+            "type": "text",
+            "multi": false,
+            "position": 11,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 264,
+            "name": "Responsabilidad Civil",
+            "hint": "responsabilidad-civil",
+            "type": "text",
+            "multi": false,
+            "position": 12,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 265,
+            "name": "Daños Materiales Causados por la Propia Carga",
+            "hint": "danos-materiales-causados-por-la-propia-carga",
+            "type": "text",
+            "multi": false,
+            "position": 13,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 266,
+            "name": "Daños a Terceros Causados por la Carga",
+            "hint": "danos-a-terceros-causados-por-la-carga",
+            "type": "text",
+            "multi": false,
+            "position": 14,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 267,
+            "name": "Deducible Inteligente",
+            "hint": "deducible-inteligente",
+            "type": "text",
+            "multi": false,
+            "position": 15,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 268,
+            "name": "Taller de Marca para vehículos nuevos hasta 2 años después de comprado",
+            "hint": "taller-de-marca-para-vehiculos-nuevos-hasta-2-anos-despues-de-comprado",
+            "type": "text",
+            "multi": false,
+            "position": 16,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 269,
+            "name": "Reposición vehículo nuevo hasta 2 año después de comprado por pérdida total",
+            "hint": "reposicion-vehiculo-nuevo-hasta-2-ano-despues-de-comprado-por-perdida-total",
+            "type": "text",
+            "multi": false,
+            "position": 17,
+            "deleted": false,
+            "validations": {}
+        },
+        {
+            "id": 270,
+            "name": "Condición de Daño para Pérdida Total",
+            "hint": "condicion-de-dano-para-perdida-total",
+            "type": "text",
+            "multi": false,
+            "position": 18,
+            "deleted": false,
+            "validations": {}
+        }
+    ],
+    "created_at": "2020-11-19T15:32:45.000-03:00",
+    "updated_at": "2021-04-27T19:42:31.000-03:00",
+    "reindex_job": {
+        "uuid": "dd1a0039-c307-48f8-b8a9-c4a2ab49a04a",
+        "type": "BackgroundJobs::ReindexContentType",
+        "status": 2,
+        "progress": 100.0,
+        "progress_percentage": "100.0%",
+        "total": 1,
+        "acknowledge": false,
+        "user_id": null,
+        "account_id": 4,
+        "site_id": null,
+        "started_at": "2021-04-27T19:42:31.000-03:00",
+        "finished_at": "2021-04-27T19:42:31.000-03:00",
+        "created_at": "2021-04-27T19:42:31.000-03:00",
+        "updated_at": "2021-04-27T19:42:31.000-03:00"
+    },
+    "dependent_entries": true
+}
