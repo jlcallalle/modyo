@@ -138,6 +138,15 @@
 .widget-opinion .box-radio {
 	display: flex;
 	justify-content: space-around;
+	border: 1px solid #C4C4C4;
+	background-color: white;
+	padding: 22px 22px 15px 22px;
+	position: relative;
+	margin-bottom: 37px;
+}
+
+.widget-opinion .box-radio label {
+    margin: 0;
 }
 
 .btn-opinion {
@@ -168,10 +177,6 @@
 
 .modal-header {
 	background-color: #E6ECF6;
-}
-
-.modal-header .close {
-	/*opacity:1;*/
 }
 
 .modal-header button span {
@@ -222,6 +227,7 @@
 
 .widget-opinion .box-radio input {
     display: block;
+	  margin-bottom: 5px;
 }
 
 .widget-opinion input::placeholder,
@@ -230,24 +236,8 @@
   font-size: 16px;
 }
 
-.widget-opinion label.desc[for="question_15_label"]:before {
-    content: 'Un último paso,';
-    font-size: 16px;
-    top: 0;
-    font-size: 14px;
-    font-weight: bold;
-}
-
 .widget-opinion label.desc[for="question_15_label"] {
-    font-size: 0;
-}
-
-.ranking {
-    border: 1px solid #C4C4C4;
-    background-color: white;
-    padding: 20px 30px;
-	  position:relative;
-	  margin-bottom: 37px;
+	 display:none;
 }
 
 @media screen and (min-width: 768px) {
@@ -261,18 +251,8 @@
     color: #53565A;
     line-height: 20px;
     display: block;
-    margin-top: 7px;
-    margin-bottom: 20px;
-}
-
-.ranking:before {
-    content: 'Hemos recibido tu comentario exitosamente';
-    position: absolute;
-    top: -45px;
-    font-size: 18px;
-    font-family: 'Open Sans';
-    font-weight: bold;
-    left: 0;
+    margin-top: 20px;
+    margin-bottom: 14px;
 }
 
 .form-next {
