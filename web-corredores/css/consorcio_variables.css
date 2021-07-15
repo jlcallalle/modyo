@@ -1,0 +1,58 @@
+/******************************************
+                 Colors
+******************************************/
+
+/***************Blue**********************/
+/* Normal */
+{% assign normalBlue = '#003DA5' %}
+
+/* Dark */
+{% assign darkBlue = '#0A3682' %}
+
+/* Lightness */
+{% assign lightBlue = '#809ED2' %}
+
+/* Ultra Lightness */
+{% assign ULightBlue = '#E6ECF6' %}
+
+/***************Greens**********************/
+/* Normal */
+{% assign normalGreen = '#84BD00' %}
+
+/* Dark */
+{% assign darkGreen = '#669F00' %}
+
+/* Lightness */
+{% assign lightGreen = '#C1DE80' %}
+
+/***************LightBlue**********************/
+/* Normal */
+{% assign normalLb = '#5BC2E7' %}
+
+/* Dark */
+{% assign darkLb = '#3DA4C9' %}
+
+/* Lightness */
+{% assign LightLb = '#ADE0F3' %}
+
+/***************Greyscale**********************/
+/* Normal */
+{% assign normalGrey = '#D9D9D6' %}
+
+/* Dark */
+{% assign darkGrey = '#53565A' %}
+
+/* Dark Charcoal */
+{% assign ulightGrey = '#333333' %}
+
+/* Lightness */
+{% assign lightGrey = '#F4F4F4' %}
+
+
+/***************Backgrounds**********************/
+/* Background A */
+{% assign normalBg = '#FAFBFD' %}
+
+/* Background B */
+{% assign darkBg = '#869FB2' %}
+

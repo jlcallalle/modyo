@@ -1,0 +1,5228 @@
+html, body {
+	font-family: "Open Sans";
+	padding-left: 0;
+	padding-right: 0; 
+
+	min-height: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+#main-layout {
+	flex-grow: 1;
+}
+#app, 
+#home-wrap-first,
+#pcc-ssv-resultado-buscador-simulacion-poliza-widget,
+#productos{
+	padding-bottom: 5em;
+}
+
+footer {
+	flex-shrink: 0;
+	width: 100%;
+}
+.footer-logo{
+	display:flex;
+	justify-content: flex-end;
+}
+@media(max-width:790px){
+	.footer-logo{
+		display:flex;
+		justify-content: center;
+	}
+}
+dt {
+	font-weight: normal; }
+
+a:focus {
+	outline: none; }
+
+input[type=text]::-ms-clear {
+	display: none;
+	width: 0;
+	height: 0; }
+
+.title-h2 {
+	font-family: "Open Sans";
+	font-weight: bold;
+	font-size: 1.5em; }
+
+.basic-text,
+.small-text,
+.wizard-text-row .wizard-block,
+.mini-text,
+.legal-text {
+	font-family: "Open Sans";
+	line-height: 1.6; 
+	font-weight: 400;
+}
+
+.basic-text {
+	font-size: 1em; }
+
+
+.small-text,
+.wizard-text-row .wizard-block {
+	font-size: 0.875em; }
+
+.text-center {
+	text-align: center !important;	}
+
+.mini-text {
+	font-size: 0.75em; }
+
+.legal-text {
+	font-size: 0.625em; }
+
+.link {
+	text-decoration: underline; }
+
+.link-no {
+	text-decoration: none; }
+
+.c-max-light {
+	color: #ffffff; }
+
+a.c-max-light:hover {
+	color: #ffffff; }
+
+.c-primary-a {
+	color: #84BD00; }
+
+.c-primary-b {
+	color: #003DA5; }
+
+.c-gris-seguros-generales {
+	color: #53565A;
+}
+
+.c-alert {
+	color: #CC0001; }
+
+.c-basic-b {
+	color: #869FB2; }
+
+.c-basic-f {
+	color: #FAFBFD; }
+
+.c-basic-g {
+	color: #D9D9D6; }
+
+.c-text-basic {
+	color: #999999; }
+
+.c-text-white {
+	color: #ffffff !important; }
+
+.c-text-dark {
+	color: #333333; }
+
+.bg-primary-a {
+	background-color: #84BD00; }
+
+.bg-primary-b {
+	background-color: #003DA5; }
+
+.bg-basic-a {
+	background-color: #5BC2E7; }
+
+.bg-basic-b {
+	background-color: #869FB2; }
+
+.bg-grey-darkest {
+	background-color: #333333; }
+
+.bg-basic-b {
+	background-color: #869FB2; }
+
+.rounded-s {
+	border-radius: 5px; }
+
+.rounded-m {
+	border-radius: 10px; }
+
+.rounded-l {
+	border-radius: 15px; }
+
+.font-main {
+	font-family: "Open Sans"; }
+
+.font-main-bold {
+	font-family: "Open Sans";
+	font-weight: bold; }
+
+.lh-s {
+	line-height: 1; }
+
+.fs-0 {
+	font-size: 10px !important; }
+
+.fs-1 {
+	font-size: 12px !important; }
+
+.fs-2 {
+	font-size: 14px !important; }
+
+.fs-3 {
+	font-size: 16px !important; }
+
+.fs-4 {
+	font-size: 18px !important; }
+
+.fs-5 {
+	font-size: 20px !important; }
+
+.fs-6 {
+	font-size: 22px !important; }
+
+.fs-7 {
+	font-size: 24px !important; }
+
+.fs-8 {
+	font-size: 26px !important; }
+
+.fs-9 {
+	font-size: 28px !important; }
+
+.fs-10 {
+	font-size: 30px !important; }
+
+.fs-11 {
+	font-size: 32px !important; }
+
+.fs-12 {
+	font-size: 34px !important; }
+
+.fs-13 {
+	font-size: 36px !important; }
+
+.fs-14 {
+	font-size: 38px !important; }
+
+.fs-15 {
+	font-size: 40px !important; }
+
+.fs-16 {
+	font-size: 42px !important; }
+
+.fs-17 {
+	font-size: 44px !important; }
+
+.fs-18 {
+	font-size: 46px !important; }
+
+.fs-19 {
+	font-size: 48px !important; }
+
+.fs-20 {
+	font-size: 50px !important; }
+
+.m-0 {
+	margin: 0px !important; }
+
+.m-1 {
+	margin: 5px !important; }
+
+.m-2 {
+	margin: 10px !important; }
+
+.m-3 {
+	margin: 15px !important; }
+
+.m-4 {
+	margin: 20px !important; }
+
+.m-5 {
+	margin: 25px !important; }
+
+.m-6 {
+	margin: 30px !important; }
+
+.m-7 {
+	margin: 35px !important; }
+
+.m-8 {
+	margin: 40px !important; }
+
+.m-9 {
+	margin: 45px !important; }
+
+.m-10 {
+	margin: 50px !important; }
+
+.m-11 {
+	margin: 55px !important; }
+
+.m-12 {
+	margin: 60px !important; }
+
+.m-13 {
+	margin: 65px !important; }
+
+.m-14 {
+	margin: 70px !important; }
+
+.m-15 {
+	margin: 75px !important; }
+
+.m-16 {
+	margin: 80px !important; }
+
+.m-17 {
+	margin: 85px !important; }
+
+.m-18 {
+	margin: 90px !important; }
+
+.m-19 {
+	margin: 95px !important; }
+
+.m-20 {
+	margin: 100px !important; }
+
+.mx-0 {
+	margin-right: 0px !important;
+	margin-left: 0px !important; }
+
+.mx-1 {
+	margin-right: 5px !important;
+	margin-left: 5px !important; }
+
+.mx-2 {
+	margin-right: 10px !important;
+	margin-left: 10px !important; }
+
+.mx-3 {
+	margin-right: 15px !important;
+	margin-left: 15px !important; }
+
+.mx-4 {
+	margin-right: 20px !important;
+	margin-left: 20px !important; }
+
+.mx-5 {
+	margin-right: 25px !important;
+	margin-left: 25px !important; }
+
+.mx-6 {
+	margin-right: 30px !important;
+	margin-left: 30px !important; }
+
+.mx-7 {
+	margin-right: 35px !important;
+	margin-left: 35px !important; }
+
+.mx-8 {
+	margin-right: 40px !important;
+	margin-left: 40px !important; }
+
+.mx-9 {
+	margin-right: 45px !important;
+	margin-left: 45px !important; }
+
+.mx-10 {
+	margin-right: 50px !important;
+	margin-left: 50px !important; }
+
+.mx-11 {
+	margin-right: 55px !important;
+	margin-left: 55px !important; }
+
+.mx-12 {
+	margin-right: 60px !important;
+	margin-left: 60px !important; }
+
+.mx-13 {
+	margin-right: 65px !important;
+	margin-left: 65px !important; }
+
+.mx-14 {
+	margin-right: 70px !important;
+	margin-left: 70px !important; }
+
+.mx-15 {
+	margin-right: 75px !important;
+	margin-left: 75px !important; }
+
+.mx-16 {
+	margin-right: 80px !important;
+	margin-left: 80px !important; }
+
+.mx-17 {
+	margin-right: 85px !important;
+	margin-left: 85px !important; }
+
+.mx-18 {
+	margin-right: 90px !important;
+	margin-left: 90px !important; }
+
+.mx-19 {
+	margin-right: 95px !important;
+	margin-left: 95px !important; }
+
+.mx-20 {
+	margin-right: 100px !important;
+	margin-left: 100px !important; }
+
+.my-0 {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important; }
+
+.my-1 {
+	margin-top: 5px !important;
+	margin-bottom: 5px !important; }
+
+.my-2 {
+	margin-top: 10px !important;
+	margin-bottom: 10px !important; }
+
+.my-3 {
+	margin-top: 15px !important;
+	margin-bottom: 15px !important; }
+
+.my-4 {
+	margin-top: 20px !important;
+	margin-bottom: 20px !important; }
+
+.my-5 {
+	margin-top: 25px !important;
+	margin-bottom: 25px !important; }
+
+.my-6 {
+	margin-top: 30px !important;
+	margin-bottom: 30px !important; }
+
+.my-7 {
+	margin-top: 35px !important;
+	margin-bottom: 35px !important; }
+
+.my-8 {
+	margin-top: 40px !important;
+	margin-bottom: 40px !important; }
+
+.my-9 {
+	margin-top: 45px !important;
+	margin-bottom: 45px !important; }
+
+.my-10 {
+	margin-top: 50px !important;
+	margin-bottom: 50px !important; }
+
+.my-11 {
+	margin-top: 55px !important;
+	margin-bottom: 55px !important; }
+
+.my-12 {
+	margin-top: 60px !important;
+	margin-bottom: 60px !important; }
+
+.my-13 {
+	margin-top: 65px !important;
+	margin-bottom: 65px !important; }
+
+.my-14 {
+	margin-top: 70px !important;
+	margin-bottom: 70px !important; }
+
+.my-15 {
+	margin-top: 75px !important;
+	margin-bottom: 75px !important; }
+
+.my-16 {
+	margin-top: 80px !important;
+	margin-bottom: 80px !important; }
+
+.my-17 {
+	margin-top: 85px !important;
+	margin-bottom: 85px !important; }
+
+.my-18 {
+	margin-top: 90px !important;
+	margin-bottom: 90px !important; }
+
+.my-19 {
+	margin-top: 95px !important;
+	margin-bottom: 95px !important; }
+
+.my-20 {
+	margin-top: 100px !important;
+	margin-bottom: 100px !important; }
+
+.mt-0 {
+	margin-top: 0px !important; }
+
+.mt-1 {
+	margin-top: 5px !important; }
+
+.mt-2 {
+	margin-top: 10px !important; }
+
+.mt-3 {
+	margin-top: 15px !important; }
+
+.mt-4 {
+	margin-top: 20px !important; }
+
+.mt-5 {
+	margin-top: 25px !important; }
+
+.mt-6 {
+	margin-top: 30px !important; }
+
+.mt-7 {
+	margin-top: 35px !important; }
+
+.mt-8 {
+	margin-top: 40px !important; }
+
+.mt-9 {
+	margin-top: 45px !important; }
+
+.mt-10 {
+	margin-top: 50px !important; }
+
+.mt-11 {
+	margin-top: 55px !important; }
+
+.mt-12 {
+	margin-top: 60px !important; }
+
+.mt-13 {
+	margin-top: 65px !important; }
+
+.mt-14 {
+	margin-top: 70px !important; }
+
+.mt-15 {
+	margin-top: 75px !important; }
+
+.mt-16 {
+	margin-top: 80px !important; }
+
+.mt-17 {
+	margin-top: 85px !important; }
+
+.mt-18 {
+	margin-top: 90px !important; }
+
+.mt-19 {
+	margin-top: 95px !important; }
+
+.mt-20 {
+	margin-top: 100px !important; }
+
+.mr-0 {
+	margin-right: 0px !important; }
+
+.mr-1 {
+	margin-right: 5px !important; }
+
+.mr-2 {
+	margin-right: 10px !important; }
+
+.mr-3 {
+	margin-right: 15px !important; }
+
+.mr-4 {
+	margin-right: 20px !important; }
+
+.mr-5 {
+	margin-right: 25px !important; }
+
+.mr-6 {
+	margin-right: 30px !important; }
+
+.mr-7 {
+	margin-right: 35px !important; }
+
+.mr-8 {
+	margin-right: 40px !important; }
+
+.mr-9 {
+	margin-right: 45px !important; }
+
+.mr-10 {
+	margin-right: 50px !important; }
+
+.mr-11 {
+	margin-right: 55px !important; }
+
+.mr-12 {
+	margin-right: 60px !important; }
+
+.mr-13 {
+	margin-right: 65px !important; }
+
+.mr-14 {
+	margin-right: 70px !important; }
+
+.mr-15 {
+	margin-right: 75px !important; }
+
+.mr-16 {
+	margin-right: 80px !important; }
+
+.mr-17 {
+	margin-right: 85px !important; }
+
+.mr-18 {
+	margin-right: 90px !important; }
+
+.mr-19 {
+	margin-right: 95px !important; }
+
+.mr-20 {
+	margin-right: 100px !important; }
+
+.mb-0 {
+	margin-bottom: 0px !important; }
+
+.mb-1 {
+	margin-bottom: 5px !important; }
+
+.mb-2 {
+	margin-bottom: 10px !important; }
+
+.mb-3 {
+	margin-bottom: 15px !important; }
+
+.mb-4 {
+	margin-bottom: 20px !important; }
+
+.mb-5 {
+	margin-bottom: 25px !important; }
+
+.mb-6 {
+	margin-bottom: 30px !important; }
+
+.mb-7 {
+	margin-bottom: 35px !important; }
+
+.mb-8 {
+	margin-bottom: 40px !important; }
+
+.mb-9 {
+	margin-bottom: 45px !important; }
+
+.mb-10 {
+	margin-bottom: 50px !important; }
+
+.mb-11 {
+	margin-bottom: 55px !important; }
+
+.mb-12 {
+	margin-bottom: 60px !important; }
+
+.mb-13 {
+	margin-bottom: 65px !important; }
+
+.mb-14 {
+	margin-bottom: 70px !important; }
+
+.mb-15 {
+	margin-bottom: 75px !important; }
+
+.mb-16 {
+	margin-bottom: 80px !important; }
+
+.mb-17 {
+	margin-bottom: 85px !important; }
+
+.mb-18 {
+	margin-bottom: 90px !important; }
+
+.mb-19 {
+	margin-bottom: 95px !important; }
+
+.mb-20 {
+	margin-bottom: 100px !important; }
+
+.ml-0 {
+	margin-left: 0px !important; }
+
+.ml-1 {
+	margin-left: 5px !important; }
+
+.ml-2 {
+	margin-left: 10px !important; }
+
+.ml-3 {
+	margin-left: 15px !important; }
+
+.ml-4 {
+	margin-left: 20px !important; }
+
+.ml-5 {
+	margin-left: 25px !important; }
+
+.ml-6 {
+	margin-left: 30px !important; }
+
+.ml-7 {
+	margin-left: 35px !important; }
+
+.ml-8 {
+	margin-left: 40px !important; }
+
+.ml-9 {
+	margin-left: 45px !important; }
+
+.ml-10 {
+	margin-left: 50px !important; }
+
+.ml-11 {
+	margin-left: 55px !important; }
+
+.ml-12 {
+	margin-left: 60px !important; }
+
+.ml-13 {
+	margin-left: 65px !important; }
+
+.ml-14 {
+	margin-left: 70px !important; }
+
+.ml-15 {
+	margin-left: 75px !important; }
+
+.ml-16 {
+	margin-left: 80px !important; }
+
+.ml-17 {
+	margin-left: 85px !important; }
+
+.ml-18 {
+	margin-left: 90px !important; }
+
+.ml-19 {
+	margin-left: 95px !important; }
+
+.ml-20 {
+	margin-left: 100px !important; }
+
+/*PADDING*/
+.p-0 {
+	padding: 0px !important; }
+
+.p-1 {
+	padding: 5px !important; }
+
+.p-2 {
+	padding: 10px !important; }
+
+.p-3 {
+	padding: 15px !important; }
+
+.p-4 {
+	padding: 20px !important; }
+
+.p-5 {
+	padding: 25px !important; }
+
+.p-6 {
+	padding: 30px !important; }
+
+.p-7 {
+	padding: 35px !important; }
+
+.p-8 {
+	padding: 40px !important; }
+
+.p-9 {
+	padding: 45px !important; }
+
+.p-10 {
+	padding: 50px !important; }
+
+.p-11 {
+	padding: 55px !important; }
+
+.p-12 {
+	padding: 60px !important; }
+
+.p-13 {
+	padding: 65px !important; }
+
+.p-14 {
+	padding: 70px !important; }
+
+.p-15 {
+	padding: 75px !important; }
+
+.p-16 {
+	padding: 80px !important; }
+
+.p-17 {
+	padding: 85px !important; }
+
+.p-18 {
+	padding: 90px !important; }
+
+.p-19 {
+	padding: 95px !important; }
+
+.p-20 {
+	padding: 100px !important; }
+
+.px-0 {
+	padding-right: 0px !important;
+	padding-left: 0px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-1 {
+	padding-right: 5px !important;
+	padding-left: 5px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-2 {
+	padding-right: 10px !important;
+	padding-left: 10px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-3 {
+	padding-right: 15px !important;
+	padding-left: 15px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-4 {
+	padding-right: 20px !important;
+	padding-left: 20px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-5 {
+	padding-right: 25px !important;
+	padding-left: 25px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-6 {
+	padding-right: 30px !important;
+	padding-left: 30px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-7 {
+	padding-right: 35px !important;
+	padding-left: 35px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-8 {
+	padding-right: 40px !important;
+	padding-left: 40px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-9 {
+	padding-right: 45px !important;
+	padding-left: 45px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-10 {
+	padding-right: 50px !important;
+	padding-left: 50px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-11 {
+	padding-right: 55px !important;
+	padding-left: 55px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-12 {
+	padding-right: 60px !important;
+	padding-left: 60px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-13 {
+	padding-right: 65px !important;
+	padding-left: 65px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-14 {
+	padding-right: 70px !important;
+	padding-left: 70px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-15 {
+	padding-right: 75px !important;
+	padding-left: 75px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-16 {
+	padding-right: 80px !important;
+	padding-left: 80px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-17 {
+	padding-right: 85px !important;
+	padding-left: 85px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-18 {
+	padding-right: 90px !important;
+	padding-left: 90px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-19 {
+	padding-right: 95px !important;
+	padding-left: 95px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.px-20 {
+	padding-right: 100px !important;
+	padding-left: 100px !important; }
+
+.py-0 {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important; }
+
+.py-1 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important; }
+
+.py-2 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important; }
+
+.py-3 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important; }
+
+.py-4 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important; }
+
+.py-5 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important; }
+
+.py-6 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important; }
+
+.py-7 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important; }
+
+.py-8 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important; }
+
+.py-9 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important; }
+
+.py-10 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important; }
+
+.py-11 {
+	padding-top: 55px !important;
+	padding-bottom: 55px !important; }
+
+.py-12 {
+	padding-top: 60px !important;
+	padding-bottom: 60px !important; }
+
+.py-13 {
+	padding-top: 65px !important;
+	padding-bottom: 65px !important; }
+
+.py-14 {
+	padding-top: 70px !important;
+	padding-bottom: 70px !important; }
+
+.py-15 {
+	padding-top: 75px !important;
+	padding-bottom: 75px !important; }
+
+.py-16 {
+	padding-top: 80px !important;
+	padding-bottom: 80px !important; }
+
+.py-17 {
+	padding-top: 85px !important;
+	padding-bottom: 85px !important; }
+
+.py-18 {
+	padding-top: 90px !important;
+	padding-bottom: 90px !important; }
+
+.py-19 {
+	padding-top: 95px !important;
+	padding-bottom: 95px !important; }
+
+.py-20 {
+	padding-top: 100px !important;
+	padding-bottom: 100px !important; }
+
+.py-21 {
+	padding-top: 105px !important;
+	padding-bottom: 105px !important; }
+
+.py-22 {
+	padding-top: 110px !important;
+	padding-bottom: 110px !important; }
+
+.py-23 {
+	padding-top: 115px !important;
+	padding-bottom: 115px !important; }
+
+.py-24 {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important; }
+
+.py-25 {
+	padding-top: 125px !important;
+	padding-bottom: 125px !important; }
+
+.py-26 {
+	padding-top: 130px !important;
+	padding-bottom: 130px !important; }
+
+.py-27 {
+	padding-top: 135px !important;
+	padding-bottom: 135px !important; }
+
+.py-28 {
+	padding-top: 140px !important;
+	padding-bottom: 140px !important; }
+
+.py-29 {
+	padding-top: 145px !important;
+	padding-bottom: 145px !important; }
+
+.py-30 {
+	padding-top: 150px !important;
+	padding-bottom: 150px !important; }
+
+.pt-0 {
+	padding-top: 0px !important; }
+
+.pt-1 {
+	padding-top: 5px !important; }
+
+.pt-2 {
+	padding-top: 10px !important; }
+
+.pt-3 {
+	padding-top: 15px !important; }
+
+.pt-4 {
+	padding-top: 20px !important; }
+
+.pt-5 {
+	padding-top: 25px !important; }
+
+.pt-6 {
+	padding-top: 30px !important; }
+
+.pt-7 {
+	padding-top: 35px !important; }
+
+.pt-8 {
+	padding-top: 40px !important; }
+
+.pt-9 {
+	padding-top: 45px !important; }
+
+.pt-10 {
+	padding-top: 50px !important; }
+
+.pt-11 {
+	padding-top: 55px !important; }
+
+.pt-12 {
+	padding-top: 60px !important; }
+
+.pt-13 {
+	padding-top: 65px !important; }
+
+.pt-14 {
+	padding-top: 70px !important; }
+
+.pt-15 {
+	padding-top: 75px !important; }
+
+.pt-16 {
+	padding-top: 80px !important; }
+
+.pt-17 {
+	padding-top: 85px !important; }
+
+.pt-18 {
+	padding-top: 90px !important; }
+
+.pt-19 {
+	padding-top: 95px !important; }
+
+.pt-20 {
+	padding-top: 100px !important; }
+
+.pr-0 {
+	padding-right: 0px !important; }
+
+.pr-1 {
+	padding-right: 5px !important; }
+
+.pr-2 {
+	padding-right: 10px !important; }
+
+.pr-3 {
+	padding-right: 15px !important; }
+
+.pr-4 {
+	padding-right: 20px !important; }
+
+.pr-5 {
+	padding-right: 25px !important; }
+
+.pr-6 {
+	padding-right: 30px !important; }
+
+.pr-7 {
+	padding-right: 35px !important; }
+
+.pr-8 {
+	padding-right: 40px !important; }
+
+.pr-9 {
+	padding-right: 45px !important; }
+
+.pr-10 {
+	padding-right: 50px !important; }
+
+.pr-11 {
+	padding-right: 55px !important; }
+
+.pr-12 {
+	padding-right: 60px !important; }
+
+.pr-13 {
+	padding-right: 65px !important; }
+
+.pr-14 {
+	padding-right: 70px !important; }
+
+.pr-15 {
+	padding-right: 75px !important; }
+
+.pr-16 {
+	padding-right: 80px !important; }
+
+.pr-17 {
+	padding-right: 85px !important; }
+
+.pr-18 {
+	padding-right: 90px !important; }
+
+.pr-19 {
+	padding-right: 95px !important; }
+
+.pr-20 {
+	padding-right: 100px !important; }
+
+.pb-0 {
+	padding-bottom: 0px !important; }
+
+.pb-1 {
+	padding-bottom: 5px !important; }
+
+.pb-2 {
+	padding-bottom: 10px !important; }
+
+.pb-3 {
+	padding-bottom: 15px !important; }
+
+.pb-4 {
+	padding-bottom: 20px !important; }
+
+.pb-5 {
+	padding-bottom: 25px !important; }
+
+.pb-6 {
+	padding-bottom: 30px !important; }
+
+.pb-7 {
+	padding-bottom: 35px !important; }
+
+.pb-8 {
+	padding-bottom: 40px !important; }
+
+.pb-9 {
+	padding-bottom: 45px !important; }
+
+.pb-10 {
+	padding-bottom: 50px !important; }
+
+.pb-11 {
+	padding-bottom: 55px !important; }
+
+.pb-12 {
+	padding-bottom: 60px !important; }
+
+.pb-13 {
+	padding-bottom: 65px !important; }
+
+.pb-14 {
+	padding-bottom: 70px !important; }
+
+.pb-15 {
+	padding-bottom: 75px !important; }
+
+.pb-16 {
+	padding-bottom: 80px !important; }
+
+.pb-17 {
+	padding-bottom: 85px !important; }
+
+.pb-18 {
+	padding-bottom: 90px !important; }
+
+.pb-19 {
+	padding-bottom: 95px !important; }
+
+.pb-20 {
+	padding-bottom: 100px !important; }
+
+.pl-0 {
+	padding-left: 0px !important; }
+
+.pl-1 {
+	padding-left: 5px !important; }
+
+.pl-2 {
+	padding-left: 10px !important; }
+
+.pl-3 {
+	padding-left: 15px !important; }
+
+.pl-4 {
+	padding-left: 20px !important; }
+
+.pl-5 {
+	padding-left: 25px !important; }
+
+.pl-6 {
+	padding-left: 30px !important; }
+
+.pl-7 {
+	padding-left: 35px !important; }
+
+.pl-8 {
+	padding-left: 40px !important; }
+
+.pl-9 {
+	padding-left: 45px !important; }
+
+.pl-10 {
+	padding-left: 50px !important; }
+
+.pl-11 {
+	padding-left: 55px !important; }
+
+.pl-12 {
+	padding-left: 60px !important; }
+
+.pl-13 {
+	padding-left: 65px !important; }
+
+.pl-14 {
+	padding-left: 70px !important; }
+
+.pl-15 {
+	padding-left: 75px !important; }
+
+.pl-16 {
+	padding-left: 80px !important; }
+
+.pl-17 {
+	padding-left: 85px !important; }
+
+.pl-18 {
+	padding-left: 90px !important; }
+
+.pl-19 {
+	padding-left: 95px !important; }
+
+.pl-20 {
+	padding-left: 100px !important; }
+
+.max-w-0 {
+	max-width: 0rem; }
+
+.max-w-1 {
+	max-width: 0.625rem; }
+
+.max-w-2 {
+	max-width: 1.25rem; }
+
+.max-w-3 {
+	max-width: 1.875rem; }
+
+.max-w-4 {
+	max-width: 2.5rem; }
+
+.max-w-5 {
+	max-width: 3.125rem; }
+
+.max-w-6 {
+	max-width: 3.75rem; }
+
+.max-w-7 {
+	max-width: 4.375rem; }
+
+.max-w-8 {
+	max-width: 5rem; }
+
+.max-w-9 {
+	max-width: 5.625rem; }
+
+.max-w-10 {
+	max-width: 6.25rem; }
+
+.max-w-11 {
+	max-width: 6.875rem; }
+
+.max-w-12 {
+	max-width: 7.5rem; }
+
+.max-w-13 {
+	max-width: 8.125rem; }
+
+.max-w-14 {
+	max-width: 8.75rem; }
+
+.max-w-15 {
+	max-width: 9.375rem; }
+
+.max-w-16 {
+	max-width: 10rem; }
+
+.max-w-17 {
+	max-width: 10.625rem; }
+
+.max-w-18 {
+	max-width: 11.25rem; }
+
+.max-w-19 {
+	max-width: 11.875rem; }
+
+.max-w-20 {
+	max-width: 12.5rem; }
+
+.max-w-21 {
+	max-width: 13.125rem; }
+
+.max-w-22 {
+	max-width: 13.75rem; }
+
+.max-w-23 {
+	max-width: 14.375rem; }
+
+.max-w-24 {
+	max-width: 15rem; }
+
+.max-w-25 {
+	max-width: 15.625rem; }
+
+.max-w-26 {
+	max-width: 16.25rem; }
+
+.max-w-27 {
+	max-width: 16.875rem; }
+
+.max-w-28 {
+	max-width: 17.5rem; }
+
+.max-w-29 {
+	max-width: 18.125rem; }
+
+.max-w-30 {
+	max-width: 18.75rem; }
+
+.max-w-31 {
+	max-width: 19.375rem; }
+
+.max-w-32 {
+	max-width: 20rem; }
+
+.max-w-33 {
+	max-width: 20.625rem; }
+
+.max-w-34 {
+	max-width: 21.25rem; }
+
+.max-w-35 {
+	max-width: 21.875rem; }
+
+.max-w-36 {
+	max-width: 22.5rem; }
+
+.max-w-37 {
+	max-width: 23.125rem; }
+
+.max-w-38 {
+	max-width: 23.75rem; }
+
+.max-w-39 {
+	max-width: 24.375rem; }
+
+.max-w-40 {
+	max-width: 25rem; }
+
+.max-w-41 {
+	max-width: 25.625rem; }
+
+.max-w-42 {
+	max-width: 26.25rem; }
+
+.max-w-43 {
+	max-width: 26.875rem; }
+
+.max-w-44 {
+	max-width: 27.5rem; }
+
+.max-w-45 {
+	max-width: 28.125rem; }
+
+.max-w-46 {
+	max-width: 28.75rem; }
+
+.max-w-47 {
+	max-width: 29.375rem; }
+
+.max-w-48 {
+	max-width: 30rem; }
+
+.max-w-49 {
+	max-width: 30.625rem; }
+
+.max-w-50 {
+	max-width: 31.25rem; }
+
+.max-w-51 {
+	max-width: 31.875rem; }
+
+.max-w-52 {
+	max-width: 32.5rem; }
+
+.max-w-53 {
+	max-width: 33.125rem; }
+
+.max-w-54 {
+	max-width: 33.75rem; }
+
+.max-w-55 {
+	max-width: 34.375rem; }
+
+.max-w-56 {
+	max-width: 35rem; }
+
+.max-w-57 {
+	max-width: 35.625rem; }
+
+.max-w-58 {
+	max-width: 36.25rem; }
+
+.max-w-59 {
+	max-width: 36.875rem; }
+
+.max-w-60 {
+	max-width: 37.5rem; }
+
+.max-w-61 {
+	max-width: 38.125rem; }
+
+.max-w-62 {
+	max-width: 38.75rem; }
+
+.max-w-63 {
+	max-width: 39.375rem; }
+
+.max-w-64 {
+	max-width: 40rem; }
+
+.max-w-65 {
+	max-width: 40.625rem; }
+
+.max-w-66 {
+	max-width: 41.25rem; }
+
+.max-w-67 {
+	max-width: 41.875rem; }
+
+.max-w-68 {
+	max-width: 42.5rem; }
+
+.max-w-69 {
+	max-width: 43.125rem; }
+
+.max-w-70 {
+	max-width: 43.75rem; }
+
+.max-w-71 {
+	max-width: 44.375rem; }
+
+.max-w-72 {
+	max-width: 45rem; }
+
+.max-w-73 {
+	max-width: 45.625rem; }
+
+.max-w-74 {
+	max-width: 46.25rem; }
+
+.max-w-75 {
+	max-width: 46.875rem; }
+
+.max-w-76 {
+	max-width: 47.5rem; }
+
+.max-w-77 {
+	max-width: 48.125rem; }
+
+.max-w-78 {
+	max-width: 48.75rem; }
+
+.max-w-79 {
+	max-width: 49.375rem; }
+
+.max-w-80 {
+	max-width: 50rem; }
+
+.max-w-81 {
+	max-width: 50.625rem; }
+
+.max-w-82 {
+	max-width: 51.25rem; }
+
+.max-w-83 {
+	max-width: 51.875rem; }
+
+.max-w-84 {
+	max-width: 52.5rem; }
+
+.max-w-85 {
+	max-width: 53.125rem; }
+
+.max-w-86 {
+	max-width: 53.75rem; }
+
+.max-w-87 {
+	max-width: 54.375rem; }
+
+.max-w-88 {
+	max-width: 55rem; }
+
+.max-w-89 {
+	max-width: 55.625rem; }
+
+.max-w-90 {
+	max-width: 56.25rem; }
+
+.max-w-91 {
+	max-width: 56.875rem; }
+
+.max-w-92 {
+	max-width: 57.5rem; }
+
+.max-w-93 {
+	max-width: 58.125rem; }
+
+.max-w-94 {
+	max-width: 58.75rem; }
+
+.max-w-95 {
+	max-width: 59.375rem; }
+
+@media (min-width: 993px) {
+	/* HEIGHT BOXES */
+	.h-lg-0 {
+		height: 0px; }
+	.h-lg-1 {
+		height: 10px; }
+	.h-lg-2 {
+		height: 20px; }
+	.h-lg-3 {
+		height: 30px; }
+	.h-lg-4 {
+		height: 40px; }
+	.h-lg-5 {
+		height: 50px; }
+	.h-lg-6 {
+		height: 60px; }
+	.h-lg-7 {
+		height: 70px; }
+	.h-lg-8 {
+		height: 80px; }
+	.h-lg-9 {
+		height: 90px; }
+	.h-lg-10 {
+		height: 100px; }
+	.h-lg-11 {
+		height: 110px; }
+	.h-lg-12 {
+		height: 120px; }
+	.h-lg-13 {
+		height: 130px; }
+	.h-lg-14 {
+		height: 140px; }
+	.h-lg-15 {
+		height: 150px; }
+	.h-lg-16 {
+		height: 160px; }
+	.h-lg-17 {
+		height: 170px; }
+	.h-lg-18 {
+		height: 180px; }
+	.h-lg-19 {
+		height: 190px; }
+	.h-lg-20 {
+		height: 200px; }
+	.h-lg-21 {
+		height: 210px; }
+	.h-lg-22 {
+		height: 220px; }
+	.h-lg-23 {
+		height: 230px; }
+	.h-lg-24 {
+		height: 240px; }
+	.h-lg-25 {
+		height: 250px; }
+	.h-lg-26 {
+		height: 260px; }
+	.h-lg-27 {
+		height: 270px; }
+	.h-lg-28 {
+		height: 280px; }
+	.h-lg-29 {
+		height: 290px; }
+	.h-lg-30 {
+		height: 300px; }
+	.h-lg-31 {
+		height: 310px; }
+	.h-lg-32 {
+		height: 320px; }
+	.h-lg-33 {
+		height: 330px; }
+	.h-lg-34 {
+		height: 340px; }
+	.h-lg-35 {
+		height: 350px; }
+	.h-lg-36 {
+		height: 360px; }
+	.h-lg-37 {
+		height: 370px; }
+	.h-lg-38 {
+		height: 380px; }
+	.h-lg-39 {
+		height: 390px; }
+	.h-lg-40 {
+		height: 400px; }
+	.h-lg-41 {
+		height: 410px; }
+	.h-lg-42 {
+		height: 420px; }
+	.h-lg-43 {
+		height: 430px; }
+	.h-lg-44 {
+		height: 440px; }
+	.h-lg-45 {
+		height: 450px; }
+	.h-lg-46 {
+		height: 460px; }
+	.h-lg-47 {
+		height: 470px; }
+	.h-lg-48 {
+		height: 480px; }
+	.h-lg-49 {
+		height: 490px; }
+	.h-lg-50 {
+		height: 500px; }
+	.h-lg-51 {
+		height: 510px; }
+	.h-lg-52 {
+		height: 520px; }
+	.h-lg-53 {
+		height: 530px; }
+	.h-lg-54 {
+		height: 540px; }
+	.h-lg-55 {
+		height: 550px; }
+	.h-lg-56 {
+		height: 560px; }
+	.h-lg-57 {
+		height: 570px; }
+	.h-lg-58 {
+		height: 580px; }
+	.h-lg-59 {
+		height: 590px; }
+	.h-lg-60 {
+		height: 600px; } }
+
+.flex-centered-separated {
+	display: flex;
+	align-items: center;
+	justify-content: space-between; }
+
+@media (min-width: 768px) {
+	.container-corp {
+		max-width: 1100px; }
+	.container-corp-min {
+		max-width: 750px; }
+	/* HEIGHT BOXES */
+	.h-md-0 {
+		height: 0px; }
+	.h-md-1 {
+		height: 10px; }
+	.h-md-2 {
+		height: 20px; }
+	.h-md-3 {
+		height: 30px; }
+	.h-md-4 {
+		height: 40px; }
+	.h-md-5 {
+		height: 50px; }
+	.h-md-6 {
+		height: 60px; }
+	.h-md-7 {
+		height: 70px; }
+	.h-md-8 {
+		height: 80px; }
+	.h-md-9 {
+		height: 90px; }
+	.h-md-10 {
+		height: 100px; }
+	.h-md-11 {
+		height: 110px; }
+	.h-md-12 {
+		height: 120px; }
+	.h-md-13 {
+		height: 130px; }
+	.h-md-14 {
+		height: 140px; }
+	.h-md-15 {
+		height: 150px; }
+	.h-md-16 {
+		height: 160px; }
+	.h-md-17 {
+		height: 170px; }
+	.h-md-18 {
+		height: 180px; }
+	.h-md-19 {
+		height: 190px; }
+	.h-md-20 {
+		height: 200px; }
+	.h-md-21 {
+		height: 210px; }
+	.h-md-22 {
+		height: 220px; }
+	.h-md-23 {
+		height: 230px; }
+	.h-md-24 {
+		height: 240px; }
+	.h-md-25 {
+		height: 250px; }
+	.h-md-26 {
+		height: 260px; }
+	.h-md-27 {
+		height: 270px; }
+	.h-md-28 {
+		height: 280px; }
+	.h-md-29 {
+		height: 290px; }
+	.h-md-30 {
+		height: 300px; }
+	.h-md-31 {
+		height: 310px; }
+	.h-md-32 {
+		height: 320px; }
+	.h-md-33 {
+		height: 330px; }
+	.h-md-34 {
+		height: 340px; }
+	.h-md-35 {
+		height: 350px; }
+	.h-md-36 {
+		height: 360px; }
+	.h-md-37 {
+		height: 370px; }
+	.h-md-38 {
+		height: 380px; }
+	.h-md-39 {
+		height: 390px; }
+	.h-md-40 {
+		height: 400px; }
+	.h-md-41 {
+		height: 410px; }
+	.h-md-42 {
+		height: 420px; }
+	.h-md-43 {
+		height: 430px; }
+	.h-md-44 {
+		height: 440px; }
+	.h-md-45 {
+		height: 450px; }
+	.h-md-46 {
+		height: 460px; }
+	.h-md-47 {
+		height: 470px; }
+	.h-md-48 {
+		height: 480px; }
+	.h-md-49 {
+		height: 490px; }
+	.h-md-50 {
+		height: 500px; }
+	.h-md-51 {
+		height: 510px; }
+	.h-md-52 {
+		height: 520px; }
+	.h-md-53 {
+		height: 530px; }
+	.h-md-54 {
+		height: 540px; }
+	.h-md-55 {
+		height: 550px; }
+	.h-md-56 {
+		height: 560px; }
+	.h-md-57 {
+		height: 570px; }
+	.h-md-58 {
+		height: 580px; }
+	.h-md-59 {
+		height: 590px; }
+	.h-md-60 {
+		height: 600px; } }
+
+.btn {
+	font-size: 1.125rem;
+	min-height: 3.5rem;
+	font-family: "Open Sans";
+	font-weight: bold;
+	transition: all 0.4s; }
+.btn.disabled {
+	color: white;
+	background-color: #D9D9D6;
+	border-color: #D9D9D6;
+	pointer-events: none; }
+.btn.disabled:hover {
+	color: white;
+	background-color: #D9D9D6;
+	border-color: #D9D9D6; }
+.btn-ejecutivo{
+	align-items: center;
+	display: flex !important;
+	border-radius: 0 ;
+	font-size: 17px;
+}
+@media(max-width: 767px){
+	.btn-ejecutivo{
+		align-items: center !important;
+		display: flex !important;
+		padding: 0 !important;
+		font-size: 12px;
+	}
+	.link-logo{
+		width: 40%;
+	}
+	.btn-ejecutivo .pr-4.text-left{
+		padding-right: 0 !important;
+	}
+}
+
+.btn-primary-corp {
+	color: #FFF;
+	background-color: #84BD00;
+	border-color: #84BD00; }
+.btn-primary-corp:hover, .btn-primary-corp:focus, .btn-primary-corp:active {
+	color: #FFF;
+	background-color: #5c8400;
+	border-color: #5c8400; }
+
+.btn-secondary-corp {
+	color: #FFF;
+	background-color: #003DA5;
+	border-color: #003DA5; }
+.btn-secondary-corp:hover, .btn-secondary-corp:focus, .btn-secondary-corp:active {
+	color: #FFF;
+	background-color: #002b74;
+	border-color: #002b74; }
+
+.btn-uncust {
+	min-height: 0; }
+
+/* btn upload */
+.btn-upload {
+	font-size: 1em;
+	min-height: 3.5rem;
+	font-family: "Open Sans";
+	transition: all 0.4s;
+	text-decoration: underline;
+	border-radius: 5px;
+	border: 0; }
+.btn-upload-blue {
+	color: #FFF;
+	background-color: #003DA5; }
+.btn-upload-blue:hover, .btn-upload-blue:focus, .btn-upload-blue:active {
+	color: #FFF;
+	background-color: #002b74;
+	border-color: #002b74; }
+
+.form-field, .form-input, .form-select {
+	font-family: "Open Sans";
+	font-size: .875rem;
+	position: relative;
+	width: 100%;
+	outline: 0;
+	border: 2px solid #D9D9D6;
+	padding-left: 15px;
+	border-radius: 5px;
+	transition: box-shadow 150ms ease-out;
+	transition: border-color 0.4s;
+	height: 3.5rem;
+	color: #474747; }
+
+.form-field {
+	padding-top: .625rem; }
+
+.form-select {
+	padding: 5px 0px 5px 15px;
+	background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.25593 7.12713C5.85716 7.58759 5.14284 7.58759 4.74407 7.12713L0.437781 2.15465C-0.123095 1.50701 0.336957 0.500001 1.19371 0.500001L9.80629 0.5C10.663 0.5 11.1231 1.50701 10.5622 2.15465L6.25593 7.12713Z' fill='%23003DA5'/%3E%3C/svg%3E%0A");
+	background-repeat: no-repeat;
+	background-position: right 15px top 50%;
+	background-position-x: 97.5%;
+	background-color: #FFFFFF;
+	-webkit-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: ""; }
+.form-select::-ms-expand {
+	display: none; }
+
+.form-group {
+	position: relative; }
+
+.form-label {
+	position: absolute;
+	left: 0;
+	top: calc(50% - 13px);
+	font-family: "Open Sans";
+	color: #53565A;
+	z-index: 1;
+	transition: transform 150ms ease-out,font-size 150ms ease-out;
+	padding-left: 15px; }
+
+.focused .form-label {
+	color: #999999;
+	transform: translateY(-55%);
+	font-size: 0.750rem; }
+
+.is-valid {
+	border-color: #84BD00 !important;
+	padding-right: calc(1.5em + .75rem);
+	background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='%2384BD00' d='M9.984 17.016l9-9-1.406-1.453-7.594 7.594-3.563-3.563-1.406 1.406zM12 2.016c5.531 0 9.984 4.453 9.984 9.984s-4.453 9.984-9.984 9.984-9.984-4.453-9.984-9.984 4.453-9.984 9.984-9.984z'></path></svg>");
+	background-repeat: no-repeat;
+	background-position: center right calc(.375em + .1875rem);
+	background-size: calc(.75em + .375rem) calc(.75em + .375rem); }
+
+.form-select.is-valid {
+	padding-right: calc((1em + .75rem) * 3 / 4 + 1.75rem);
+	background: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.25593 7.12713C5.85716 7.58759 5.14284 7.58759 4.74407 7.12713L0.437781 2.15465C-0.123095 1.50701 0.336957 0.500001 1.19371 0.500001L9.80629 0.5C10.663 0.5 11.1231 1.50701 10.5622 2.15465L6.25593 7.12713Z' fill='%23003DA5'/%3E%3C/svg%3E%0A") no-repeat no-repeat right 6px top 50%, url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='%2384BD00' d='M9.984 17.016l9-9-1.406-1.453-7.594 7.594-3.563-3.563-1.406 1.406zM12 2.016c5.531 0 9.984 4.453 9.984 9.984s-4.453 9.984-9.984 9.984-9.984-4.453-9.984-9.984 4.453-9.984 9.984-9.984z'></path></svg>") #fff no-repeat center right 1.75rem/calc(.75em + .47rem) calc(.75em + .47rem); }
+
+.is-invalid {
+	border-color: #d6001a !important;
+	padding-right: calc(1.5em + .75rem);
+	background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='%23F44336' d='M17.016 15.609l-3.609-3.609 3.609-3.609-1.406-1.406-3.609 3.609-3.609-3.609-1.406 1.406 3.609 3.609-3.609 3.609 1.406 1.406 3.609-3.609 3.609 3.609zM12 2.016c5.531 0 9.984 4.453 9.984 9.984s-4.453 9.984-9.984 9.984-9.984-4.453-9.984-9.984 4.453-9.984 9.984-9.984z'></path></svg>");
+	background-repeat: no-repeat;
+	background-position: center right calc(.375em + .1875rem);
+	background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+	box-shadow: none; }
+
+.form-error {
+	font-family: "Open Sans";
+	font-size: 0.75em;
+	position: absolute;
+	top: 100%;
+	left: 10px;
+	color: #CC0001; }
+
+.radio-block-input,
+.radio-circle-input {
+	display: none; }
+
+.cmn-radio-bl, .radio-block, .radio-block-reg, .radio-block-form, .radio-block-productos, .radio-block-mandatos {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	min-height: 86px;
+	transition: all 0.4s;
+	margin-right: 10px;
+	cursor: pointer; }
+
+.radio-block {
+	border: 1px solid #5BC2E7;
+	background-color: #F2F6F8;
+	padding: 0 .625rem; }
+
+.radio-block-reg {
+	border: 1px solid #999999;
+	background-color: #ffffff; }
+
+.radio-block-input:checked + .radio-block-reg,
+.radio-block-input:checked + .radio-block {
+	border: 3px solid #003DA5; }
+
+.radio-block-input:checked + .radio-block-reg .radio-block-text-reg,
+.radio-block-input:checked + .radio-block-reg .radio-block-text-regmin {
+	color: #003DA5; }
+
+.radio-block-text {
+	font-family: "Open Sans";
+	font-weight: bold;
+	color: #003DA5; }
+
+.radio-block-text-reg,
+.radio-block-text-regmin {
+	font-family: "Open Sans";
+	font-weight: bold;
+	color: #333333; }
+
+.radio-block-text-reg {
+	font-size: 2em;
+	letter-spacing: 0.13em; }
+
+.radio-block-text-regmin {
+	font-size: .750em;
+	letter-spacing: 1em; }
+
+.register-block {
+	display: inline-block;
+	width: 230px; }
+
+.radio-block-form {
+	border: 1px solid #5BC2E7;
+	background-color: #ffffff;
+	padding: 0 .625rem;
+	min-height: 54px; }
+
+.radio-block-productos {
+	justify-content: flex-start;
+	border: 2px solid #D9D9D6;
+	background-color: #ffffff;
+	padding: 0 1.2em;
+	min-height: 56px;
+	margin-bottom: 1.3em; }
+
+.radio-block-input:checked + .radio-block-productos {
+	background-color: #003DA5;
+	border-color: #003DA5;
+	color: white; }
+
+.radio-block-input:checked + .radio-block-productos .radio-block-text {
+	color: white; }
+
+.radio-block-mandatos {
+	justify-content: flex-start;
+	border: 2px solid #D9D9D6;
+	background-color: #ffffff;
+	padding: 0 1.2em;
+	min-height: 61px;
+	margin-bottom: 1.3em; }
+.radio-block-mandatos .radio-block-text {
+	font-size: .85em;
+	color: #53565A;
+	font-family: "Open Sans";
+	line-height: 17px; }
+
+.radio-block-input:checked + .radio-block-mandatos {
+	border-color: #5BC2E7;
+	color: #5BC2E7;
+	border-width: 3px; }
+
+.radio-block-input:checked + .radio-block-mandatos .radio-block-text {
+	color: #5BC2E7; }
+
+/* Circle Check */
+.radio-circle {
+	display: inline-block;
+	height: 35px;
+	width: 35px;
+	border: 1px solid #004275;
+	border-radius: 50%; }
+
+.radio-circle-input:checked + .radio-circle {
+	background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='%2384BD00' d='M9.984 17.016l9-9-1.406-1.453-7.594 7.594-3.563-3.563-1.406 1.406zM12 2.016c5.531 0 9.984 4.453 9.984 9.984s-4.453 9.984-9.984 9.984-9.984-4.453-9.984-9.984 4.453-9.984 9.984-9.984z'></path></svg>");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 27px;
+	cursor: pointer; }
+
+.banner-pill {
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	overflow: hidden; }
+
+a.banner-pill:hover {
+	text-decoration: none; }
+
+.banner-pill-col-img {
+	flex: 0 0 7.625rem;
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-size: cover;
+	align-self: stretch; }
+
+.banner-pill-col-cont {
+	padding: 20px; }
+
+@media (min-width: 993px) {
+	.banner-pill-desk-column {
+		flex-direction: column; }
+	.banner-pill-desk-column .banner-pill-col-img {
+		background-position: center;
+		flex: 0 0 60%; }
+	.banner-pill-desk-column .banner-pill-col-cont {
+		flex: 0 0 40%;
+		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.6667 12C17.6667 12.4266 17.5033 12.8533 17.1783 13.1783L8.84531 21.5113C8.19367 22.1629 7.14038 22.1629 6.48873 21.5113C5.83709 20.8596 5.83709 19.8063 6.48873 19.1547L13.6435 12L6.48873 4.8453C5.83709 4.19366 5.83709 3.14037 6.48873 2.48873C7.14037 1.83709 8.19367 1.83709 8.84531 2.48873L17.1783 10.8217C17.5033 11.1467 17.6667 11.5734 17.6667 12Z' fill='white'/%3E%3C/svg%3E%0A");
+		background-position: center right 10px;
+		background-repeat: no-repeat;
+		background-size: 18px;
+		padding: 5px 40px 5px 20px;
+		display: flex;
+		align-items: center;
+		width: 100%; } }
+
+.carousel-corp .carousel-indicators li {
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	opacity: 1;
+	border: 1px solid #003DA5; }
+.carousel-corp .carousel-indicators li.active {
+	background-color: #003DA5; }
+
+.wizard {
+	display: table;
+	table-layout: fixed;
+	width: 100%; }
+
+.wizard-graph-row, .wizard-text-row {
+	display: table-row; }
+
+.wizard-block {
+	display: table-cell; }
+
+.wizard-graph-row {
+	margin-bottom: 3px; }
+.wizard-graph-row .wizard-block {
+	position: relative;
+	height: .938em; }
+
+/*BARRAS*/
+.wizard-graph-row .wizard-block:before,
+.wizard-graph-row .wizard-block.wizard-block-start:after,
+.wizard-graph-row .wizard-block.wizard-block-advanced:after {
+	content: "";
+	display: block;
+	height: 2px;
+	position: absolute;
+	top: calc(50% - 1px); }
+
+.wizard-graph-row .wizard-block:before {
+	width: 100%;
+	background-color: #ebebeb; }
+
+.wizard-graph-row .wizard-block:first-child:before,
+.wizard-graph-row .wizard-block:last-child:before {
+	width: 50%; }
+
+.wizard-graph-row .wizard-block:first-child:before {
+	right: 0; }
+
+.circle-number {
+	height: 14px;
+	width: 14px;
+	border: 2px solid #809ED2;
+	border-radius: 50%;
+	background-color: #ffffff;
+	color: #ffffff;
+	font-size: 16px;
+	font-family: "Open Sans";
+	position: absolute;
+	left: calc(50% - .75rem);
+	text-align: center;
+	padding-top: 1px;
+	padding-left: 1px;
+	z-index: 2; }
+
+.wizard-text-row .wizard-block {
+	text-align: center;
+	font-size: 0.875em;
+	color: #84BD00;
+	padding-top: 4px;
+	line-height: 1.4; }
+
+.wizard-graph-row .wizard-block.wizard-block-start:after,
+.wizard-graph-row .wizard-block.wizard-block-advanced:after {
+	background-color: #84BD00;
+	left: 0; }
+
+.wizard-graph-row .wizard-block.wizard-block-advanced:first-child:after {
+	width: calc(50% + 8px);
+	left: 50%;
+	z-index: 1; }
+
+.wizard-graph-row .wizard-block.wizard-block-start:after {
+	width: 50%; }
+
+.wizard-graph-row .wizard-block.wizard-block-advanced:after {
+	width: calc(100% + 8px);
+	border-radius: 0 .625rem .625rem 0;
+	z-index: 1; }
+
+.wizard-graph-row .wizard-block.wizard-block-advanced .circle-number {
+	background-color: #003DA5;
+	border-color: #003DA5; }
+
+.wizard-graph-row.wizard-graph-complete .wizard-block.wizard-block-start:after,
+.wizard-graph-row.wizard-graph-complete .wizard-block.wizard-block-advanced:after {
+	background-color: #C7EEC5; }
+
+.wizard-graph-row.wizard-graph-complete .circle-number {
+	background-color: #77C162; }
+
+.m-drawer .m-drawer__panel {
+	background-color: #003DA5 !important;
+	color: white !important;
+	padding: 7.5rem; }
+
+.m-drawer .m-drawer__panel .side-person {
+	background-color: #003DA5 !important;
+	margin-left: 0 !important;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	margin-right: 0 !important;
+	max-width: 323px;
+	border: none;
+	color: white;
+}
+.m-drawer .m-drawer__panel .side-person a{
+	color: white;
+}
+.m-drawer .m-drawer__panel .side-person-menu-inner .side-pages{
+	text-decoration: none;
+}
+.m-drawer .m-drawer__panel .side-person .side-pages{
+	font-weight: normal;
+}
+.planblock {
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #F2F6F8; }
+
+.planblock.planblock-main {
+	flex: 0 0 126px; }
+
+.planblock-choose {
+	flex: 0 0 264px; }
+
+.planblock-header {
+	flex: 0 0 68px;
+	align-items: center;
+	border-radius: 15px 15px 0 0;
+	margin-bottom: 0; }
+
+.planblock-header {
+	padding: 10px 20px; }
+
+.planblock-item {
+	padding: 25px 20px 20px; }
+
+.planblock-header-a {
+	background-color: #869FB2;
+	border: 1px solid #869FB2; }
+
+.planblock-header-b,
+.planblock-header-c {
+	display: flex;
+	-ms-flex-pack: justify;
+	justify-content: space-between; }
+
+.planblock-header-b {
+	background-color: #5BC2E7 !important;
+	border: 1px solid #5BC2E7; }
+
+.planblock-header-c {
+	background-color: #003DA5 !important;
+	border: 1px solid #003DA5; }
+
+.planblock-header-ico {
+	width: 25px;
+	margin-right: 20px; }
+
+.planblock-item {
+	flex: 0 0 150px;
+	background-color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border-right: 1px solid #F2F6F8;
+	border-left: 1px solid #F2F6F8; }
+
+label.planblock-item {
+	margin-bottom: 0;
+	cursor: pointer;
+	transition: all 0.2s; }
+
+.planblock-item.planblock-item-odd {
+	background-color: #F2F6F8; }
+
+.planblock-choose .planblock-item {
+	align-items: center;
+	-ms-flex-pack: center;
+	justify-content: center; }
+
+.planblock-c-a {
+	color: #84BD00; }
+
+.planblock-c-b {
+	color: #869FB2; }
+
+.planblock-input {
+	display: none; }
+.planblock-input:checked + label.planblock-item {
+	border: 4px solid #5BC2E7;
+	border-radius: 15px;
+	transform: scale(1.07); }
+.planblock-input:checked + label.planblock-item .planblock-c-a,
+.planblock-input:checked + label.planblock-item .planblock-c-b {
+	color: #5BC2E7; }
+
+@media (min-width: 768px) {
+	.planblock.planblock-main {
+		flex: 0 0 264px; } }
+
+/* Side Menu Referencia Desktop 5 */
+.side-person {
+	max-width: 360px;
+	margin-left: auto;
+	margin-right: auto;
+	/* background-color: #999; */
+	background-color: #ffffff;
+	padding: 3em 2.938em;
+	color: #003DA5;
+	border: 1px solid #000000;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+.side-person-drawer {
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	/* background-color: #999; */
+	background-color: #E6ECF6;
+	color: white;
+}
+.side-person-menu {
+	margin-top: 2em;
+	padding: 0;
+	list-style-type: none; 
+}
+.side-person-menu li {
+	margin-bottom: 1.2em; 
+}
+
+/*.side-person-menu a {
+color: white; 
+color: #003DA5;
+font-family: "Open Sans";
+font-weight: bold; 
+}*/
+
+.side-person-menu-inner {
+	margin-top: 1em;
+	list-style-type: disc;
+	padding-left: 2em; }
+.side-person-menu-inner a {
+	font-family: "Open Sans";
+	text-decoration: underline; }
+.side-person-menu .cerrar {
+	margin-top: 6em; }
+
+.banner-page {
+	min-height: 300px;
+	background-size: cover;
+	display: block;
+	/* justify-content: flex-start; */
+	margin-bottom: 1.9em;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.banner-page-info p{
+	line-height: 120%;
+	font-size: 24px;}
+@media(max-width: 767px){
+	.banner-page-info p{
+		line-height: 120%;
+		font-size: 16px;}
+}
+.banner-page.box-start{
+	justify-content: flex-start;
+}
+.banner-page.box-end{
+	justify-content: flex-end;
+}
+.banner-page-info.box-left{
+	margin-left: 2rem;
+	position: absolute;
+	left: 0;
+}
+.banner-page-info.box-right{
+	margin-right: 2rem;
+	position: absolute;
+	right: 0;
+}
+
+@media (max-width: 767px) {
+	.banner-page {
+		margin-left: -15px;
+		margin-right: -15px;
+		border-bottom: 10px solid #84BD00;
+		display: block;
+		min-height: 200px; 
+	} 
+}
+.banner-page-info {
+	background-color: white;
+	display: flex;
+	align-items: center;
+	max-width: 320px;
+	max-height: 184px;
+	border-bottom: 16px solid #84BD00;
+	padding: 2em 1.5em 1em;
+	margin-bottom: 2em;
+	margin-left: 2rem;
+}
+@media (max-width: 767px) {
+	.banner-page-info {
+		border-bottom: 0;
+		max-width: 231px;
+		padding: 1.5em 1em .5em 1em;
+		height: auto;
+		margin-left: auto; } }
+.banner-page-info h3 {
+	font-size: 1.25em; }
+@media (max-width: 768px) {
+	.banner-page-info h3 {
+		font-size: .9em; } }
+.banner-page-info p {
+	/*color: #53565A; */
+}
+@media (max-width: 767px) {
+	.banner-page-info p {
+		font-size: .7em; } }
+
+/*Layout*/
+.container-corp, .container-corp-secundary {
+	width: 100%; }
+
+.header-link {
+	display: flex;
+	/*height: 26px;*/
+}
+
+@media (min-width: 580px) {
+	.header-link {
+		height: 45px; } }
+
+@media (min-width: 768px) {
+	.container-corp, .container-corp-secundary {
+		margin-right: auto;
+		margin-left: auto;
+		padding-right: 15px;
+		padding-left: 15px; }
+	.container-corp {
+		max-width: 1210px; }
+	.container-corp-secundary {
+		max-width: 1010px; }
+	.container-small {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 20px;
+		width: 100%; } }
+
+@media (max-width: 767px) {
+	.container-corp, .container-corp-secundary, .container-small {
+		padding-right: 15px;
+		padding-left: 15px; } }
+
+.header {
+	background-color: #fff;
+	height: 72px;
+	/*margin-bottom: 83px !important;*/
+}
+
+.login-logo {
+	display: block;
+	max-width: 330px;
+	width: 100%;
+	margin: 0 auto; }
+
+.bg-login {
+	background-color: #E5E5E5; }
+
+.container-login {
+	padding-top: 2.813rem;
+	padding-bottom: 2.813rem;
+	border-radius: 10px 10px 0 0;
+	background-color: #003DA5;
+	border-bottom: 1.25rem solid #84BD00; }
+
+/*.login-footer {
+background-color: $c-grey-darkest;
+}*/
+/* Desktop 4 del figma */
+.box-resume {
+	border-radius: 15px;
+	box-shadow: 0px 2px 5px #D9D9D6; }
+@media (max-width: 768px) {
+	.box-resume {
+		margin-bottom: 2em; } }
+.box-resume-top {
+	background-color: #E6ECF6; 
+	display: flex;
+	flex-flow: column;
+	height: 100%;}
+.side-user-panel-title{
+	background: #003DA5;
+	padding: 1em 1.5em;
+	border-radius: 8px 8px 0 0;
+}
+.box-resume-bot {
+	border-radius: 0 0 15px 15px;
+	background-color: #FAFBFD;
+	padding: 1.5em;
+	min-height: 145px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column; }
+
+.box-pagador {
+	background-color: #F2F6F8;
+	padding: 2.5em 1.5em;
+	box-shadow: 0px 2px 5px #D9D9D6; }
+
+.box-checkmandato {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1em;
+	position: relative; }
+@media (max-width: 768px) {
+	.box-checkmandato {
+		flex-flow: nowrap;
+		padding: 0;
+		justify-content: flex-start; } }
+@media (max-width: 768px) {
+	.box-checkmandato p {
+		width: calc(100% - 35px);
+		padding-left: 1em; } }
+.box-checkmandato:before {
+	position: absolute;
+	content: "";
+	top: 0;
+	right: 0;
+	height: 100px;
+	width: 1px;
+	background-color: #869FB2; }
+@media (max-width: 768px) {
+	.box-checkmandato:before {
+		display: none; } }
+
+.box-pep {
+	background-color: #F2F6F8;
+	padding: 2.5em 1.5em;
+	box-shadow: 0px 2px 5px #D9D9D6; }
+
+/* Panel Block Desktop 14 */
+.panel-block-header {
+	background-color: #003DA5;
+	color: white;
+	border-radius: 15px 15px 0 0;
+	padding: 1em 0; }
+
+.panel-block-bot {
+	background-color: #F2F6F8;
+	color: #003DA5;
+	border-radius: 0 0 15px 15px;
+	padding: 3em 0; }
+
+.panel-block-mid {
+	background-color: #F2F6F8;
+	color: #003DA5;
+	border-radius: 15px;
+	padding: 3em 0; }
+
+.box-valorcuota {
+	text-align: center;
+	margin-bottom: 2em; }
+.box-valorcuota-monto {
+	font-size: 32px;
+	line-height: 30px;
+	margin-bottom: 0;
+	font-family: "Open Sans";
+	font-weight: bold;
+	color: #84BD00; }
+.box-valorcuota-monto span {
+	font-size: 18px; }
+
+.popover {
+	background-color: #869FB2 !important;
+	border-radius: 20px 20px 0px 20px !important;
+	font-size: 0.75em !important;
+	color: #ffffff;
+	border: none !important;
+	padding: 15px 15px; }
+.popover-body {
+	color: #ffffff;
+	padding: 0; }
+
+.popover.bs-popover-top > .arrow::before,
+.popover.bs-popover-top > .arrow::after {
+	border-color: #869FB2 transparent transparent transparent;
+	bottom: 2px; }
+
+.popover.bs-popover-top > .arrow::before,
+.popover.bs-popover-top > .arrow::after {
+	border-color: transparent transparent #869FB2 transparent;
+	top: 2px; }
+
+.box-condicionresumen {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1em; }
+.box-condicionresumen .check {
+	flex-basis: 50px;
+	min-width: 50px; }
+
+@media (max-width: 768px) {
+	.panel-block-header {
+		padding: 1em; }
+	.panel-block-bot {
+		padding: 2em 1em; }
+	.panel-block-mid {
+		padding: 2em 1em; }
+	.box-condicionresumen .check {
+		order: 2; }
+	.box-valorcuota {
+		text-align: left; }
+	.box-valorcuota-monto {
+		font-size: 20px;
+		line-height: 20px; }
+	.box-valorcuota-monto span {
+		font-size: 14px; }
+	.mini-text-mobile {
+		font-size: 0.75em; }
+	.small-text-mobile {
+		font-size: 0.875em; } }
+}
+
+/**multiselect**/
+.multiselect * {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.multiselect, .multiselect__input, .multiselect__single {
+	padding: 0;
+	font-family: inherit;
+	font-size: .875rem;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+}
+.multiselect__input{
+	outline: 0;
+	border: 0;
+}
+.multiselect__input:focus {
+	width: fit-content !important;
+	outline: 0;
+}
+.multiselect__current, .multiselect__select {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	margin: 0;
+	line-height: 1.5;
+	text-decoration: none;
+	cursor: pointer;
+}
+.multiselect {
+	position: relative;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	display: block;
+	width: 100%;
+	min-height: 40px;
+	color: #636e72;
+	text-align: left;
+}
+.multiselect__select {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40px;
+	height: 100%;
+	text-align: center;
+	background: transparent;
+	-webkit-transition: -webkit-transform .2s ease;
+	transition: -webkit-transform .2s ease;
+	transition: transform .2s ease;
+	transition: transform .2s ease,-webkit-transform .2s ease;
+}
+.multiselect__tags {
+display: block;
+    min-height: 40px;
+    padding: 1.2rem 40px .8rem .8rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    cursor: pointer;
+    height: 3.5rem;
+    color: #474747;
+    border-radius: 5px;
+    border: 2px solid #d9d9d6;
+    clear: both;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.multiselect__content-wrapper {
+	position: absolute;
+	top: 120%;
+	z-index: 50;
+	display: block;
+	width: 100%;
+	max-height: 240px;
+	overflow: auto;
+	background: #fff;
+	border: 1px solid #b2bec3;
+	border-radius: .3rem;
+	-webkit-overflow-scrolling: touch;
+}
+.multiselect__content {
+	display: inline-block;
+	min-width: 100%;
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+	list-style: none;
+}
+.multiselect__element {
+	display: block;
+}
+.multiselect__option {
+	position: relative;
+	display: block;
+	min-height: 40px;
+	padding: 1rem;
+	line-height: 1.5;
+	text-decoration: none;
+	text-transform: none;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.multiselect__option--highlight {
+	font-weight: 700;
+	border-left: 6px solid #334251;
+	outline: none;
+}
+.multiselect__select:before {
+    position: relative;
+    top: 60%;
+    right: 0;
+    margin-top: 4px;
+    content: "";
+    border-color: #003da5 transparent transparent;
+    border-style: solid;
+    border-width: .5rem 0.35rem 0;
+}
+.multiselect__select {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    text-align: center;
+    background: #fff;
+    -webkit-transition: -webkit-transform .2s ease;
+    transition: -webkit-transform .2s ease;
+    transition: transform .2s ease;
+    transition: transform .2s ease,-webkit-transform .2s ease;
+}
+
+.box-filter .multiselect__select{
+	background-color: white;
+	border-radius: 5px;
+}
