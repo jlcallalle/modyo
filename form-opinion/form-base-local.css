@@ -11,6 +11,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+	  margin: 60px auto 0 auto;
 }
 
 .context-forms-thank_you .form-thanks-message:before {
@@ -28,17 +29,23 @@
     margin-bottom: 20px;
 }
 
+.context-forms-thank_you .form-actions {
+    text-align: center;
+    max-width: 500px;
+	  margin: 0 auto;
+}
+
 .context-forms-thank_you .form-actions a {
     min-height: auto;
     border-radius: 4px;
     padding: 8px 72px;
     min-height: 10px;
-    font-size: 20px;
     font-weight: bold;
     margin-top: 30px;
+	  font-size: 0;
 }
 
-.context-forms-thank_you .form-actions {
-    text-align: center;
-    max-width: 500px;
+.context-forms-thank_you .form-actions a:after {
+    content: 'Regresar al Home';
+    font-size: 18px;
 }

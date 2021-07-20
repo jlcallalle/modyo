@@ -1,11 +1,11 @@
-console.log('formulario opinion desarrollo');
-document.getElementById("answers_13_value").value = "";
-document.getElementById("answers_12_value").value = "";
+console.log('formulario opinion calidad');
+document.getElementById("answers_29_value").value = "";
+document.getElementById("answers_31_value").value = "";
 
-$("#answers_13_value").attr("placeholder", "Escribe un motivo");   
-$("#answers_13_value").attr('maxlength','70');
-$("#answers_12_value").attr("placeholder", "Ingrese aquí tu comentario");
-$("#answers_12_value").attr('maxlength','140');
+$("#answers_29_value").attr("placeholder", "Escribe un motivo");   
+$("#answers_29_value").attr('maxlength','70');
+$("#answers_31_value").attr("placeholder", "Ingrese aquí tu comentario");
+$("#answers_31_value").attr('maxlength','140');
 
 $(".radio").wrapAll( "<div class='box-radio' />");
 
@@ -30,6 +30,3 @@ var classAdmin = $('#header').attr('class');
 if ( $("#header").hasClass( "adminCNS" ) ) {
     $(".section-comparte").addClass("d-none");
 }
-
-
- 
