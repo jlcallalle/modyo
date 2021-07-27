@@ -30,3 +30,19 @@ var classAdmin = $('#header').attr('class');
 if ( $("#header").hasClass( "adminCNS" ) ) {
     $(".section-comparte").addClass("d-none");
 }
+
+
+
+/* Add Class Javascript*/
+/* var el = document.getElementById('header');
+if (el.className === 'header adminCNS'){
+	console.log('js');
+	var comparte = document.getElementsByClassName("section-comparte")[0];
+  comparte.classList.add("d-none");
+} 
+
+var classAdmin = $('#header').attr('class');
+if ( $("#header").hasClass( "adminCNS" ) ) {
+	   console.log('es jquery');
+    $(".section-comparte").addClass("d-none");
+} */

@@ -1,0 +1,243 @@
+<div  id="home-vida" class="container container-corp mx-auto">
+	<div class="row d-flex clearfix">
+		<div class="col-lg-4 col-md-5 aside-vida">
+			<aside id="side-user-panel" class="box-resume-top resume-home d-none d-lg-block">
+				<div class="side-user-panel-title">
+					<p class="font-main-bold c-max-light fs-7">                            
+						Seguros de Vida
+					</p>
+					<span class="green-line"></span>
+				</div>
+				<ul>
+					<li>
+						<a href="#" @click="getUrl('buscar-cotizador')" class="fs-3 c-primary-b font-main-bold" onclick="javascript:marcaje_google_analytics(this, 'Buscar Cotizaciones', 'clic')" title="Buscar Cotizaciones">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17.25 2.25H6.75C5.50736 2.25 4.5 3.25736 4.5 4.5V19.5C4.5 20.7426 5.50736 21.75 6.75 21.75H17.25C18.4926 21.75 19.5 20.7426 19.5 19.5V4.5C19.5 3.25736 18.4926 2.25 17.25 2.25Z" stroke="#003DA5" stroke-width="1.5" stroke-linejoin="round"/>
+								<path d="M8.25 6H15.75" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M8.25 9.75H15.75" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M8.25 13.5H12" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg> 
+							Buscar cotizaciones
+						</a>
+					</li>
+					<hr>
+					<li>
+						<a target="_blank" class="fs-3 c-primary-b font-main-bold" href="https://d2ze71d0gq5maz.cloudfront.net/?origin=corredores" onclick="javascript:marcaje_google_analytics(this, 'Seguros de Vida', 'clic')" title="Flujo digital">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M20.2434 4.5H3.75656C2.92451 4.5 2.25 5.17451 2.25 6.00656V17.2434C2.25 18.0755 2.92451 18.75 3.75656 18.75H20.2434C21.0755 18.75 21.75 18.0755 21.75 17.2434V6.00656C21.75 5.17451 21.0755 4.5 20.2434 4.5Z" stroke="#003DA5" stroke-width="1.5" stroke-linejoin="round"/>
+								<path d="M0.75 19.5H23.25" stroke="#003DA5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+							</svg>
+
+							Flujo digital
+						</a>
+						<svg class="my-4" width="296" height="1" viewBox="0 0 296 1" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="-4.37114e-08" y1="0.5" x2="296" y2="0.499974" stroke="#D9D9D6"></line></svg>
+					</li>
+
+					<li v-if="isCorredor">
+						<a class="fs-3 c-primary-b font-main-bold" href="{{ site.url }}/seguros-de-vida" onclick="javascript:marcaje_google_analytics(this, 'Seguros de Vida', 'clic')" title="Tracking siniestros">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10.5 10.875C10.5 10.4772 10.658 10.0956 10.9393 9.81434C11.2206 9.53304 11.6022 9.375 12 9.375C12.3978 9.375 12.7794 9.53304 13.0607 9.81434C13.342 10.0956 13.5 10.4772 13.5 10.875" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M21 9.375H21.75" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M3 9.375H2.25" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M3 9.375C3 13.875 3.75 15.375 6.75 15.375C9.75 15.375 10.5 13.875 10.5 9.375C10.5 9.375 9.75 8.625 6.75 8.625C3.75 8.625 3 9.375 3 9.375Z" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M21 9.375C21 13.875 20.25 15.375 17.25 15.375C14.25 15.375 13.5 13.875 13.5 9.375C13.5 9.375 14.25 8.625 17.25 8.625C20.25 8.625 21 9.375 21 9.375Z" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							Tracking Siniestros
+						</a>
+											<hr>
+					</li>
+
+					<li>
+						<a class="fs-3 c-primary-b font-main-bold" href="https://d17mh033okktwq.cloudfront.net/uploads/b08f1f5f-6d18-4aab-855f-f15ce4e0dbbd/original/Tabla_Exigencias_Medicas.pdf" target="_blank" onclick="javascript:marcaje_google_analytics(this, 'Seguros de Vida', 'clic')" title="Tabla de Exigencias Medicas">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M18 3.75H6C4.78125 3.75 3.98438 4.40625 3.75 5.625L2.25 12.75V18C2.25173 18.5962 2.48934 19.1675 2.91092 19.5891C3.3325 20.0107 3.9038 20.2483 4.5 20.25H19.5C20.0962 20.2483 20.6675 20.0107 21.0891 19.5891C21.5107 19.1675 21.7483 18.5962 21.75 18V12.75L20.25 5.625C20.0156 4.35938 19.1719 3.75 18 3.75Z" stroke="#003DA5" stroke-width="1.5" stroke-linejoin="round"/>
+								<path d="M2.25 12.75H9" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M15 12.75H21.75" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M9 12.75C9 13.5456 9.31607 14.3087 9.87868 14.8713C10.4413 15.4339 11.2044 15.75 12 15.75C12.7956 15.75 13.5587 15.4339 14.1213 14.8713C14.6839 14.3087 15 13.5456 15 12.75" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M6.75 6.75H17.25" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M6 9.75H18" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+
+
+							Tabla de Exigencias Médicas
+						</a>
+					</li>
+					<hr>
+					<li v-if="!isCorredor">                                    								
+						<a class="fs-3 c-primary-b font-main-bold" @click="collapsePropuestas()" data-toggle="collapse" href="#propuestasCollapse" role="button" aria-expanded="false" aria-controls="propuestasCollapse">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M18 3.75H6C4.78125 3.75 3.98438 4.40625 3.75 5.625L2.25 12.75V18C2.25173 18.5962 2.48934 19.1675 2.91092 19.5891C3.3325 20.0107 3.9038 20.2483 4.5 20.25H19.5C20.0962 20.2483 20.6675 20.0107 21.0891 19.5891C21.5107 19.1675 21.7483 18.5962 21.75 18V12.75L20.25 5.625C20.0156 4.35938 19.1719 3.75 18 3.75Z" stroke="#003DA5" stroke-width="1.5" stroke-linejoin="round"/>
+								<path d="M2.25 12.75H9" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M15 12.75H21.75" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M9 12.75C9 13.5456 9.31607 14.3087 9.87868 14.8713C10.4413 15.4339 11.2044 15.75 12 15.75C12.7956 15.75 13.5587 15.4339 14.1213 14.8713C14.6839 14.3087 15 13.5456 15 12.75" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M6.75 6.75H17.25" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M6 9.75H18" stroke="#003DA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+
+							Propuestas
+							<svg  v-if="propuestasIsCollapsed" width="16" height="16" class="ml-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12.9378 10.0607L8.56972 4.9632C8.49931 4.88108 8.41197 4.81516 8.31369 4.76997C8.21541 4.72477 8.10852 4.70137 8.00035 4.70137C7.89217 4.70137 7.78528 4.72477 7.687 4.76997C7.58872 4.81516 7.50138 4.88108 7.43097 4.9632L3.06285 10.0607C2.64597 10.5473 2.9916 11.2988 3.63222 11.2988L12.3697 11.2988C13.0103 11.2988 13.356 10.5473 12.9378 10.0607Z" fill="#003DA5"/>
+							</svg>
+
+							<svg v-if="!propuestasIsCollapsed" width="16" height="16" class="ml-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M3.06216 5.9393L7.43028 11.0368C7.50069 11.1189 7.58803 11.1848 7.68631 11.23C7.78459 11.2752 7.89148 11.2986 7.99966 11.2986C8.10783 11.2986 8.21472 11.2752 8.313 11.23C8.41128 11.1848 8.49862 11.1189 8.56903 11.0368L12.9372 5.9393C13.354 5.45273 13.0084 4.70117 12.3678 4.70117H3.63028C2.98966 4.70117 2.64403 5.45273 3.06216 5.9393Z" fill="#003DA5"/>
+							</svg>
+
+						</a>
+						<div class="collapse ml-1" id="propuestasCollapse">
+							<ul class="mt-0">
+								<li class="mt-4">
+									<a class="fs-3 c-primary-b " href="#" @click="getUrl('mantencion')" onclick="javascript:marcaje_google_analytics(this, 'Seguros de Vida', 'clic')" title="Mantención">                                 
+										Mantención
+									</a>
+								</li>
+								<li class="mt-4">
+									<a class="fs-3 c-primary-b " href="#" @click="getUrl('traspaso')" onclick="javascript:marcaje_google_analytics(this, 'Seguros de Vida', 'clic')" title="Traspaso">                                  										Traspasos
+									</a>
+									
+								</li>
+							</ul>
+							<hr/>
+						</div>
+					</li>
+				</ul>
+
+			</aside>
+
+		</div>
+		<div class="col-lg-8 col-md-12 float-right mb-20">
+			{% assign entries = spaces['web-corredores'].types['banner-imagenes'].entries | by_category: 'seguros-vida' %}
+			{% assign cards = spaces['web-corredores'].types['card-login'].entries | by_category: 'home-vida' %}
+
+			{% for entry in entries %}
+			<div class="banner-page  {% if entry.fields.Alineacion=== 'Derecha'  %} box-end {% else %}box-start {% endif %}" style="background-image: url({{ entry.fields.Imagen.url }})">
+				<div class="banner-page-info {% if entry.fields.Alineacion=== 'Derecha'  %} box-right {% else %}box-left {% endif %}">
+					<div>{{ entry.fields.Detalle }}</div>
+				</div>
+			</div>
+			{% endfor %}
+			<!--Fin slider -->
+			<hr>
+			<h2 class="c-dark-grey font-main-bold fs-7 mt-8 mb-11 position-relative">
+				Cotizadores
+				<span class="green-line-text"></span>
+			</h2>
+
+			<div class="row card-vertical border-bottom py-5">
+				<!-- Nuevo diseño -->
+				<div class="col-lg-4 col-md-12 col-sm-12">
+					<p class="c-gris-seguros-generales fs-5">${categoriasProductos[0].name}</p>
+				</div>
+				<div v-for="categoria in categoriasProductos[0].children"
+						 :key="categoria.name" class="col-lg-4 product-margin col-md-6 col-sm-12">
+					<a @click="getUrl('categoria', categoria)" class="mb-6 font-main fs-3 c-normal-blue"><svg class="mr-3" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M3.52827 2.9095C0.459572 5.59477 -0.0944997 12.7662 0.0120523 16.0162C-0.0945013 19.799 0.491534 27.2049 4.00775 29.4426C7.52397 31.6803 13.2245 31.9467 16.1547 32C19.3512 32 23.0273 32 27.8221 29.6024C31.1785 27.2049 31.8178 22.5696 31.9777 16.0162C32.1375 9.46284 31.4982 4.9874 28.1418 2.43C25.4721 0.395847 18.9783 -0.0741379 16.1547 0.032417C13.2245 -0.127421 6.59697 0.224223 3.52827 2.9095Z" fill="#003DA5"/>
+						<path d="M18.0592 13.357C15.2814 11.5626 12.4064 12.8508 9.75011 10.0383C9.13136 9.38202 9.49074 17.3976 12.8157 20.4351C15.2467 22.6539 19.0001 22.4064 20.2657 20.2501C21.5314 18.0939 20.837 15.1511 18.0592 13.357Z" stroke="#FAFBFD" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M13.4062 15.9062C16.0938 18.4375 18.875 19.9375 22.5312 20.5" stroke="#FAFBFD" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>${ categoria.name }</a>
+				</div>
+			</div>
+			<div class="row card-vertical border-bottom py-5">
+				<!-- Nuevo diseño -->
+				<div class="col-lg-4 col-md-12 col-sm-12">
+					<p class="c-gris-seguros-generales fs-5">${categoriasProductos[1].name}</p>
+				</div>
+				<div v-for="categoria in categoriasProductos[1].children"
+						 :key="categoria.name" class="product-margin col-lg-4 col-md-6 col-sm-12">
+					<a @click="getUrl('categoria', categoria)" class=" mb-6 font-main fs-3 c-normal-blue"><svg class="mr-3" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M3.52827 2.9095C0.459572 5.59477 -0.0944997 12.7662 0.0120523 16.0162C-0.0945013 19.799 0.491534 27.2049 4.00775 29.4426C7.52397 31.6803 13.2245 31.9467 16.1547 32C19.3512 32 23.0273 32 27.8221 29.6024C31.1785 27.2049 31.8178 22.5696 31.9777 16.0162C32.1375 9.46284 31.4982 4.9874 28.1418 2.43C25.4721 0.395847 18.9783 -0.0741379 16.1547 0.032417C13.2245 -0.127421 6.59697 0.224223 3.52827 2.9095Z" fill="#003DA5"></path>
+						<path d="M19.0287 10.5C17 10.5 16 12.5 16 12.5C16 12.5 15 10.5 12.9712 10.5C11.3225 10.5 10.0168 11.8794 9.99995 13.5253C9.96558 16.9419 12.7103 19.3716 15.7187 21.4134C15.8016 21.4699 15.8996 21.5 16 21.5C16.1003 21.5 16.1983 21.4699 16.2812 21.4134C19.2893 19.3716 22.034 16.9419 22 13.5253C21.9831 11.8794 20.6775 10.5 19.0287 10.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+						</svg>${ categoria.name }</a>
+				</div>
+			</div>
+			<div class="row card-vertical border-bottom py-5">
+				<!-- Nuevo diseño -->
+				<div class="col-lg-4 col-md-12 col-sm-12">
+					<p class="c-gris-seguros-generales fs-5">${categoriasProductos[2].name}</p>
+				</div>
+				<div v-for="categoria in categoriasProductos[2].children"
+						 :key="categoria.name" class="product-margin col-lg-4 col-md-6 col-sm-12">
+					<a @click="getUrl('categoria', categoria)" class=" mb-6 font-main fs-3 c-normal-blue"><svg class="mr-3" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M3.52827 2.9095C0.459572 5.59477 -0.0944997 12.7662 0.0120523 16.0162C-0.0945013 19.799 0.491534 27.2049 4.00775 29.4426C7.52397 31.6803 13.2245 31.9467 16.1547 32C19.3512 32 23.0273 32 27.8221 29.6024C31.1785 27.2049 31.8178 22.5696 31.9777 16.0162C32.1375 9.46284 31.4982 4.9874 28.1418 2.43C25.4721 0.395847 18.9783 -0.0741379 16.1547 0.032417C13.2245 -0.127421 6.59697 0.224223 3.52827 2.9095Z" fill="#003DA5"/>
+						<path d="M18.0592 13.357C15.2814 11.5626 12.4064 12.8508 9.75011 10.0383C9.13136 9.38202 9.49074 17.3976 12.8157 20.4351C15.2467 22.6539 19.0001 22.4064 20.2657 20.2501C21.5314 18.0939 20.837 15.1511 18.0592 13.357Z" stroke="#FAFBFD" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M13.4062 15.9062C16.0938 18.4375 18.875 19.9375 22.5312 20.5" stroke="#FAFBFD" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>${ categoria.name }</a>
+				</div>
+			</div>
+			<div class="row card-vertical border-bottom py-5">
+				<!-- Nuevo diseño -->
+				<div class="col-lg-4 col-md-12 col-sm-12">
+					<p class="c-gris-seguros-generales fs-5">${categoriasProductos[3].name}</p>
+				</div>
+				<div v-for="categoria in categoriasProductos[3].children"
+						 :key="categoria.name" class="product-margin col-lg-4 col-md-6 col-sm-12">
+					<a @click="getUrl('categoria', categoria)" class="mb-6 font-main fs-3 c-normal-blue">
+						<svg class="mr-3" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3.52827 2.9095C0.459572 5.59477 -0.0944997 12.7662 0.0120523 16.0162C-0.0945013 19.799 0.491534 27.2049 4.00775 29.4426C7.52397 31.6803 13.2245 31.9467 16.1547 32C19.3512 32 23.0273 32 27.8221 29.6024C31.1785 27.2049 31.8178 22.5696 31.9777 16.0162C32.1375 9.46284 31.4982 4.9874 28.1418 2.43C25.4721 0.395847 18.9783 -0.0741379 16.1547 0.032417C13.2245 -0.127421 6.59697 0.224223 3.52827 2.9095Z" fill="#003DA5"/>
+							<path d="M22.4718 11.5116C19.6775 11.0103 18.5222 10.6391 16 9.5C13.4778 10.6391 12.3225 11.0103 9.5281 11.5116C9.02185 19.5353 15.5181 22.3059 16 22.5C16.4818 22.3059 22.9781 19.5353 22.4718 11.5116Z" stroke="#FAFBFD" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+
+						${ categoria.name }</a>
+				</div>
+			</div>
+		</div>
+		<!--Fin cards -->
+	</div>
+	<div id="loading" v-if="loading">
+		<div class="spinner-border" role="status">
+			<span class="sr-only">Cargando...</span>
+		</div>
+	</div>
+	<!-- Modal sin acceso-->
+	<div class="modal fade genericModal" id="noAccessModal" tabindex="-1" role="dialog" aria-labelledby="noAccessModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<svg data-v-2e362a38="" width="99" height="87" viewBox="0 0 99 87" fill="none" xmlns="http://www.w3.org/2000/svg"><path data-v-2e362a38="" d="M40.8397 5C44.6888 -1.66667 54.3113 -1.66667 58.1603 5L96.6984 71.75C100.547 78.4167 95.7361 86.75 88.0381 86.75H10.9619C3.26387 86.75 -1.54739 78.4167 2.30161 71.75L40.8397 5Z" fill="#003DA5"></path><path data-v-2e362a38="" d="M46.4062 41.0156C46.4062 39.4635 47.2708 38.6875 49 38.6875C50.7292 38.6875 51.5938 39.4635 51.5938 41.0156C51.5938 41.7552 51.375 42.3333 50.9375 42.75C50.5104 43.1562 49.8646 43.3594 49 43.3594C47.2708 43.3594 46.4062 42.5781 46.4062 41.0156ZM51.375 63H46.6094V45.5312H51.375V63Z" fill="white"></path></svg>
+					<h4 class="modal-title text-center c-primary-b mb-0" id="exampleModalLabel">Acceso no permitido.</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p v-if="isCorredor" class="text-center c-primary-b mb-0">
+						Lo sentimos actualmente no te encuentras habilitado para realizar esta acción. Contáctate con tu Ejecutiva.
+					</p>
+					<p v-if="!isCorredor" class="text-center c-primary-b mb-0">
+						Lo sentimos actualmente no te encuentras habilitado para realizar esta acción.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal otros productos -->
+	<div class="modal fade genericModal" class="otherProductsModal" id="otherProductsModal" tabindex="-1" role="dialog" aria-labelledby="otherProductsModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title text-center c-primary-b mb-0" id="exampleModalLabel">Otros Productos</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row card-vertical justify-content-center">
+						<div v-for="categoria in categoriasProductos[3].children"
+								 :key="categoria.name" class="col-lg-4 col-md-12 col-sm-12">
+							<!-- Recuerda colocar este evento en el siguiente boton -->
+							<button @click="getUrl('categoria', categoria)"
+											class="cotizador-card mb-6 ">
+								<span class="cotizador-card-title font-main-bold c-primary-b">
+									<img :alt="categoria.name"
+											 :src="categoria.image"
+											 class="pr-2">
+									${ categoria.name }
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
