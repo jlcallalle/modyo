@@ -60,6 +60,9 @@
 .tab-tabla .box-contenido-form h5 {
   color: #869FB2;
 }
+.box-contenido-form h5 + p {
+  color: #53565A;
+}
 
 .box-descarga-form {
   margin-top: 30px;

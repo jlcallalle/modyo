@@ -62,6 +62,10 @@ $acero: #869FB2;
         .tab-tabla & {
             color: $acero;
         }
+        & + p {
+            color: $gray;
+        }
+
     }
 }
 
