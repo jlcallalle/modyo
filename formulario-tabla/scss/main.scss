@@ -3,11 +3,11 @@ $gray-line: #E6ECF6;
 $verde: #84BD00;
 $blue: #003DA5;
 $acero: #869FB2;
-.context-custom-show-seguros-de-vida {
+/* .context-custom-show-seguros-de-vida {
     background-repeat: no-repeat;
     background-position: 210px -60px;
 }
-
+ */
 .page-formulario-vida {
     h2 {
         color: $gray;
@@ -46,7 +46,6 @@ $acero: #869FB2;
     }
 
     .tab-content-formulario {
-        //border-left:1px solid red;
         margin-top: 32px;
     }
 
