@@ -1,0 +1,82 @@
+.context-custom-show-seguros-de-vida {
+  background-repeat: no-repeat;
+  /* background-position: center -67px; */
+  background-position: 210px -60px;
+}
+
+.page-formulario-vida h2 {
+  color: #53565A;
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.box-formularios {
+  margin-top: 53px;
+}
+.box-formularios .nav-tabs {
+  border-bottom: 1px solid #E6ECF6;
+}
+.box-formularios .nav-tabs .nav-link {
+  font-size: 20px;
+  color: #53565A;
+  font-weight: bold;
+  border: none;
+}
+.box-formularios .nav-item.show .nav-link,
+.box-formularios .nav-link.active {
+  color: #84BD00;
+  background-color: transparent;
+  border-bottom: 4px solid #84BD00;
+}
+.box-formularios .tab-content-formulario {
+  margin-top: 32px;
+}
+
+.box-contenido-form {
+  background-color: white;
+  border: 1px solid #E6ECF6;
+  padding: 22px 40px;
+}
+.box-contenido-form h5 {
+  color: #003DA5;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.box-descarga-form {
+  margin-top: 70px;
+}
+
+.item-descarga {
+  margin-bottom: 68px;
+}
+.item-descarga h6 {
+  color: #53565A;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid #E6ECF6;
+}
+
+.lista-descarga {
+  list-style: none;
+  margin: 34px 0 0 0;
+  padding: 0 0 0 12px;
+  -webkit-columns: 2;
+     -moz-columns: 2;
+          columns: 2;
+}
+.lista-descarga li {
+  margin: 0 0 24px 0;
+}
+.lista-descarga p {
+  color: #869FB2;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+.lista-descarga a {
+  color: #84BD00;
+  font-weight: bold;
+  font-size: 14px;
+}
