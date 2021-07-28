@@ -11,21 +11,30 @@ $acero: #869FB2;
 .page-formulario-vida {
     h2 {
         color: $gray;
-        font-size: 32px;
+        font-size: 20px;
         text-align: center;
         font-weight: bold;
+        @media screen and (min-width: 768px) {
+            font-size: 32px;
+        }
     }
 }
 
 .box-formularios {
-    margin-top: 53px;
+    margin-top: 30px;
+    @media screen and (min-width: 768px) {
+        margin-top: 53px;
+    }
     .nav-tabs {
         border-bottom: 1px solid $gray-line;
         .nav-link {
-            font-size: 20px;
+            font-size: 15px;
             color: #53565A;
             font-weight: bold;
             border:none;
+            @media screen and (min-width: 768px) {
+                font-size: 20px;
+            }
         }
     } 
 
@@ -58,7 +67,10 @@ $acero: #869FB2;
 }
 
 .box-descarga-form {
-    margin-top: 70px;
+    margin-top: 30px;
+    @media screen and (min-width: 768px) {
+        margin-top: 70px;
+    }
 }
 
 
@@ -75,8 +87,12 @@ $acero: #869FB2;
 .lista-descarga {
     list-style: none;
     margin: 34px 0 0 0;
-    padding: 0 0 0 12px;
-    columns: 2;
+    padding: 0;
+    @media screen and (min-width: 768px) {
+        padding: 0 0 0 12px;
+        columns: 2;
+	}
+
     li {
         margin: 0 0 24px 0;
     }

@@ -5,22 +5,37 @@
 
 .page-formulario-vida h2 {
   color: #53565A;
-  font-size: 32px;
+  font-size: 20px;
   text-align: center;
   font-weight: bold;
 }
+@media screen and (min-width: 768px) {
+  .page-formulario-vida h2 {
+    font-size: 32px;
+  }
+}
 
 .box-formularios {
-  margin-top: 53px;
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .box-formularios {
+    margin-top: 53px;
+  }
 }
 .box-formularios .nav-tabs {
   border-bottom: 1px solid #E6ECF6;
 }
 .box-formularios .nav-tabs .nav-link {
-  font-size: 20px;
+  font-size: 15px;
   color: #53565A;
   font-weight: bold;
   border: none;
+}
+@media screen and (min-width: 768px) {
+  .box-formularios .nav-tabs .nav-link {
+    font-size: 20px;
+  }
 }
 .box-formularios .nav-item.show .nav-link,
 .box-formularios .nav-link.active {
@@ -47,7 +62,12 @@
 }
 
 .box-descarga-form {
-  margin-top: 70px;
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .box-descarga-form {
+    margin-top: 70px;
+  }
 }
 
 .item-descarga {
@@ -63,10 +83,15 @@
 .lista-descarga {
   list-style: none;
   margin: 34px 0 0 0;
-  padding: 0 0 0 12px;
-  -webkit-columns: 2;
-     -moz-columns: 2;
-          columns: 2;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .lista-descarga {
+    padding: 0 0 0 12px;
+    -webkit-columns: 2;
+       -moz-columns: 2;
+            columns: 2;
+  }
 }
 .lista-descarga li {
   margin: 0 0 24px 0;
