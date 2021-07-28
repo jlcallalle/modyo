@@ -4,16 +4,11 @@ $verde: #84BD00;
 $blue: #003DA5;
 $acero: #869FB2;
 .context-custom-show-seguros-de-vida {
-    //background-image: url(../images/formulario.png);
     background-repeat: no-repeat;
-    //background-position: top center;
-    /* background-position: center -67px; */
     background-position: 210px -60px;
-    //border: 1px solid blue;
 }
 
 .page-formulario-vida {
-    //height: 1955px;
     h2 {
         color: $gray;
         font-size: 32px;
@@ -56,14 +51,15 @@ $acero: #869FB2;
         color: $blue;
         font-size: 16px;
         font-weight: bold;
+        .tab-tabla & {
+            color: $acero;
+        }
     }
 }
 
 .box-descarga-form {
     margin-top: 70px;
 }
-
-
 
 
 .item-descarga {
@@ -92,7 +88,44 @@ $acero: #869FB2;
     }
     a {
         color: #84BD00;
-        font-weight: bold;
         font-size: 14px;
     }
 }
+
+.box-texto-formulario {
+    padding: 0 50px;
+    margin-top: 40px;
+    p {
+        font-size: 12px;
+        color: $gray;
+    }
+}
+
+.box-descarga-pdf {
+    a {
+        color:$blue;
+        font-size: 14px;
+    }
+}
+.icon-pdf {
+    position: relative;
+    top: -1px;
+    margin-right: 8px;
+}
+
+.box-tabla-exigencias {
+    margin-top: 30px;
+    padding-bottom: 70px;
+    border-bottom: 1px solid $gray-line;
+}
+
+.box-texto-tabla {
+    margin-top: 65px;
+    p {
+        font-size: 12px;
+        color: $gray;
+        line-height: 20px;
+    }
+}
+
+

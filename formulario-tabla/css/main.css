@@ -1,6 +1,5 @@
 .context-custom-show-seguros-de-vida {
   background-repeat: no-repeat;
-  /* background-position: center -67px; */
   background-position: 210px -60px;
 }
 
@@ -43,6 +42,9 @@
   font-size: 16px;
   font-weight: bold;
 }
+.tab-tabla .box-contenido-form h5 {
+  color: #869FB2;
+}
 
 .box-descarga-form {
   margin-top: 70px;
@@ -77,6 +79,40 @@
 }
 .lista-descarga a {
   color: #84BD00;
-  font-weight: bold;
   font-size: 14px;
+}
+
+.box-texto-formulario {
+  padding: 0 50px;
+  margin-top: 40px;
+}
+.box-texto-formulario p {
+  font-size: 12px;
+  color: #53565A;
+}
+
+.box-descarga-pdf a {
+  color: #003DA5;
+  font-size: 14px;
+}
+
+.icon-pdf {
+  position: relative;
+  top: -1px;
+  margin-right: 8px;
+}
+
+.box-tabla-exigencias {
+  margin-top: 30px;
+  padding-bottom: 70px;
+  border-bottom: 1px solid #E6ECF6;
+}
+
+.box-texto-tabla {
+  margin-top: 65px;
+}
+.box-texto-tabla p {
+  font-size: 12px;
+  color: #53565A;
+  line-height: 20px;
 }
