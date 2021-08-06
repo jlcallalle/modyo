@@ -1,0 +1,71 @@
+Confirmación:
+
+data:
+    accepted:false
+    actLaboralGlosa:" Administrador "
+    actividadLaboral:306
+    adicionales:Array[1]
+    0:Object
+    agnoVehiculo:2021
+    apellidoPagador:"Faust Lira"
+    apellidos:"Faust Lira"
+    banco:""
+    celular:"988765543"
+    chasis:"589000007765"
+    codigopropuesta:null
+    confirmed:false
+    correoElectronico:"jv@jv.cl"
+    deducibleUf:"0"
+    departamento:""
+    domicilio:"EL LAGO 67"
+    estadoAgrupacion:"1"
+    fechaVencimiento:""
+    giroComercial:""
+    giroComercialGlosa:""
+    giroPagador:"Seleccionar"
+    ids:"2395"
+    imprimePoliza:""
+    inspeccionFlag:1
+    inspeccionRes:true
+    inspeccionSolicita:1
+    marca:"CITROEN"
+    medioPagoGlosa:"Contado"
+    modelo:"C 2"
+    motor:"45678900888"
+    nombreCuenta:""
+    nombrePagador:"A"
+    nombrePlan:"Seguro Auto Full"
+    nombres:"A"
+    numCuenta:""
+    numTarjeta:""
+    nunCuotas:"1"
+    patente:undefined
+    razonSocial:""
+    razonSocialPagador:""
+    rut:"12.481.285-2"
+    rutEjecutivo:""
+    rutPagador:"12.481.285-2"
+    tipoAntiguedad:1
+    tipoPersona:"1"
+    tipoVivienda:2
+    valorCuota:"893875"
+    valorCuotaUF:"30.154902"
+
+
+Computer
+    $screens:ƒ (e, t)
+    cuentaMask:"(error during evaluation)"
+    cuotaNumberMask:"893.875"
+    formatPolizaAnual:"30.15"
+    formatRut:"12.481.285-2"
+    getAdicionales:Array[1]
+    0:Object
+    tarjetaMask:"(error during evaluation)"
+
+Vuex bindings
+    dondeClientePep:"DONDE PEPE V5"
+    fechaClientePep:"12/08/2021"
+    isPep:1
+    nombreClientePep:"LIZ TANANTA"
+    relacionClientePep:"DESCRIBA PEP V5\n"
+    rutClientePep:"11.111.111-1"
