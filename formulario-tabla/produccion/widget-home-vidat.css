@@ -1,0 +1,128 @@
+.resume-home{
+	border-radius: 8px;
+	overflow: hidden;
+}
+.resume-home .back-link{
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration-line: underline;
+	color: #003DA5;
+	margin: 20px 0px 10px 0;
+}
+
+.card-vida-productos{
+	width: 100%;
+	height: 215.61px;  
+	margin: 55px 0 30px 0;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+}
+.card-vida-productos img:hover{
+	opacity: 0.8;
+}
+.carousel-item{
+	max-height: 21.875rem;
+}
+.cotizador-card{
+	background: #FFFFFF;
+	border: 1px solid #D9D9D6;
+	box-sizing: border-box;
+	border-radius: 15px;
+	width: 234px;
+	height: 91px;
+}
+.cotizador-card:focus,
+.cotizador-card:active{
+	outline: 0;
+}
+.cotizador-card p{
+	margin-bottom: 0;
+}
+button.cotizador-card:hover,
+button.cotizador-card:active {
+	background: #F2F6F8;
+	border: 4px solid #003DA5;
+}
+.cotizador-card-title{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+}
+
+@media only screen and (max-width: 992px) {
+	.cotizador-card {
+		width: 100%;
+	}
+}
+
+#loading {
+	position: fixed;
+	width: 100%;
+	height:100%;
+	display: flex;
+	align-items: center;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.2);
+	color: #003DA5;
+	z-index: 99999;
+}
+
+.spinner-border {
+	display: flex;
+	margin: 0 auto;
+	width: 5rem;
+	height: 5rem
+}
+
+.genericModal .modal-dialog{
+	max-width: 956px;
+	margin: 1.75rem auto;
+	min-height: calc(100% - 3.5rem);
+	display: flex;
+}
+
+.genericModal .modal-content {
+	background: rgb(250, 251, 253);
+	border-radius: 30px;
+}
+
+.genericModal .modal-header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.genericModal .modal-body{
+	padding-bottom: 2em;
+}
+.genericModal .close{
+	position: absolute;
+	top: 0.5em;
+	right: 1em;
+}
+#noAccessModal{
+	z-index: 999999;
+}
+
+#home-vida a {
+	color: #003DA5 !important;
+	cursor: pointer;
+}
+	.aside-vida{
+		display:block;
+	}
+@media(max-width: 767px){
+	.aside-vida{
+		display:none;
+	}
+	.product-margin{
+		margin-bottom:50px;
+	}
+}
