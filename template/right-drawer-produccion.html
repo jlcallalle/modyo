@@ -1,0 +1,162 @@
+<m-slide-out-panel
+									 ref="slidePanel"
+									 id="right_drawer_qa"
+									 open-on="right"
+									 width="445px"
+									 classes="shadow-lg">
+	<template #default>
+		<div class="side-person">
+			<p class="mb-0 font-main-bold fs-3">{{ user.custom_fields._ucf_nombrecorredor }}</p>
+			<p class="mb-0">{{user.name}}</p>
+			<ul class="side-person-menu">
+				{% if page_title == 'Home' %}
+				<li>
+					<p class="font-main-bold">Explora por:</p>
+					<ul class="side-person-menu-inner">
+						<li>
+							<a href="{{ site.url }}/seguros-generales" title="Seguros Generales" class="side-pages">Seguros Generales</a>
+						</li>
+						<li>
+							<a href="{{ site.url }}/seguros-de-vida" title="Seguros de Vida" class="side-pages">Seguros de Vida</a>
+						</li>
+					</ul>
+				</li>
+				{% elsif page_title == 'Seguros Generales' %}
+				<li v-if="simulacion">
+					<a href="#;" title="Simular">Simular</a>
+					<ul class="side-person-menu-inner">
+						<li>
+							<a href="{{ site.url }}/seguros-generales/venta/panel-productos" title="Vehículo">Vehículo</a>
+						</li>
+					</ul>
+				</li>
+				<li v-if="simulacion">
+					<a href="{{ site.url }}/seguros-generales/venta/buscador-simulacion-poliza-vehiculo" title="Consultar simulaciones">Consultar simulaciones</a>
+				</li>
+				{% elsif page_title == 'Panel Productos' %}
+				<li v-if="simulacion">
+					<a href="#;" title="Simular">Simular</a>
+					<ul class="side-person-menu-inner">
+						<li>
+							<a href="{{ site.url }}/seguros-generales/venta/panel-productos" title="Vehículo">Vehículo</a>
+						</li>
+					</ul>
+				</li>
+				<li v-if="simulacion">
+					<a href="{{ site.url }}/seguros-generales/venta/buscador-simulacion-poliza-vehiculo" title="Consultar simulaciones">Consultar simulaciones</a>
+				</li>
+				{% elsif page_title == 'Datos Vehículo' %}
+				<li v-if="simulacion">
+					<a href="#;" title="Simular">Simular</a>
+					<ul class="side-person-menu-inner">
+						<li>
+							<a href="{{ site.url }}/seguros-generales/venta/panel-productos" title="Vehículo">Vehículo</a>
+						</li>
+					</ul>
+				</li>
+				<li v-if="simulacion">
+					<a href="{{ site.url }}/seguros-generales/venta/buscador-simulacion-poliza-vehiculo" title="Consultar simulaciones">Consultar simulaciones</a>
+				</li>
+				{% elsif page_title == 'Resultado Buscador Simulacion Poliza Vehiculo' %}
+				<li v-if="simulacion">
+					<a href="#;" title="Simular">Simular</a>
+					<ul class="side-person-menu-inner">
+						<li>
+							<a href="{{ site.url }}/seguros-generales/venta/panel-productos" title="Vehículo">Vehículo</a>
+						</li>
+					</ul>
+				</li>
+				<li v-if="simulacion">
+					<a href="{{ site.url }}/seguros-generales/venta/buscador-simulacion-poliza-vehiculo" title="Consultar simulaciones">Consultar simulaciones</a>
+				</li>
+				{% elsif page_title == 'Planes' %}
+				<li v-if="simulacion">
+					<a href="#;" title="Simular">Simular</a>
+					<ul class="side-person-menu-inner">
+						<li>
+							<a href="{{ site.url }}/seguros-generales/venta/panel-productos" title="Vehículo">Vehículo</a>
+						</li>
+					</ul>
+				</li>
+				<li v-if="simulacion">
+					<a href="{{ site.url }}/seguros-generales/venta/buscador-simulacion-poliza-vehiculo" title="Consultar simulaciones">Consultar simulaciones</a>
+				</li>
+				{% elsif page_title == 'Datos Personales' %}
+				<li v-if="simulacion">
+					<a href="#;" title="Simular">Simular</a>
+					<ul class="side-person-menu-inner">
+						<li>
+							<a href="{{ site.url }}/seguros-generales/venta/panel-productos" title="Vehículo">Vehículo</a>
+						</li>
+					</ul>
+				</li>
+				<li v-if="simulacion">
+					<a href="{{ site.url }}/seguros-generales/venta/buscador-simulacion-poliza-vehiculo" title="Consultar simulaciones">Consultar simulaciones</a>
+				</li>
+				{% elsif page_title == 'Buscador Simulación póliza vehículo' %}
+				<li v-if="simulacion">
+					<a href="#;" title="Simular">Simular</a>
+					<ul class="side-person-menu-inner">
+						<li>
+							<a href="{{ site.url }}/seguros-generales/venta/panel-productos" title="Vehículo">Vehículo</a>
+						</li>
+					</ul>
+				</li>
+				<li v-if="simulacion">
+					<a href="{{ site.url }}/seguros-generales/venta/buscador-simulacion-poliza-vehiculo" title="Consultar simulaciones">Consultar simulaciones</a>
+				</li>
+				{% elsif page_title == 'Seguros de Vida'%}
+				<li >
+					<a href="#" @click="getUrl('buscar-cotizador')" onclick="javascript:marcaje_google_analytics(this, 'Buscar Cotizaciones', 'clic')" title="Buscar Cotizaciones">Buscar Cotizaciones</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://formularios-ejecutivo.consorcio.cl/?origin=corredores" title="Flujo digital">Flujo digital</a>	
+				</li>
+				<!-- Si es corredor-->
+				<!-- <li v-if="isCorredor">
+					<a href="#;" title="Tracking siniestro">Tracking Siniestros</a>
+				</li> -->
+				<!-- Si es CNS-->
+				<li v-if=!isCorredor>
+					<a href="#;" title="Propuestas">Propuestas</a>
+					<ul class="side-person-menu-inner">
+						<li>
+							<a href="#"  @click="getUrl('mantencion')" title="Mantención">Mantención</a>
+						</li>
+						<li>
+							<a href="#" @click="getUrl('traspaso')" title="Traspaso">Traspaso</a>
+						</li>
+					</ul>
+				</li>		
+				{% endif %}
+				<li v-if="admin">
+					<a href="{{ site.url }}/mantenedor-categorias-roles" title="Categorias y Roles">Categorías y Roles</a>
+				</li>
+				<li v-if="admin">
+					<a href="{{ site.url }}/logs" title="Obtener logs">Obtener Logs</a>
+				</li>
+				{% if page_title != 'Home' %}
+				<li>
+					<a href="{{ site.url }}" title="Volver">        
+						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0.378828 7.62021L5.80899 13.0504C5.92805 13.1704 6.06969 13.2657 6.22576 13.3307C6.38182 13.3957 6.54922 13.4292 6.71829 13.4292C6.88735 13.4292 7.05475 13.3957 7.21081 13.3307C7.36688 13.2657 7.50852 13.1704 7.62758 13.0504C7.86611 12.8104 8 12.4858 8 12.1475C8 11.8091 7.86611 11.4845 7.62758 11.2446L3.09391 6.71091L7.62758 2.17724C7.86611 1.93728 8 1.61269 8 1.27435C8 0.936003 7.86611 0.611408 7.62758 0.371453C7.50791 0.252756 7.36599 0.15885 7.20995 0.0951161C7.05392 0.0313826 6.88683 -0.000922424 6.71829 5.20653e-05C6.54974 -0.000922395 6.38265 0.0313827 6.22662 0.0951162C6.07058 0.15885 5.92866 0.252757 5.80899 0.371453L0.378828 5.80162C0.25879 5.92067 0.163513 6.06232 0.0984941 6.21839C0.0334747 6.37445 -8.12922e-07 6.54185 -7.98142e-07 6.71091C-7.83362e-07 6.87998 0.0334747 7.04738 0.0984941 7.20344C0.163514 7.35951 0.25879 7.50115 0.378828 7.62021Z" fill="white"/>
+						</svg>
+						Volver</a>
+				</li>
+				{% endif %}
+				<li class="cerrar">
+					<a href="{{ site.url }}/logout"
+						 title="Cerrar Sesión"
+						 class="font-main-bold">Cerrar Sesión</a>
+				</li>
+			</ul>
+			<!---loader -->
+			<div id="loading" v-if="loading">
+				<div class="spinner-border" role="status">
+					<span class="sr-only">Cargando...</span>
+				</div>
+			</div>
+			{% snippet "modal_acceso_vida" %}
+		</div>
+	</template>
+</m-slide-out-panel>
