@@ -1,0 +1,149 @@
+.container-sm{
+	max-width: 41.063em;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.form-password_container{
+	background: white;
+	padding: 2.5em 3em;
+	box-shadow: 0px 10px 20px rgba(148, 148, 148, 0.25);
+	border-radius: 8px;
+	margin-bottom: 6em;
+}
+.form-title{
+	color: #003DA5;
+	text-align: center;
+	font-weight: bold;
+	font-size: 2em;
+	line-height: 40px;
+}
+.form-subtitle{
+	text-align: center;
+	font-size: 1em;
+	line-height: 1.5em;
+	color: #003DA5;
+	margin-bottom: 2em;
+}
+.form-password_title{
+	color: #53565A;
+	font-weight: bold;
+	font-size: 1.5em;
+	line-height: 2em;
+	margin-bottom:1em;
+}
+.form-password form #form-submit-10 {
+	background-color: #84BD00;
+	border-radius: 4px;
+	font-weight: bold;
+	font-size: 20px;
+	height: 48px;
+	width: 203px;
+	max-width: 100%;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	line-height: 27px;}
+
+.form-password form label.desc{
+	font-size: 16px;
+	line-height: 1.5em;
+	color: #53565A;
+	padding-top: 0.4em;
+	font-weight: 600;
+}
+
+.form-password form label .req{
+	display: none;
+}
+.form-password form .inner {text-align:center;}
+
+.form-password form input.form-control{
+	border: 1px solid #869FB2;
+	height: 3em;
+	border-radius: 4px;
+	font-size: 1em;
+	color: #000;
+}
+.form-password .form-snippet h1,
+.form-password .form-snippet .form-description {
+	display: none;
+}
+@media(max-width:767px){
+	.form-password_container{
+		padding: 2.5em 1em;
+	}
+}
+
+input::placeholder,
+.form-control::placeholder{
+  color: #808080;
+  font-size: 1em;
+}
+
+.context-forms-form_response #main{
+    margin: 0;
+    background: #FFF;
+    padding: 0;
+}
+.form-password_container .container{
+    padding-left: 0;
+    padding-right: 0;
+}
+.form-password_container .form-description{
+    display: none;
+}
+
+.form-password_container .alert-message.alert-error {
+    font-family: Open Sans;
+    font-size: .75em;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    color: #cc0001;
+}
+.form-password_container .req{
+    display:none;
+    }
+
+.form-password_container .inner{
+    text-align: center;
+    }
+.form-password_container .btn-primary {
+    background-color: #84BD00;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 20px;
+    height: 48px;
+    width: 203px;
+    max-width: 100%;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    line-height: 27px;
+}
+
+.alert-container {
+    background: #fff;
+    border: 1px solid #c4c4c4;
+    -webkit-box-shadow: 0 0 8px hsl(0deg 0% 58% / 25%);
+    box-shadow: 0 0 8px hsl(0deg 0% 58% / 25%);
+    border-radius: 4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+	display: flex;
+}
+.alert-container_icon {
+    background: #f7b4b8;
+    border: 1px solid #e30613;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 4px 0 0 4px;
+}
+.alert-container_message {
+    padding: 1em;
+    margin-bottom: 0;
+}
+.alert-container_icon svg {
+    position: relative;
+    top: calc(50% - 14px);
+    width: 3.5em;
+}
