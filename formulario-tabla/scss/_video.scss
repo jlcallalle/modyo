@@ -1,0 +1,255 @@
+/* Your code */
+.main-video {
+	background-color:#ffffff;
+	padding:70px 0;
+}
+.box-video-content {
+	display:flex;
+	border-radius:8px;
+}
+.box-video-content-info {
+	width:50%;
+	padding:20px;
+	box-shadow: 0px 0px 3px #d0d0d0;
+	    border-radius: 8px 0 0 8px;
+	display:flex;
+	flex-flow:column;
+}
+
+.like-video {
+	margin-top:auto;
+	display:flex;
+	align-items:center;
+}
+.link-video-icon {
+	margin-right:5px;
+}
+
+.box-video-content-video {
+	width:50%;
+}
+/* Quitar cuando este el video */
+.box-video-content-video img {
+	width:100%;
+
+}
+
+.all-videos {
+	padding:70px 0;
+}
+
+.box-single-video {
+	border-radius:8px;
+	margin-bottom:30px;
+	display: block;
+}
+
+.box-single-video:hover {
+	text-decoration:none;
+}
+.box-single-video:hover h6,
+.box-single-video:hover h4 {
+	text-decoration:none;
+}
+
+/* Quitar cuando este el video */
+.box-single-video-video img {
+	width:100%;
+	border-radius:8px 8px 0 0;
+}
+.box-single-video-info {
+	background-color:#ffffff;
+	box-shadow: 0px 0px 3px #d0d0d0;
+	border-radius:0 0 8px 8px;
+	padding:32px;
+	min-height:75px;
+}
+
+.box-single-video-info h6 {
+	color:#53565A;
+}
+.box-single-video-info h4 {
+	color:#003DA5;
+}
+
+
+.footer-blue {
+	background-color:#003DA5;
+	padding-top:40px;
+	padding-bottom:40px;
+}
+
+.footer-blue-content-social {
+	display:flex;
+	align-items: center;
+}
+.footer-blue-content-social .left,
+.footer-blue-content-social .right {
+	width:50%;
+}
+
+.footer-blue-social {
+	display:flex;
+	align-items: center;
+  justify-content: center;
+	height: 100%;
+}
+.footer-blue-social p {
+	margin-right:25px;
+	margin-bottom:0;
+}
+.footer-blue-social a {
+	margin-right:25px;
+}
+.footer-blue-social a:last-child {
+	margin-right:0px;
+}
+
+.border-b-white {
+	border-bottom:1px solid white;
+}
+.border-b-grey {
+	border-bottom:1px solid #D9D9D6;
+}
+
+.c-color-white {
+	color:white;
+}
+
+.footer-blue-pages {
+	display:flex;
+	color:white;
+}
+.footer-blue-pages a {
+	color:white;
+	display:block;
+	font-size:14px;
+	margin-bottom:15px;
+}
+.footer-blue-pages-item {
+	width:25%;
+	padding-right: 20px;
+}
+.footer-blue-pages-item-doble {
+	width:50%;
+}
+.footer-blue-pages-item-doble .left,
+.footer-blue-pages-item-doble .right {
+	width:50%;
+}
+
+.footer-blue-pages-item-doble .left {
+	padding-right:20px;
+}
+
+
+.footer-blue-ext {
+	display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-blue-ext a {
+	color:white;
+}
+
+.footer-blue-ext .links a {
+	margin-right:40px;
+}
+.footer-blue-ext .links a:last-child {
+	margin-right:0;
+}
+
+
+.footer-blue-bottom {
+	display:flex;
+	justify-content:space-between;
+}
+.footer-blue-bottom-textos {
+	width:45%;
+}
+
+
+
+@media (max-width: 768px) {
+	.box-video-content {
+		flex-flow:column;
+	}
+	.box-video-content-info,
+	.box-video-content-video
+	{
+		width:100%;
+	}
+	.box-video-content-info {
+		border-radius:8px 8px 0 0;
+	}
+	.footer-blue-content-social {
+  	flex-flow:column;
+	}
+	.footer-blue-content-social .left, .footer-blue-content-social .right {
+		width:100%;
+	}
+	.footer-blue-content-social .left {
+		margin-bottom:20px;
+	}
+	
+	.footer-blue-pages {
+		flex-flow:column;
+	}
+	.footer-blue-pages-item,
+	.footer-blue-pages-item-doble {
+		width:100%;
+		margin-bottom:20px;
+	}
+	.footer-blue-social a {
+		margin-right:0;
+		margin-bottom:5px;
+	}
+	
+	.footer-blue-pages-item-doble .d-flex {
+		flex-flow:column;
+	}
+	.footer-blue-pages-item-doble .left, .footer-blue-pages-item-doble .right {
+		width:100%;
+	}
+	.footer-blue-ext {
+		flex-flow:column;
+		align-items: flex-start;
+	}
+	.footer-blue-ext .links a {
+		display:block;
+		margin-bottom:15px;
+	}
+	.footer-blue-bottom {
+		flex-flow:column;
+	}
+	.footer-blue-bottom-textos {
+		margin-bottom:15px;
+		width:100%;
+	}
+}
+
+@media (max-width: 600px) {
+
+	.footer-blue-social {
+		justify-content: flex-start;
+    flex-flow: column;
+	}
+	.footer-blue-social p {
+		margin-bottom:15px;
+	}
+	
+}
+
+/* Nuevo */
+
+/* .box-video-item {
+	border-left:1px solid blue;
+	width: 590px;
+    // height: 335px;
+	// height: 389; 
+	video {
+		border-left:1px solid orange;
+		width: 590px;
+    	//height: 335px;
+	}
+} */
