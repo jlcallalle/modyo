@@ -1,0 +1,35 @@
+{
+    "meta": {
+        "name": "Carnet antiguo",
+        "slug": "carnet-antiguo",
+        "tags": [],
+        "type": "documentos",
+        "uuid": "d99e72c6-410b-436f-8429-d42c0a9bdf89",
+        "space": "rescate-seguro-con-ahorro-lider",
+        "author": {},
+        "locale": "es",
+        "private": false,
+        "targets": [],
+        "category": null,
+        "created_at": "2021-08-17T20:49:58.000-03:00",
+        "updated_at": "2021-08-17T20:50:34.000-03:00",
+        "published_at": "2021-08-17T20:50:34.000-03:00",
+        "version_type": "current",
+        "unpublished_at": null,
+        "available_locales": [
+            "es"
+        ]
+    },
+    "fields": {
+        "Título": {
+            "url": "https://d17mh033okktwq.cloudfront.net/uploads/d387cf4e-a914-4468-ba81-4ae0592f1664/original/SD_CI_ANTIGUA_VF.png",
+            "tags": [],
+            "uuid": "d387cf4e-a914-4468-ba81-4ae0592f1664",
+            "title": "Sd  Ci Antigua Vf",
+            "alt_text": null,
+            "description": null,
+            "content_type": "image/png"
+        },
+        "Nuevo item 2": "Carnet antiguo"
+    }
+}

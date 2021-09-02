@@ -1,0 +1,58 @@
+<!-- Your code -->
+<div class="container seguros">
+    <div class="row">
+         
+    </div>
+  </div>
+  
+  <br>
+  <br>
+  <div class="container-corp mx-auto">
+      <div id="collapseCoberturas">
+          <div class="d-flex">
+              <div class="planblock planblock-main planblock-mini planblock-flat mr-5">
+                  <div class="planblock-item planblock-item-headflat bg-basic-b mb-2">
+                      <p class="planblock-main-text text-center font-main-bold c-max-light mb-0"> Cobertura </p>
+                  </div>
+                  <div class="planblock-item planblock-item-odd">
+                      <p class="planblock-main-text text-center font-main-bold c-text-dark mb-0"> 
+                          Asiento Pasajeros de Veh Mot
+                          Muerte e Incapacidad </p>
+                  </div>
+                  <div class="planblock-item ">
+                      <p class="planblock-main-text text-center font-main-bold c-text-dark mb-0">
+                          Asistencia&nbsp;de&nbsp;Vehículos </p>
+                  </div>
+                  <div class="planblock-item planblock-item-odd">
+                      <p class="planblock-main-text text-center font-main-bold c-text-dark mb-0"> 
+                          Condición de Daño para
+                          Pérdida Total </p>
+                  </div>
+                  <div class="planblock-item ">
+                      <p class="planblock-main-text text-center font-main-bold c-text-dark mb-0"> 
+                          Daños Materiales Causados
+                          por la Propia Carga </p>
+                  </div>
+                 </div>
+              <div class="overflow-auto  mb-6 w-100">
+                  <div class="d-flex">
+                      <div id="cobertura-4" class="planblock planblock-main planblock-mini planblock-flat mr-5">
+                          <div class="planblock-item planblock-item-headflat
+                      bg-basic-a mb-2">
+                              <p class="planblock-main-text text-center font-main-bold c-max-light mb-0">Seguro Auto Full </p>
+                          </div>
+                          {% assign entries = spaces['retail'].types['cobertura-planes-vehiculo'].entries | sort_by: 'published_at','asc' %}
+                          {% for entry in entries %}
+                              <div class="planblock-item">
+                                <p>  {{ entry.meta.title }} </p>
+                                
+                              </div>
+                          {% endfor %}
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
