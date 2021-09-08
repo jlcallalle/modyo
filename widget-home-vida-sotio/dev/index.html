@@ -1,4 +1,3 @@
-<!-- Your code -->
 <section class="main-video">
 	<div class="container container-corp">
 		<div class="row">
@@ -124,8 +123,78 @@
 				</a>
 			</div>
 		</div>
+		
 	</div>
 </section>
+
+<section class="section-dinamico">
+	<div class="container container-corp">
+		<div class="row">
+				<div class="col-md-12">
+						<h2 class="font-main-bold fs-10">Te lo explicamos</h2>
+						<p class="fs-5 mb-10">Video tutoriales explicativos agregar texto descriptivo</p>
+						<div class="box-video-content" id="boxVideoContent">
+							<div class="box-video-content-info">
+								<h3 class="fs-7 font-main-bold">01</h3>
+								<h3 id="titulo-principal" class="fs-7 font-main-bold">Ingreso a la plataforma digital Vida</h3>
+								<p id="texto-principal" class="font-main">Lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised.</p>
+								<div class="like-video">
+									<span class="link-video-icon">
+										<svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M19.0581 1C15.0006 1 13.0006 5 13.0006 5C13.0006 5 11.0006 1 6.94314 1C3.64564 1 1.03439 3.75875 1.00064 7.05062C0.931889 13.8837 6.42126 18.7431 12.4381 22.8269C12.604 22.9397 12.8 23.0001 13.0006 23.0001C13.2013 23.0001 13.3973 22.9397 13.5631 22.8269C19.5794 18.7431 25.0688 13.8837 25.0006 7.05062C24.9669 3.75875 22.3556 1 19.0581 1Z" stroke="#003DA5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									</span>
+									<span class="fs-5 font-main-bold">
+										23
+									</span>
+								</div>
+							</div>
+							<div class="box-video-content-video">
+								<div class="box-video-item">
+									<video id="videoclip" controls
+												 src="https://d17mh033okktwq.cloudfront.net/uploads/e6f715b9-8330-4110-870e-308ca7e3978e/original/video3-llenado-saap.mp4"
+												 poster="https://d17mh033okktwq.cloudfront.net/uploads/50b5ce40-3850-4b7d-b8c2-b84023967af9/original/videoContent.png"
+												 width="590"  height="389"></video>
+								</div>
+              </div>
+						</div>
+				</div>
+			</div>
+		<br><br><br>
+		<div class="row">
+			{% assign entries = spaces['web-corredores'].types['video-tutoriales'].entries| sort_by: 'published_at','desc' %}
+				{% for entry in entries limit:3  %}
+					<div class="col-md-4">
+						<a class="box-single-video" href="#;"  title="{{ entry.meta.title }}">
+							<div class="box-single-video-video">
+								<!-- VIDEO -->
+								<img class="imagen-video" src="{{ entry.fields.Imagen.url }}" />
+							</div>
+							<div class="box-single-video-info">
+								<!-- INFO -->
+								<h6 class="fs-2 font-main-bold">02</h6>
+								<h4 class="fs-5 font-main-bold">{{ entry.meta.title }}</h4>
+								<p>{{ entry.description }}</p>
+								<p></p>
+								<time>Date: {{ entry.published_at | format_date }}</time>
+							</div>
+							<div class="contenido-dinamico">
+								<div id="texto-video">
+									<span class="texto-video"{{ entry.fields.contenido }}</span>
+								</div>
+								<div id="link-video">
+									<div class="link-video">{{ entry.fields.video }}</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				{% endfor %}
+
+		</div>
+	</div>
+</section>
+
+
 
 
 <section class="footer-blue">

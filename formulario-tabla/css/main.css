@@ -480,3 +480,17 @@
     	//height: 335px;
 	}
 } */
+button {
+  background-image: url(https://www.searchpng.com/wp-content/uploads/2019/02/Instagram-Like-Icon-1.png);
+  color: black;
+  background-size: 35px;
+  background-position: 30px 42%;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 59px;
+  font-size: 20px;
+  border: 1px solid #a8b4c9;
+  text-align: center;
+  text-indent: 32px;
+  margin-left: 20px;
+}

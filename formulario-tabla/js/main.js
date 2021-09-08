@@ -25,5 +25,25 @@ $(document).ready(function () {
         console.log('posterPrincipal', posterPrincipal);
     });
 
+    megusta=0;
+    // $('#contador').html(localStorage.getItem("cuenta"));
+    $( "#corazon" ).click(function() { 
+        megusta= 1+megusta;
+        console.log('megusta',megusta);
+        $('#contador').html(megusta);
+        localStorage.setItem("cuenta", megusta);
+        $('#contador').html(localStorage.getItem("cuenta"));
+    });
+    /* var count = 0;
+    $("#update").click(function() {
+        count++;
+        $("#counter").html("My current count is: "+count);
+    }); */
 });
 
+
+if (localStorage.getItem('cuenta') !== null) {
+    console.log(`cuentaexists`);
+} else {
+    console.log(`cuentanot found`);
+}

@@ -1,0 +1,35 @@
+rut: "15382666-8"
+numero_serie: "A029575333"
+fecha_nacimiento: "2000-01-01"   ingresar: 01012010
+
+Ver import rutUtilities from '@consorcio/pcc-commons-vue/src/helpers/rutUtilities';
+-------
+
+INCIDENCIA 1.
+=============
+[RECHAZADO]Si se escriben letras, caracteres especiales, un espaciado o solo hace click en el campo Monto se llena automáticamente con el valor 10.000
+
+- escriben letras:listo
+- caracteres especiales: listo
+- un espaciado: listo
+- hace click en el campo Monto  se llena automáticamente con el valor 10.000
+
+Succes Class
+load:  pcc-form-field withdrawalQuantity untouched pristine required
+bien:  pcc-form-field withdrawalQuantity touched is-dirty is-valid validated required changed passed
+error: pcc-form-field withdrawalQuantity touched is-dirty is-invalid validated required changed failed
+
+APIS:
+
+https://omc6rz1o5b.execute-api.us-east-1.amazonaws.com/v1/seguro-lider/rescate/consulta
+
+
+
+
+INCIDENCIA 2.
+=============
+
+Si se ingresa el rut, número de serie y fecha y no arroja coincidencia debe mostrar un mensaje
+El mensaje debe ser:
+
+No se encuentran pólizas vigentes Según nuestros registros no existen pólizas vigentes de Seguro de Vida con Ahorro asociadas al dato ingresado. Inténtalo nuevamente o comunícate con nosotros al correo XXXXXX@correo.cl

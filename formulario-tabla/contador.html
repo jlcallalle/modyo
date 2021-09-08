@@ -1,0 +1,25 @@
+<html>
+
+<body>
+
+    <button id="update" type="button">Button</button>
+    <div id="counter">0</div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+    <script type="text/javascript">
+
+        var count = 0;
+       /*  $( "#update" ).click(function() { 
+            count++;
+            $("#counter").html(count);
+        }); */
+
+        $("#update").click(function() {
+            $('#counter').html(function(i, val) { return +val+1 });
+        });
+
+
+    </script>
+    
+</body>
+</htlm>
