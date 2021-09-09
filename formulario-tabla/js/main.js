@@ -6,6 +6,7 @@ $(document).ready(function () {
 
     $( ".box-single-video" ).click(function() {
         var titulo = $(this).attr('title');
+        var dataIndex = $(this).attr('data-index');
         var parrafo = $(this).find('.texto-video').text();
         var urVideo = $(this).find('.link-video').text();
         var imgVideo = $(this).find('.imagen-video').attr('src');
@@ -13,11 +14,13 @@ $(document).ready(function () {
         var posterPrincipal = $("#videoclip").attr('poster');
 
         $("#titulo-principal").text(titulo);
+        $("#index-post").text(dataIndex);
         $("#texto-principal").text(parrafo);
         $("#videoclip").attr('src', urVideo);
         $("#videoclip").attr('poster', imgVideo);
 
         console.log('titulo', titulo);
+        console.log('dataIndex', dataIndex);
         console.log('parrafo', parrafo);
         console.log('urVideo', urVideo);
         console.log('srcPrincipal', srcPrincipal);
