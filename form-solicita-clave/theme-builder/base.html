@@ -1,0 +1,47 @@
+{% html5 %} <!-- HTML header with browser directives -->
+<head>
+	{% snippet 'shared/general/head' %}
+</head>
+
+{% body %} <!-- Body with automatic context classes -->
+{% snippet 'shared/general/body_tag_manager' %}
+<div id="modyo-site-alert-wrapper"></div>
+{% snippet 'shared/general/header' %}
+
+{%if request.url contains 'thank_you'%}
+	{{ site.breadcrumb }}
+<script>
+
+(function(){
+	var newBreadcrumb = document.querySelector(".breadcrumb-inner.container");
+	newBreadcrumb.innerHTML='<a class="first " href="https://consorcio-corredores-qa.modyo.be/web-corredores">Home ></a> <a class="last item-0 " href="https://consorcio-corredores-qa.modyo.be/solicita-tu-clave">&nbsp;Solicita tu Clave</a>';
+})();
+</script>
+{% else  %}
+{{ site.breadcrumb }}
+{% endif  %}
+<div id="main-layout">
+	{% if request.url contains 'save_form?slug=solicita-tu-clave'  %}
+		<style>{% snippet "form_solicita_clave_css" %}</style>
+	<div class="container-sm pt-6">
+		<h1 class="form-title">Solicita tu clave</h1>
+		<h2 class="form-subtitle">Hola!! ¿Eres Corredor/ Agente Libre de Seguros Generales y deseas obtener tu clave?, entonces completa el siguiente formulario:</h2>
+		<div class="form-password_container">
+			<h3 class="form-password_title">Completa los siguientes datos</h3>
+					<div class="alert-container my-5"><div class="alert-container_icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 12C21 7.03125 16.9688 3 12 3C7.03125 3 3 7.03125 3 12C3 16.9688 7.03125 21 12 21C16.9688 21 21 16.9688 21 12Z" stroke="#E30613" stroke-width="1.5" stroke-miterlimit="10"></path><path d="M11.7307 7.7837L11.9998 13.5001L12.2684 7.7837C12.2701 7.74716 12.2642 7.71066 12.2513 7.67644C12.2384 7.64222 12.2186 7.61099 12.1932 7.58467C12.1678 7.55834 12.1373 7.53748 12.1036 7.52334C12.0698 7.5092 12.0336 7.5021 11.997 7.50245V7.50245C11.9609 7.50279 11.9251 7.51041 11.892 7.52486C11.8589 7.53931 11.829 7.56028 11.8041 7.58653C11.7793 7.61278 11.76 7.64377 11.7474 7.67765C11.7348 7.71152 11.7291 7.74759 11.7307 7.7837V7.7837Z" stroke="#E30613" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 17.2459C11.8146 17.2459 11.6333 17.1909 11.4792 17.0879C11.325 16.9848 11.2048 16.8384 11.1339 16.6671C11.0629 16.4958 11.0443 16.3073 11.0805 16.1255C11.1167 15.9436 11.206 15.7765 11.3371 15.6454C11.4682 15.5143 11.6352 15.425 11.8171 15.3889C11.999 15.3527 12.1875 15.3713 12.3588 15.4422C12.5301 15.5132 12.6765 15.6333 12.7795 15.7875C12.8825 15.9417 12.9375 16.1229 12.9375 16.3084C12.9375 16.557 12.8387 16.7954 12.6629 16.9713C12.4871 17.1471 12.2486 17.2459 12 17.2459Z" fill="#E30613"></path></svg></div><p class="alert-container_message c-dark-grey fs-2">El formulario no ha sido enviado, por favor verifique el dato ingresado.</p></div>
+				{{ content_for_layout }}
+			<p class="c-dark-grey fs-3 mt-5 mb-3">Previa validación de esta información, enviaremos los datos de acceso al correo electrónico que has ingresado.</p>
+			</div>
+		
+
+			{% else  %}
+				{{ content_for_layout }}
+			{% endif  %}
+	</div>
+
+	<script>{% snippet "shared/serviceworker/register_js" %}</script>
+	{% snippet 'shared/general/footer' %}
+
+	{% endbody %}
+
+	{% endhtml5 %}
