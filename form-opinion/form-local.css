@@ -143,6 +143,10 @@ background-color: #E6ECF6;
   margin-left: 9px;
 }
 
+.modal-header .close:focus {
+  outline: none;
+}
+
 .widget-opinion .form-control {
 border: 1px solid #C4C4C4;
 }
