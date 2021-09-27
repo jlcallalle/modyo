@@ -1,0 +1,12 @@
+{
+    "paginacion": {
+        "pagina": 1,
+        "cantidad": 12
+    },
+    "rut": null,
+    "idAgrupacion": null,
+    "fechaInicio": null,
+    "fechaTermino": null,
+    "rutEjecutivo": "77508900-8",
+    "estado": 1
+}
