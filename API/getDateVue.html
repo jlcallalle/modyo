@@ -1,0 +1,39 @@
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<!-- TODO esto debe venir desde un servicio -->
+<section id="seccion-dinamico">
+	<p class=" container-corp mx-auto indicadores-container">
+		<span> {{ diaActual}} </span>
+        <span> ${diaActual} </span>
+	</p>
+</section>
+
+<script>
+	var vm = new Vue({
+
+		delimiters: ['${', '}'],
+		data: function() {
+			return {
+				diaActual:'',
+			};
+		},
+		mounted: function() {
+			this.getDiaActual();
+		},
+		methods: {
+			getDiaActual: function(){
+				const self = this;
+				const monthNames = ["enero", "febrero", "marzo", "abril", "mayo", "junio",
+														"julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+				const dateObj = new Date();
+				const month = monthNames[dateObj.getMonth()];
+				const day = String(dateObj.getDate()).padStart(2, '0');
+				const year = dateObj.getFullYear();
+				const output = `${day} de ${month} de ${year}`;
+
+				self.diaActual = output; 
+			},
+		}
+	}).$mount('#seccion-dinamico')
+</script>

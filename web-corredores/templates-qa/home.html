@@ -1,0 +1,25 @@
+{% html5 %} <!-- HTML header with browser directives -->
+<head>
+	{% snippet 'shared/general/head' %}
+</head>
+
+{% body %} <!-- Body with automatic context classes -->
+{% snippet 'shared/general/body_tag_manager' %}
+
+<div id="modyo-site-alert-wrapper"></div>
+{% snippet 'shared/general/header' %}
+
+{% snippet "indicadores_economicos" %}
+
+
+<div id="main-layout">
+	{{ content_for_layout }}  
+
+</div>  
+{% snippet 'shared/general/footer' %}
+<script>
+	{% snippet "shared/serviceworker/register_js" %}
+</script>
+
+{% endbody %}
+{% endhtml5 %}

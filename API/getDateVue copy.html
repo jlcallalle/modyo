@@ -1,0 +1,84 @@
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<!-- TODO esto debe venir desde un servicio -->
+<section id="seccion-dinamico">
+	<p class=" container-corp mx-auto indicadores-container">
+		<span>${diaActual}</span><span class="ml-6">Valor ${valor}	</span>
+	</p>
+</section>
+
+<script>
+	var vm = new Vue({
+
+		delimiters: ['${', '}'],
+		data: function() {
+			return {
+				fecha: '',
+				valor: '',
+				diaActual:'',
+				axios_api: null,
+			};
+		},
+		mounted: function() {
+			this.getDiaActual();
+			this.getIndicadores();
+			/*Breadcrumbs*/
+			$('.breadcrumb a:contains("Venta")').remove();
+			$(".breadcrumb-inner .separator:nth-of-type(2)").last().remove();
+
+		},
+		methods: {
+
+			getDiaActual: function(){
+				const self = this;
+				const monthNames = ["enero", "febrero", "marzo", "abril", "mayo", "junio",
+														"julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+				const dateObj = new Date();
+				const month = monthNames[dateObj.getMonth()];
+				const day = String(dateObj.getDate()).padStart(2, '0');
+				const year = dateObj.getFullYear();
+				const output = `${day} de ${month} de ${year}`;
+
+				self.diaActual = output; 
+			},
+			getIndicadores: function () {
+				var self = this;
+
+				var data = JSON.stringify({});
+				var axios_api = axios.create({ //xrr8zq3x1e   0972vjesll 0sxttyhh2f
+					baseURL: 'https://oz4ensc242.execute-api.us-east-1.amazonaws.com/v1/passthrough-gate/qa-api-indicadores-economicos/v1',
+					headers: {
+						'Content-Type': 'application/json'
+
+					},
+					data : data
+				});
+				var axios_auth = axios.create();
+				axios_auth.defaults.baseURL = '{{site.baseUrl}}' + '/auth/openidc';
+
+					var injectToken = async function(config) {
+					try {
+						var response = await axios_auth.get('/access_token');
+						var newConfig = config;
+						newConfig.headers = {
+							Authorization: "Bearer " + response.data.access_token,
+							'Content-Type': 'application/json'
+						};
+						return newConfig;
+					} catch (error) {
+						throw new Error('Unauthorized');
+					}
+				};
+				axios_api.interceptors.request.use(injectToken);
+				axios_api.post('/indices-economicos', data).then(function (response) {
+					self.fecha = response.data.DTORetornoIndicesEconomicos.fecha_sistema;
+					const valorUF = response.data.DTORetornoIndicesEconomicos.valor_uf;
+					self.valor = valorUF.slice(0, 4) + "$" + valorUF.slice(4, 13);
+				});
+
+			},
+
+		}
+	}).$mount('#seccion-dinamico')
+</script>

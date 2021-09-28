@@ -458,9 +458,9 @@
 
 /* PAGE HOME */
 .page-home {
-  background-image: url(../img/page-home.png);
+ /*  background-image: url(../img/page-home.png);
   background-position: -234px -72px;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   padding: 25px 25px;
   margin-bottom: 20px;
 }
