@@ -5,19 +5,32 @@ var vm = new Vue ({
 	delimiters: ['${', '}'],
 	data: function() {
 		return {
+			diaActual:'',
 		};
 	},
 	mounted: function() {
 		this.initCarousel();
+		this.getDiaActual();
 	},
 	methods: {
 		initCarousel: function() {
 	   $('#carouselHomeUnificado').carousel({
       interval: 5000
-    });
+    	});
 		},
+		getDiaActual: function() {
+			  const self = this;
+				const monthNames = ["enero", "febrero", "marzo", "abril", "mayo", "junio",
+														"julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+				const dateObj = new Date();
+				const month = monthNames[dateObj.getMonth()];
+				const day = String(dateObj.getDate()).padStart(2, '0');
+				const year = dateObj.getFullYear();
+				const output = `${day} de ${month} de ${year}`;
+				self.diaActual = output; 
+		}
 	},
-}).$mount('#home-unificado');
+}).$mount('#home-vida');
  
 
   (function(){
