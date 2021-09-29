@@ -6,11 +6,16 @@ var vm = new Vue ({
 	data: function() {
 		return {
 			diaActual:'',
+			info: null
 		};
 	},
 	mounted: function() {
 		this.initCarousel();
 		this.getDiaActual();
+		//axios
+			  //.get('https://api.coindesk.com/v1/bpi/currentprice.json')
+			  //.then(response => (this.info = response.data.bpi))
+			  //.catch(error => console.log(error))
 	},
 	methods: {
 		initCarousel: function() {

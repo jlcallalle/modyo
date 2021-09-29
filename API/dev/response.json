@@ -1,0 +1,55 @@
+{
+    "avatar": {
+        "file_name": null,
+        "url_original": "https://consorcio-corredores-dev.modyo.be/assets/avatar/missing_C100x100.png",
+        "url_small": "https://consorcio-corredores-dev.modyo.be/assets/avatar/missing_C100x100.png",
+        "url_medium": "https://consorcio-corredores-dev.modyo.be/assets/avatar/missing_C200x200.png"
+    },
+    "id": 70,
+    "external_id": null,
+    "name": "Usuario Prueba Web Corredores",
+    "first_name": "Usuario Prueba",
+    "last_name": "Web Corredores",
+    "second_last_name": null,
+    "email": "gabriel@gmail.com",
+    "username": "d3783662-93e6-47c5-9dc0-85292808bb73",
+    "url": "https://consorcio-corredores-dev.modyo.be/admin/customers/users/ad30efe7-8ea8-434d-936f-c15828e81828",
+    "sex": 3,
+    "birth_at": null,
+    "active": true,
+    "created_at": "2021-04-13T18:05:29.000-04:00",
+    "updated_at": "2021-09-28T20:08:55.000-03:00",
+    "last_login_at": "2021-09-28T16:32:11.000-03:00",
+    "targets": [],
+    "last_login_ip": "3.209.90.6",
+    "custom_fields": [
+        {
+            "key": "_ucf_rutcorredor",
+            "name": "rutCorredor",
+            "type": "string",
+            "value": "77508900-8"
+        },
+        {
+            "key": "_ucf_perfilusuario",
+            "name": "perfilUsuario",
+            "type": "string",
+            "value": "[\"JEFE_CORR\"]"
+        },
+        {
+            "key": "_ucf_nombrecorredor",
+            "name": "nombreCorredor",
+            "type": "string",
+            "value": "THB CHILE CORREDORES DE SEGUROS S.A."
+        }
+    ],
+    "tags": "",
+    "login_count": 723,
+    "verified": false,
+    "current_login_at": "2021-09-28T20:08:55.000-03:00",
+    "delegated_token": {
+        "uuid": "eb7a04a8-fb13-457e-986c-46b8152cb921",
+        "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmN0UzdlFWRG9DQzd1c0N5ZFpNTTBEbl9tNUFiQ0RMSHRXaDI2NjhGUTJrIn0.eyJqdGkiOiI5NWI2NmU4Ny00ZGNlLTRlM2YtOTg1Ny0yMTdjZmE3NDBhOGIiLCJleHAiOjE2MzI4ODA1MTksIm5iZiI6MCwiaWF0IjoxNjMyODgwMjE5LCJpc3MiOiJodHRwczovL3Nzb2Rldi5jb25zb3JjaW8uY2wvYXV0aC9yZWFsbXMvU2l0aW9DbGllbnRlRGlzdHJpYnVpZG9yIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImQzNzgzNjYyLTkzZTYtNDdjNS05ZGMwLTg1MjkyODA4YmI3MyIsInR5cCI6IkJlYXJlciIsImF6cCI6IndlYkNvcnJlZG9yZXMyIiwibm9uY2UiOiJiY2JlNzA4ZTNlYTk4MzdiNjg2NWM5NzBhNWY5MjI0MyIsImF1dGhfdGltZSI6MTYzMjg3MDUzMiwic2Vzc2lvbl9zdGF0ZSI6IjQzNjU5N2Q4LTMxMzMtNDA5OC1hY2IzLWZkOWEyMTYxMzMwMCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJmaWxVc3VhcmlvIjpbIkpFRkVfQ09SUiJdLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInJ1dENvcnJlZG9yIjoiNzc1MDg5MDAtOCIsIm5vbWJyZUNvcnJlZG9yIjoiVEhCIENISUxFIENPUlJFRE9SRVMgREUgU0VHVVJPUyBTLkEuIiwibmFtZSI6IlVzdWFyaW8gcHJ1ZWJhIFdlYiBDb3JyZWRvcmVzIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiMTU3Mjg4NjctOSIsImdpdmVuX25hbWUiOiJVc3VhcmlvIHBydWViYSIsImZhbWlseV9uYW1lIjoiV2ViIENvcnJlZG9yZXMiLCJlbWFpbCI6ImdhYnJpZWxAZ21haWwuY29tIn0.JUkfQmGfFAg0ESqPGNtjGFPw0uvugHyTYNaluhL0z2QZerA9AqVykwVwh_J8gYLF9IuwzwKLTfvjugJjk_WZt01722ImwTwBjtg3Wm8gUL-enlMsf6qDN_GZxUwB2VRoMOtwPXVTWO8q6M7az1BM3HS7ByszlVDMRbdSnw_-HrXDPVe-sWNgkk4yJZZyYHbqbYOkT8XByK_hXWQu-5fa2easr5VDrZyh4MVycEp84D1u_EoedxJEjMkKd-f_vXHrkUSpfExXT3PASPK08_wpt1GQK_sVlX5TJ3H19P63d4P-memD5516wgz9GLeCh-ZCjCubhznrr_Oc4b9lrHJ33A",
+        "access_token_expires_in": 300,
+        "access_token_expires_in_datetime": "2021-09-29T01:55:18.633+00:00"
+    }
+}
