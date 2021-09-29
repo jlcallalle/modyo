@@ -350,17 +350,23 @@
               <div class="row-title">
                 <div class="title-page">
                   <h2>!Hola <span>{{user.name}}</span>!</h2>
-                  <div class="flag-tipo">Ejecutivo</div>
-                  <p>{{ user.custom_fields._ucf_perfilusuario }}</p>
-                  <div class="test d-none none" >
-                    <p> Fecha 1: {{ 'now' | date: "%Y %h" }}</p>
-                    <p> Fecha 2: {{ 'now' | date: "%a, %b %d, %y" }}</p>
-                    <p> user.custom_fields["_ucf_perfilusuario"]  {{ user.custom_fields["_ucf_perfilusuario"] }} </p>
-                    <p> user.custom_fields._ucf_nombrecorredor  {{ user.custom_fields._ucf_nombrecorredor }} </p>
-                  </div>
+                   {% assign rol =  user.custom_fields._ucf_perfilusuario  | replace: "[", "" | replace: "]", ""  | replace: '"', "" | replace: ' ', ""  %}
+                   {% if rol contains "JEFE_CORR" %}
+                      <div class="flag-tipo">Jefe Corredor</div>
+                   {% elsif rol contains "EJECUTIVO_CNS" %}
+                      <div class="flag-tipo">Ejecutivo CNS</div>
+                   {% elsif rol contains "EJECUTIVO_CORR" %}
+                      <div class="flag-tipo">Ejecutivo Corredor</div>
+                   {% elsif rol contains "ADM_CNS_CORR" %}
+                      <div class="flag-tipo">Admin Corredor</div>
+                   {% else %}
+                    Hola
+                  {% endif %}
+                  
                 </div>
-                <div class="fecha-actual">${diaActual} </div>
+                <div class="fecha-actual {{class}}">${diaActual} </div>
               </div>
+              <p>${info} </p>
               <div class="row-consulta">
                 <div class="box-dejaste">
                   <h4>Sigue donde lo dejaste</h4>
