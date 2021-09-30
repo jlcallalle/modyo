@@ -1,0 +1,33 @@
+{
+    "cantidadTotal": 1,
+    "filtros": {
+        "simulaciones": [
+            {
+                "idAgrupacion": "126",
+                "rut_corredor": 77508900,
+                "dv_corredor": "8",
+                "rut": 15728867,
+                "dv": "9",
+                "nombres": "Cristian Alejandro",
+                "apellidos": "Aguilar Llanquilef",
+                "email": "test@test.com",
+                "telefono": "None",
+                "estado_vehiculo": "1",
+                "usoVehiculo": "2",
+                "patentevehiculo": null,
+                "marcavehiculo": "AUDI",
+                "modelovehiculo": "A1",
+                "idMarca": "20",
+                "glosaModelo": "2201",
+                "anio": "2020",
+                "fechaAgrupacion": "Tue, 29 Dec 2020 00:00:00 GMT",
+                "estadoAgrupacion": "1",
+                "flujo": "planes",
+                "idFormaPago": "None",
+                "glosaFormapago": null,
+                "cantidadCuotas": "None",
+                "descuento": "None"
+            }
+        ]
+    }
+}

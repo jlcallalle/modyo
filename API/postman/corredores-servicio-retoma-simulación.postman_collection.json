@@ -1,0 +1,726 @@
+{
+	"info": {
+		"_postman_id": "beacf0e0-7161-4a5f-8f51-c6d7e02a2f88",
+		"name": "corredores-servicio-retoma-simulación",
+		"description": "Servicio encargado de realizar llamados al modelo intermedio (base de datos del proyecto web-corredores) y que están principalmente asociadas a las cotizaciones, simulaciones y simulaciones extendidas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "cotizacion",
+			"item": [
+				{
+					"name": "/retoma/cotizacion",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{authToken}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAgrupacion\": 22,\r\n    \"idCotizacion\": 7,\r\n    \"comisionNueva\": \"1\",\r\n    \"comisionUf\": \"1\",\r\n    \"idModulo\": 1,\r\n    \"primaBase\": \"1\",\r\n    \"primaNeta\": \"1\",\r\n    \"remarque\": 1,\r\n    \"iva\": \"1\",\r\n    \"primaFinal\": \"1\",\r\n    \"valorUfDia\": \"1\",\r\n    \"cuotaUf\": \"1\",\r\n    \"cuotaPesos\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/retoma/cotizacion",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"retoma",
+								"cotizacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/retoma/cotizacion/:idAgrupacion",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{authToken}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/retoma/cotizacion/:idagrupacion",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"retoma",
+								"cotizacion",
+								":idagrupacion"
+							],
+							"variable": [
+								{
+									"key": "idagrupacion",
+									"value": "22"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/retoma/cotizacion/:idCotizacion",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{authToken}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comisionNueva\": \"1\",\r\n    \"comisionUf\": \"1\",\r\n    \"idModulo\": 1,\r\n    \"primaBase\": \"2\",\r\n    \"primaNeta\": \"2\",\r\n    \"remarque\": 1,\r\n    \"iva\": \"1\",\r\n    \"primaFinal\": \"3\",\r\n    \"valorUfDia\": \"1\",\r\n    \"cuotaUf\": \"1\",\r\n    \"cuotaPesos\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/retoma/cotizacion/:idCotizacion",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"retoma",
+								"cotizacion",
+								":idCotizacion"
+							],
+							"variable": [
+								{
+									"key": "idCotizacion",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Carpeta que contiene todo los endpoint asociados a la tabla de cotizaciones de la base de datos webCorredores",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "simulaciones",
+			"item": [
+				{
+					"name": "/retoma/simulaciones",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{authToken}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rut_corredor\": 19784212,\r\n    \"dv_corredor\": \"1\",\r\n    \"rut\": 14339517,\r\n    \"dv\": \"0\",\r\n    \"nombres\": \"Jenifer\",\r\n    \"apellidos\": \"araya prueba\",\r\n    \"email\": \"camilojtg.dev@protonmail.com\",\r\n    \"telefono\": 945286919,\r\n    \"estado_vehiculo\": \"1\",\r\n    \"usoVehiculo\": \"2\",\r\n    \"idMarca\": 15,\r\n    \"glosaModelo\": \"16\",\r\n    \"anio\": 1700,\r\n    \"fechaAgrupacion\": \"Thu, 23 Jun 2016 00:00:00 GMT\",\r\n    \"estadoAgrupacion\": \"3\",\r\n    \"flujo\": \"PENDIENTE\",\r\n    \"idFormaPago\": 19,\r\n    \"glosaFormaPago\": \"20\",\r\n    \"cantidadCuotas\": 21,\r\n    \"descuento\": \"22\",\r\n    \"patentevehiculo\": \"12345\",\r\n    \"marcavehiculo\": \"123456\",\r\n    \"modelovehiculo\": \"123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/retoma/simulaciones",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"retoma",
+								"simulaciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/retoma/simulaciones/:rutCorredor",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{authToken}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/retoma/simulaciones/:rutCorredor",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"retoma",
+								"simulaciones",
+								":rutCorredor"
+							],
+							"variable": [
+								{
+									"key": "rutCorredor",
+									"value": "19784212"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/retoma/simulaciones/:idAgrupacion",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{authToken}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rut_corredor\": 5,\r\n    \"dv_corredor\": \"6\",\r\n    \"rut\": 7,\r\n    \"dv\": \"8\",\r\n    \"nombres\": \"9n\",\r\n    \"apellidos\": \"10A\",\r\n    \"email\": \"11b\",\r\n    \"telefono\": 12,\r\n    \"estado_vehiculo\": \"13\",\r\n    \"usoVehiculo\": \"14\",\r\n    \"idMarca\": 15,\r\n    \"glosaModelo\": \"16\",\r\n    \"anio\": 1700,\r\n    \"fechaAgrupacion\": \"Thu, 23 Jun 2016 00:00:00 GMT\",\r\n    \"estadoAgrupacion\": \"18\",\r\n    \"flujo\": \"RECHAZADO\",\r\n    \"idFormaPago\": 19,\r\n    \"glosaFormaPago\": \"20\",\r\n    \"cantidadCuotas\": 21,\r\n    \"descuento\": \"22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/retoma/simulaciones/:idAgrupacion",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"retoma",
+								"simulaciones",
+								":idAgrupacion"
+							],
+							"variable": [
+								{
+									"key": "idAgrupacion",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/retoma/simulaciones/portAgrupacion/:idAgrupacion",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{authToken}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/retoma/simulaciones/porAgrupacion/:idAgrupacion",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"retoma",
+								"simulaciones",
+								"porAgrupacion",
+								":idAgrupacion"
+							],
+							"variable": [
+								{
+									"key": "idAgrupacion",
+									"value": "1100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/retoma/simulaciones/filtrodinamico",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{authToken}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"paginacion\":{\r\n      \"pagina\":1,\r\n      \"cantidad\":12\r\n   },\r\n   \"rut\":null,\r\n   \"idAgrupacion\":null,\r\n   \"fechaInicio\":null,\r\n   \"fechaTermino\":null,\r\n   \"rutEjecutivo\":\"15728867-9\",\r\n   \"estado\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/retoma/simulaciones/filtrodinamico",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"retoma",
+								"simulaciones",
+								"filtrodinamico"
+							]
+						},
+						"description": "POSIBLES ESTADOS\r\n\r\n 1: \"PENDIENTE\" \r\n 2: \"EXPIRADA\" \r\n 3: \"RECHAZADA\"\r\n\r\n {\r\n    \"paginacion\": {\r\n        \"cantidad\": 5,\r\n        \"pagina\": 1\r\n    },\r\n    \"rut\": 7,\r\n    \"idAgrupacion\": null,\r\n    \"fechaInicio\":  \"Thu, 01 Nov 2020 00:00:00 GMT\",\r\n    \"fechaTermino\": \"Thu, 12 Dec 2020 00:00:00 GMT\", \r\n    \"estado\": 2\r\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "/descargas",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{authToken}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rut\": null,\r\n    \"idAgrupacion\": 13088,\r\n    \"fechaInicio\":  null,\r\n    \"fechaTermino\": null,\r\n    \"rutEjecutivo\": \"77508900-8\",\r\n    \"estado\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/descargas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"descargas"
+							]
+						},
+						"description": "Servicio encargado de generar un archivo .xlsx en base al cuerpo entregado."
+					},
+					"response": []
+				}
+			],
+			"description": "Carpeta que contiene todo los endpoint asociados a la tabla de simulaciones de la base de datos webCorredores",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "simulacion Extendida",
+			"item": [
+				{
+					"name": "/retoma/simulacionExtendida",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{authToken}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idagrupacion\": 21,\r\n    \"codigopropuesta\": null,\r\n    \"datos\": {\r\n        \"venta\": {\r\n            \"seguro\": {\r\n                \"idLogCotizacion\": 10582957,\r\n                \"inicioVigencia\": \"11/06/2020\",\r\n                \"finVigencia\": \"11/06/2021\"\r\n            },\r\n            \"contratante\": {\r\n                \"tipoPersona\": 1,\r\n                \"rut\": \"189454791\",\r\n                \"giro\": 0,\r\n                \"nombres\": \"Máximo Hugo\",\r\n                \"apellidoPaterno\": \"Décimo\",\r\n                \"apellidoMaterno\": \"Zañartu\",\r\n                \"fechaNacimiento\": \"18/06/1981\",\r\n                \"nacionalidad\": 1,\r\n                \"sexo\": 2,\r\n                \"estadoCivil\": 5,\r\n                \"actividadLaboral\": 400,\r\n                \"solicitaFactura\": 0,\r\n                \"giroComercial\": \"\",\r\n                \"PEP\": {\r\n                    \"esPEP\": 0,\r\n                    \"descripcion\": \"\", \r\n                    \"donde\": \"\",\r\n                    \"desde\": \"01/01/1900\", \r\n                    \"hasta\": \"01/01/2010\"\r\n                },\r\n                \"informacionContacto\": {\r\n                    \"codigoMovil\": 9,\r\n                    \"telefonoMovil\": 87654321,\r\n                    \"codigoArea\": 2,\r\n                    \"telefonoFijo\": 22222222,\r\n                    \"correoElectronico\": \"prueba@prueba.cl\"\r\n                },\r\n                \"direccion\": {\r\n                    \"codigoRegion\": 5,\r\n                    \"codigoCiudad\": 521,\r\n                    \"codigoComuna\": 5211,\r\n                    \"nombreCalle\": \"Las Acacias\",\r\n                    \"numeroCalle\": 443,\r\n                    \"tipoVivienda\": 2,\r\n                    \"casa\":\"B\",\r\n                    \"departamento\": \"\",\r\n                    \"piso\": 0,\r\n                    \"villaPoblacion\": \"\"\r\n                }\r\n            },\r\n            \"pagador\": {\r\n                \"rut\": \"141116665\",\r\n                \"nombres\": \"Máximo Hugo\",\r\n                \"apellidoPaterno\": \"Décimo\",\r\n                \"apellidoMaterno\": \"Zañartu\"\r\n            },\r\n            \"vehiculo\": {\r\n                \"tipoAntiguedad\":2,\r\n                \"motor\":\"ab12345671122\",\r\n                \"chasis\": \"10291181\",\r\n                \"color\": \"azul\",\r\n                \"continuidadCobertura\": {\r\n                    \"tieneContinuidad\": 0\r\n                }\r\n            },\r\n            \"formaPago\": {\r\n                \"diaPago\": 20,\r\n                \"viaPago\": 2, \r\n                \"codigoBanco\": 1, \r\n                \"tipoCuenta\": 1, \r\n                \"numeroCuenta\": \"\", \r\n                \"tipoTarjeta\": 1, \r\n                \"numeroTarjeta\": \"2913221122221111\", \r\n                \"fechaExpiracion\":\"12/2020\"\r\n            },\r\n            \"inspeccion\": { \r\n                \"nombreContacto\": \"Máximo\",\r\n                \"fechaInspeccion\": \"12/06/2020\",\r\n                \"observacion\": \"Ninguna\", \r\n                \"informacionContacto\": { \r\n                    \"codigoMovil\": 9,\r\n                    \"telefonoMovil\": 85745454,\r\n                    \"codigoArea\": 2,\r\n                    \"telefonoFijo\": 25874123,\r\n                    \"correoElectronico\": \"prueba@prueba.cl\"\r\n                },\r\n                \"direccion\": { \r\n                    \"codigoRegion\": 5,\r\n                    \"codigoCiudad\": 521,\r\n                    \"codigoComuna\": 5211,\r\n                    \"nombreCalle\": \"Las Acacias\",\r\n                    \"numeroCalle\": 443,\r\n                    \"tipoVivienda\": 1,\r\n                    \"casa\":\"\",\r\n                    \"departamento\": \"\",\r\n                    \"piso\": 0,\r\n                    \"villaPoblacion\": \"\"\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/retoma/simulacionextendida",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"retoma",
+								"simulacionextendida"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/retoma/simulacionExtendida/:idagrupacion",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{authToken}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/retoma/simulacionextendida/:idagrupacion",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"retoma",
+								"simulacionextendida",
+								":idagrupacion"
+							],
+							"variable": [
+								{
+									"key": "idagrupacion",
+									"value": "21"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/retoma/simulacionExtendida/:idagrupacion",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{authToken}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigopropuesta\": \"123456\",\r\n    \"datos\": {\r\n        \"name\": \"TEST\",\r\n        \"phoneNumber\": {\r\n            \"num1\": \"test\",\r\n            \"num2\": \"32165\",\r\n            \"da\": {\r\n                \"nombre\": \"infor\",\r\n                \"info2\": \"dasdsa\"\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/retoma/simulacionextendida/:idagrupacion",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"retoma",
+								"simulacionextendida",
+								":idagrupacion"
+							],
+							"variable": [
+								{
+									"key": "idagrupacion",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Carpeta que contiene todo los endpoint asociados a la tabla de simulación extendida de la base de datos webCorredores",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"const postReq={",
+					"  url: pm.environment.get(\"tokenurl\"),",
+					"  method: 'POST',",
+					"  header: {",
+					"    'content-type': 'application/x-www-form-urlencoded'",
+					"  },",
+					"  body: {",
+					"    mode: 'urlencoded',",
+					"    urlencoded: [",
+					"      { key: \"grant_type\", value: \"password\", disabled: false },",
+					"      { key: \"client_secret\", value: pm.environment.get(\"client-secret\"), disabled: false },",
+					"      { key: \"client_id\", value: pm.environment.get(\"client-id\"), disabled: false },",
+					"      { key: \"username\", value: pm.environment.get(\"username\"), disabled: false },",
+					"      { key: \"password\", value: pm.environment.get(\"password\"), disabled: false },",
+					"    ]",
+					"  }",
+					"};",
+					"pm.sendRequest(postReq, function (err, res) {",
+					"    console.log(res.json().access_token);",
+					"    pm.environment.set(\"authToken\", \"Bearer \" + res.json().access_token);",
+					"});"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

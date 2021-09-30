@@ -1,0 +1,55 @@
+{
+    "name": "/retoma/simulaciones/filtrodinamico",
+    "request": {
+        "auth": {
+            "type": "apikey",
+            "apikey": [
+                {
+                    "key": "value",
+                    "value": "{{authToken}}",
+                    "type": "string"
+                },
+                {
+                    "key": "key",
+                    "value": "Authorization",
+                    "type": "string"
+                },
+                {
+                    "key": "in",
+                    "value": "header",
+                    "type": "string"
+                }
+            ]
+        },
+        "method": "POST",
+        "header": [
+            {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+            }
+        ],
+        "body": {
+            "mode": "raw",
+            "raw": "{\r\n   \"paginacion\":{\r\n      \"pagina\":1,\r\n      \"cantidad\":12\r\n   },\r\n   \"rut\":null,\r\n   \"idAgrupacion\":null,\r\n   \"fechaInicio\":null,\r\n   \"fechaTermino\":null,\r\n   \"rutEjecutivo\":\"15728867-9\",\r\n   \"estado\":3\r\n}",
+            "options": {
+                "raw": {
+                    "language": "json"
+                }
+            }
+        },
+        "url": {
+            "raw": "{{baseUrl}}/retoma/simulaciones/filtrodinamico",
+            "host": [
+                "{{baseUrl}}"
+            ],
+            "path": [
+                "retoma",
+                "simulaciones",
+                "filtrodinamico"
+            ]
+        },
+        "description": "POSIBLES ESTADOS\r\n\r\n 1: \"PENDIENTE\" \r\n 2: \"EXPIRADA\" \r\n 3: \"RECHAZADA\"\r\n\r\n {\r\n    \"paginacion\": {\r\n        \"cantidad\": 5,\r\n        \"pagina\": 1\r\n    },\r\n    \"rut\": 7,\r\n    \"idAgrupacion\": null,\r\n    \"fechaInicio\":  \"Thu, 01 Nov 2020 00:00:00 GMT\",\r\n    \"fechaTermino\": \"Thu, 12 Dec 2020 00:00:00 GMT\", \r\n    \"estado\": 2\r\n}"
+    },
+    "response": []
+},
