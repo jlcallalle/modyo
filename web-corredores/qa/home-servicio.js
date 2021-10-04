@@ -8,6 +8,7 @@ var vm = new Vue({
 	delimiters: ['${', '}'],
 	data: function() {
 		return {
+			prueba: null,
 			test: null,
 			rut: null,
 			banco: null,
@@ -19,14 +20,13 @@ var vm = new Vue({
 	},
 	mounted: function() {
 		this.getTokenModyo();
+		this.getPrueba();
 		console.log('test');
 	  // this.getResultFromToken();
 		axios
 			  .get('https://api.coindesk.com/v1/bpi/currentprice.json')
 			  .then(response => (this.info = response.data.bpi))
 			  .catch(error => console.log(error))
-
-
 	},
 	methods: {
 		getTokenModyo: function () {
@@ -35,7 +35,7 @@ var vm = new Vue({
 			var data = JSON.stringify({});
 			var axios_api = axios.create({
 				baseURL: 'https://fphoqlwxwg.execute-api.us-east-1.amazonaws.com/v1',
-			headers: {
+				headers: {
 				'Content-Type': 'application/json',
 				'Accept': 'application/json',
 			},
@@ -74,7 +74,54 @@ var vm = new Vue({
 			});
 
 		},
+		
+		getPrueba: function () {
+				console.log('getPrueba...');
+				var self = this;
+				//var data = JSON.stringify({});
+			  var data = JSON.stringify({
+					"paginacion": {
+						"pagina": 1,
+						"cantidad": 12
+					},
+					"rut": null,
+					"idAgrupacion": null,
+					"fechaInicio": null,
+					"fechaTermino": null,
+					"rutEjecutivo": "15728867-9",
+					"estado": 3
+				});
+				var axios_api = axios.create({ //0972vjesll
+					baseURL: 'https://t1zs0fmctk.execute-api.us-east-1.amazonaws.com',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+				  data : data
+				});
+				var axios_auth = axios.create();
+				axios_auth.defaults.baseURL = '{{site.baseUrl}}' + '/api/profile/me';
 
+				var injectToken = async function injectToken(config) {
+					try {
+						var response = await axios_auth.get();
+						var newConfig = config;
+						newConfig.headers = {
+							Authorization: "Bearer " + response.data.delegated_token.access_token,
+							'Content-Type': 'application/json'
+						};
+						return newConfig;
+					} catch (error) {
+						throw new Error('Unauthorized');
+					}
+				};
+
+				axios_api.interceptors.request.use(injectToken);
+				axios_api.post('/v1/retoma/simulaciones/filtrodinamico', data).then(function (response) {
+					console.log(response);
+				  self.prueba = response.data;
+				});
+
+			},
 		getResultFromToken: function () {
 			const params = new URLSearchParams();
 			params.append("grant_type", "client_credentials");
