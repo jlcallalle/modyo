@@ -1,0 +1,26 @@
+#DEV---------------------
+
+# Modyo Setup
+MODYO_ACCOUNT_URL=https://consorcio-corredores-dev.modyo.be/
+MODYO_VERSION=9
+MODYO_TOKEN=MpU6q7B1iq46XLx_f1R-x9dhQi_zBpFrkRnWBhQFmOU
+MODYO_SITE_HOST=rescate-seguro-con-ahorro-lider
+MODYO_WIDGET_NAME=web-retiro-presto-widget
+
+# Vue i18n Configuration
+VUE_APP_I18N_LOCALE=es-CL
+VUE_APP_I18N_FALLBACK_LOCALE=es-CL
+
+# Consorcio endpoint
+VUE_APP_API_RESCATE =https://omc6rz1o5b.execute-api.us-east-1.amazonaws.com/v1
+VUE_APP_FACHADA =
+VUE_APP_TOKEN_RECAPTCHA = 6LeSK60bAAAAAF6rEP8Qd2HJ6kCeKMa2TB158UPU 
+
+
+# MODYO SDK CONFIG
+VUE_APP_MODYO_WIDGET_NAME=web-retiro-presto-widget
+VUE_APP_MODYO_ACCOUNT_URL=https://consorcio-corredores-dev.modyo.be
+VUE_APP_MODYO_SITE_HOST=rescate-seguro-con-ahorro-lider
+VUE_APP_MODYO_SPACE=rescate-seguro-con-ahorro-lider
+VUE_APP_MODYO_TYPE=documentos
+VUE_APP_MODYO_AUTHPATH=/auth/openidc
