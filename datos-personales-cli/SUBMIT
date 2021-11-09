@@ -1,0 +1,32 @@
+submit:
+
+this.updateUserInfo();
+ updateUserInfo() {
+      this.$store.dispatch('updateInfo', {
+        isPersonaJuridica: this.isPersonaJuridica,
+        hasPolizas: this.hasPolizas,
+        polizaAdjunta: this.polizaAdjunta,
+        sameAsOwner: this.sameAsOwner,
+        autoRegistrado: this.autoRegistrado,
+        rut: this.rut,
+        nombres: this.nombres,
+        apellidos: this.apellidos,
+        razonSocial: this.razonSocial,
+        giroComercial: this.giroComercial,
+        giroComercialGlosa: this.giroComercialGlosa,
+        rutPagador: this.rutPagador,
+        nombrePagador: this.nombrePagador,
+        apellidosPagador: this.apellidosPagador,
+        razonSocialPagador: this.razonSocialPagador,
+        giroPagador: this.giroPagador,
+        giroPagadorGlosa: this.giroPagadorGlosa,
+        tieneSiniestrosPeriodo: this.tieneSiniestrosPeriodo,
+        nrofactura: this.nrofactura,
+        fechaEmisionFactura: this.fechaEmisionFactura,
+        rutEmisorFactura: this.rutEmisorFactura,
+        fechaFinVigencia: this.fechaFinVigencia,
+        nombreBanco: this.nombreBanco,
+        codigoBanco: this.codigoBanco,
+        tipoCuenta: this.tipoCuenta,
+        nombreCuenta: this.nombreCuenta,
+        numeroCuenta: this.numeroCuenta,
