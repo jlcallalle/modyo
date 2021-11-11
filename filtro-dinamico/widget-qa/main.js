@@ -14,8 +14,7 @@ var vm = new Vue({
 			banco: null,
 			axios_api: null,
 			token:null,
-			info: null
-
+			info: null,
 		};
 	},
 	mounted: function() {
@@ -23,7 +22,7 @@ var vm = new Vue({
 		console.log('test');
 		axios
 			  .get('http://localhost:3000/filtros')
-			  .then(response => (this.info = response.data))
+			  .then(response => (this.info = response.data.simulaciones))
 			  .catch(error => console.log(error))
 	},
 	methods: {
@@ -69,8 +68,9 @@ var vm = new Vue({
 
 				axios_api.interceptors.request.use(injectToken);
 				axios_api.post('/v1/retoma/simulaciones/filtrodinamico', data).then(function (response) {
-					console.log('servicio filtrodinamico', response);
-				  self.prueba = response.data;
+					console.log('servicio filtrodinamico', response.data.filtros.simulaciones);
+				  //self.prueba = response.data;
+					self.prueba = response.data.filtros.simulaciones;
 				});
 
 			}

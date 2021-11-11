@@ -2,32 +2,42 @@
 	<button  @click="urlContinuar()">
 		Simulación Seguro 
 	</button>
+	<!-- <p>info</p>
+	<ul>
+		<li v-for="(p, i) in info " v-bind:key="p">
+			${ i } - ${ p.idAgrupacion }
+		</li>
+   </ul> 
+   -->
+	<p>prueba</p>
 	<ul>
 		<li v-for="(p, i) in prueba" v-bind:key="p">
-			{{ i }} 
+			${ i } - ${ p.nombres }
 		</li>
   </ul> 
 	<div class="data" style="border: 1px solid red">
-		${prueba.cantidadTotal}
+		<!-- <p>prueba.filtros. </p>  -->
+		<!--  ${prueba.filtros.simulaciones}  -->
 		<!-- ${prueba.filtros.simulaciones[0].nombres} -->
-		${prueba.filtros.simulaciones[0].idAgrupacion}  
+		<!--<p>prueba.filtros.simulaciones[0].idAgrupacion</p> 
+		${prueba.filtros.simulaciones[0].idAgrupacion} --> 
 	</div>
 	
 		<p class="text-center ">
-			<p>${info} </p>
+			<strong>prueba api Mock::</strong>  ${info}
 		</p>
 		<p class="text-center ">
-		prueba: ${prueba}
+			<strong>prueba api real ::</strong> ${prueba}
 		</p>
-		<p class="text-center ">
+		<p class="text-center d-none">
 		Por rut: ${test}
 		</p>
 		<hr/>
-			<p class="text-center ">
+			<p class="text-center d-none">
 		Bancos: ${rut}
 	</p>
 			<hr/>
-			<p class="text-center ">
+			<p class="text-center d-none">
 		Token: ${token}
 	</p>
 </div>
