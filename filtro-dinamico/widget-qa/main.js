@@ -22,7 +22,7 @@ var vm = new Vue({
 		this.getPrueba();
 		console.log('test');
 		axios
-			  .get('http://localhost:3000/simulaciones')
+			  .get('http://localhost:3000/filtros')
 			  .then(response => (this.info = response.data))
 			  .catch(error => console.log(error))
 	},
