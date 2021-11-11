@@ -1,5 +1,5 @@
 // Your code
-console.log('home servicios widget dev');
+console.log('home servicios widget qa');
 
 {% snippet "vue_js" %}
 {% snippet "axios_js" %}
@@ -44,7 +44,7 @@ var vm = new Vue({
 					"estado": 3
 				});
 				var axios_api = axios.create({ //rbewijz1ka (dev)  - t1zs0fmctk (qa)
-					baseURL: 'https://rbewijz1ka.execute-api.us-east-1.amazonaws.com',
+					baseURL: 'https://t1zs0fmctk.execute-api.us-east-1.amazonaws.com',
 					headers: {
 						'Content-Type': 'application/json'
 					},
@@ -73,9 +73,6 @@ var vm = new Vue({
 				  self.prueba = response.data;
 				});
 
-		},
-		urlContinuar() {
-			window.location.href = `/web-corredores/seguros-generales/venta/planes?ids=126`;
-		},
+			}
 	}
 }).$mount('#test');

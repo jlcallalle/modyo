@@ -28,22 +28,36 @@
 </div> -->
 
 <div id="test">
-    <p class="text-center ">
-        <p>${info} </p>
-    </p>
-    <p class="text-center ">
-    prueba: ${prueba}
-    </p>
-    <p class="text-center ">
-    Por rut: ${test}
-    </p>
-    <hr/>
-        <p class="text-center ">
-    Bancos: ${rut}
+	<button  @click="urlContinuar()">
+		Simulación Seguro 
+	</button>
+	<ul>
+        <li v-for="(p, i) in prueba" v-bind:key="p">
+			{{ i }} - {{ p }}
+	   </li>
+    </ul> 
+	<div class="data" style="border: 1px solid red">
+		${prueba.cantidadTotal}
+		<!-- ${prueba.filtros.simulaciones[0].nombres} -->
+		${prueba.filtros.simulaciones[0].idAgrupacion}  
+	</div>
+	
+	<p class="text-center ">
+		<p>${info} </p>
+	</p>
+	<p class="text-center ">
+	prueba: ${prueba}
+	</p>
+	<p class="text-center ">
+	Por rut: ${test}
+	</p>
+	<hr/>
+		<p class="text-center ">
+	Bancos: ${rut}
 </p>
-        <hr/>
-        <p class="text-center ">
-    Token: ${token}
+		<hr/>
+		<p class="text-center ">
+	Token: ${token}
 </p>
 </div>
 
