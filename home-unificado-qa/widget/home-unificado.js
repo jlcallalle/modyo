@@ -12,23 +12,25 @@ var vm = new Vue ({
 			isActiveMenuSide: false,
 			categoriasProductos: window.liquid.categorias,
 			axios_api: null,
+            prueba: null,
 		};
 	},
 	mounted: function() {
 		this.initCarousel();
 		this.getDiaActual();
 		this.getIndicadores();
+        this.getPrueba();
 		const target = document.querySelector('.menu-side-slide-content');
-    document.addEventListener('click', (event) => {
-      const withinBoundaries = event.composedPath().includes(target);
-      if (withinBoundaries) {
-        console.log('click inside');
-      } else {
-        console.log('click outside');
-				this.isActiveMenuSide = false;
-				document.querySelector('.menu-side-slide').classList.remove('active');
-      }
-    });
+        document.addEventListener('click', (event) => {
+            const withinBoundaries = event.composedPath().includes(target);
+            if (withinBoundaries) {
+                console.log('click inside');
+            } else {
+                console.log('click outside');
+                this.isActiveMenuSide = false;
+                document.querySelector('.menu-side-slide').classList.remove('active');
+            }
+        });
 		
 		//Initialize axios
 		this.axios_api = axios.create({
@@ -58,8 +60,6 @@ var vm = new Vue ({
 		}
 
 		this.axios_api.interceptors.request.use(injectToken);
-		
-		
 		
 		axios
 			  .get('http://localhost:3000/simulaciones')
@@ -226,10 +226,58 @@ var vm = new Vue ({
 				}
 			});
 		},
+        getPrueba: function () {
+            console.log('getPrueba simulacion dev...');
+            var self = this;
+            //var data = JSON.stringify({});
+              var data = JSON.stringify({
+                "paginacion": {
+                    "pagina": 1,
+                    "cantidad": 12
+                },
+                "rut": null,
+                "idAgrupacion": null,
+                "fechaInicio": null,
+                "fechaTermino": null,
+                "rutEjecutivo": "77508900-8", //77508900-8  15728867-9
+                "estado": 1
+            });
+            var axios_api = axios.create({ //rbewijz1ka (dev)  - t1zs0fmctk (qa)
+                baseURL: 'https://t1zs0fmctk.execute-api.us-east-1.amazonaws.com',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+              data : data
+            });
+            var axios_auth = axios.create();
+            axios_auth.defaults.baseURL = '{{site.baseUrl}}' + '/api/profile/me';
+
+            var injectToken = async function injectToken(config) {
+                try {
+                    var response = await axios_auth.get();
+                    var newConfig = config;
+                    newConfig.headers = {
+                        Authorization: "Bearer " + response.data.delegated_token.access_token,
+                        'Content-Type': 'application/json'
+                    };
+                    return newConfig;
+                } catch (error) {
+                    throw new Error('Unauthorized');
+                }
+            };
+
+            axios_api.interceptors.request.use(injectToken);
+            axios_api.post('/v1/retoma/simulaciones/filtrodinamico', data).then(function (response) {
+                console.log('servicio filtrodinamico', response.data.filtros.simulaciones);
+              //self.prueba = response.data;
+                self.prueba = response.data.filtros.simulaciones.sort( (a , b)  => (new Date(a.fechaAgrupacion)).getTime() > (new Date(b.fechaAgrupacion)).getTime()  );
+                
+            });
+
+        },
 		urlContinuar() {
-        window.location.href = `/web-corredores/seguros-generales/venta/planes?ids=126`;
-			  //window.location.href = `/web-corredores/seguros-generales/venta/planes?ids=${simulacion.idAgrupacion}`;
-    },
+            window.location.href = `/web-corredores/seguros-generales/venta/planes?ids=126`;
+        },
 	},
 }).$mount('#home-vida');
  

@@ -380,7 +380,7 @@
 									<div class="box-dejaste">
 										<h4>Sigue donde lo dejaste</h4>
 										<div class="box-contenido">
-											<a href="#" class="item-dejaste circle-bullet">
+											<a href="#" class="item-dejaste circle-bullet d-none">
 												Cotización Seguro
 												<span>Vida</span>
 												<i><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -393,7 +393,7 @@
 													</svg>
 												</i>
 											</a>
-											<a href="#" class="item-dejaste circle-bullet">
+											<a href="#" class="item-dejaste circle-bullet  d-none">
 												Simulación Seguro
 												<span>Generales</span>
 												<i><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -407,7 +407,7 @@
 												</i>
 											</a>
 											<button
-												class="item-dejaste circle-bullet" @click="urlContinuar()">
+												class="item-dejaste circle-bullet d-none" @click="urlContinuar()">
 												Simulación Seguro test
 												<span>Generales</span>
 												<i><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -420,6 +420,15 @@
 													</svg>
 												</i>
 											</button>
+											<ul class="lista-simulacion">
+												<li v-for="(p, i) in prueba.slice(0, 3)" v-bind:key="p"> 
+													<!-- ${ i } - ${ p.nombres } - ${ p.idAgrupacion } - ${ p.flujo }  -->
+													<a class="item-dejaste circle-bullet fs-3" :href="`https://consorcio-corredores-qa.modyo.be/web-corredores/seguros-generales/venta/${ p.flujo }?ids=${ p.idAgrupacion }`" target="_blank">Simulacion- ${ p.idAgrupacion }
+														<span class="fs-1">${ p.flujo } </span>
+														<i><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.375 3.5L12.875 8L8.375 12.5" stroke="#53565A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12.25 8H3.125" stroke="#53565A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>
+													</a>
+												</li>
+											</ul> 
 										</div>
 									</div>
 									<div class="box-oportunidades">
