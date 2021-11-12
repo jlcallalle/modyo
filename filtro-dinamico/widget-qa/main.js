@@ -39,7 +39,7 @@ var vm = new Vue({
 					"idAgrupacion": null,
 					"fechaInicio": null,
 					"fechaTermino": null,
-					"rutEjecutivo": "15728867-9", //77508900-8  15728867-9
+					"rutEjecutivo": "77508900-8", //77508900-8  15728867-9
 					"estado": 1
 				});
 				var axios_api = axios.create({ //rbewijz1ka (dev)  - t1zs0fmctk (qa)

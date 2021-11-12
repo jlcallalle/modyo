@@ -9,11 +9,13 @@
 		</li>
    </ul> 
    -->
+	
+	<!-- https://consorcio-corredores-dev.modyo.be/web-corredores/seguros-generales/venta/planes?ids=126  -->
 	<p>prueba</p>
 	<ul>
-		<li v-for="(p, i) in prueba" v-bind:key="p"> 
+		<li v-for="(p, i) in prueba.slice(0, 3)" v-bind:key="p"> 
 			<!-- ${ i } - ${ p.nombres } - ${ p.idAgrupacion } - ${ p.flujo }  -->
-			<a href="https://consorcio-corredores-qa.modyo.be/web-corredores/seguros-generales/venta/planes">link text - ${ p.idAgrupacion } </a>
+			<a :href="`https://consorcio-corredores-qa.modyo.be/web-corredores/seguros-generales/venta/${ p.flujo }?ids=${ p.idAgrupacion }`" target="_blank">link  - ${ p.idAgrupacion } - ${ p.nombres } - ${ p.apellidos } - ${ p.flujo } </a>
 		</li>
   </ul> 
 	<div class="data" style="border: 1px solid red">
