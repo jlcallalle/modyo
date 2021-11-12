@@ -11,8 +11,9 @@
    -->
 	<p>prueba</p>
 	<ul>
-		<li v-for="(p, i) in prueba" v-bind:key="p">
-			${ i } - ${ p.nombres }
+		<li v-for="(p, i) in prueba" v-bind:key="p"> 
+			<!-- ${ i } - ${ p.nombres } - ${ p.idAgrupacion } - ${ p.flujo }  -->
+			<a href="https://consorcio-corredores-qa.modyo.be/web-corredores/seguros-generales/venta/planes">link text - ${ p.idAgrupacion } </a>
 		</li>
   </ul> 
 	<div class="data" style="border: 1px solid red">
@@ -22,6 +23,7 @@
 		<!--<p>prueba.filtros.simulaciones[0].idAgrupacion</p> 
 		${prueba.filtros.simulaciones[0].idAgrupacion} --> 
 	</div>
+	
 	
 		<p class="text-center ">
 			<strong>prueba api Mock::</strong>  ${info}

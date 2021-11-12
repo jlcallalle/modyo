@@ -1,0 +1,18 @@
+Crear mandato PAT 
+
+BODY: 
+{
+	"ncompany": 2,
+	"sclient": "11111111",
+    "sdigit": "1",
+	"sfirstname": "sfirstname",
+	"slastname": "slastname",
+	"slastname2": "slastname2",
+	"ntypmandato": 2,
+	"snumcuentacargo": "1231231231231232",
+	"ncard_type": 1,
+	"dexpirtarjstr": "10/2025",
+	"nbilldate": 20,
+	"sphone": "123123123",
+	"semail": "a@a.cl"
+}
