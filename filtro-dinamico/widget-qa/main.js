@@ -39,8 +39,8 @@ var vm = new Vue({
 					"idAgrupacion": null,
 					"fechaInicio": null,
 					"fechaTermino": null,
-					"rutEjecutivo": "15728867-9",
-					"estado": 3
+					"rutEjecutivo": "15728867-9", //77508900-8  15728867-9
+					"estado": 1
 				});
 				var axios_api = axios.create({ //rbewijz1ka (dev)  - t1zs0fmctk (qa)
 					baseURL: 'https://t1zs0fmctk.execute-api.us-east-1.amazonaws.com',
@@ -70,7 +70,8 @@ var vm = new Vue({
 				axios_api.post('/v1/retoma/simulaciones/filtrodinamico', data).then(function (response) {
 					console.log('servicio filtrodinamico', response.data.filtros.simulaciones);
 				  //self.prueba = response.data;
-					self.prueba = response.data.filtros.simulaciones;
+					self.prueba = response.data.filtros.simulaciones.sort( (a , b)  => (new Date(a.fechaAgrupacion)).getTime() > (new Date(b.fechaAgrupacion)).getTime()  );
+					
 				});
 
 			}
