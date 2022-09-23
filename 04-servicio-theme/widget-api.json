@@ -1,0 +1,31 @@
+{% snippet "vue_js" %}
+{% snippet "axios_js" %}
+
+//const link_api = "https://6a56-200-52-92-58.ngrok.io/actuator";
+const link_api = "https://wsqa.invextarjetas.com.mx/token";
+// const link_api = "https://api.coindesk.com/v1/bpi/currentprice.json";
+
+var vm = new Vue({
+	delimiters: ['${', '}'],
+	data: function() {
+		return {
+			title: 'Hola Vue! 2022',
+      results: [],
+      servicio: link_api,
+		};
+	},
+	mounted: function() {
+		axios.post(link_api, new URLSearchParams({
+				grant_type: 'client_credentials',
+			}),
+			{
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded',
+				authorization: 'Basic TDVCQWxNUEE1Z19HTkZGVWU2MjlHbmgwS0c4YTpUSENUcGxpdnR4TW1KVU9PX2xKbnpTbE1YU2Nh',
+			},
+		})
+		.then((response) => {
+			this.results = response.data;
+		});
+	}
+}).$mount('#test');

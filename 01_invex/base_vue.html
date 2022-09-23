@@ -1,0 +1,84 @@
+{% html5 %} <!-- HTML header with browser directives -->
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+{% body %} <!-- Body with automatic context classes -->
+<div id="app">
+	  <p>Token Invex URL: <code> ${token_invex} </code></p>
+	  <div id="usuario360">${resultado}</div>
+</div>
+<script>
+		const externalApiBase = 'https://wsqa.invextarjetas.com.mx';
+		const urltokeninvex = 'https://wsqa.invextarjetas.com.mx/token';
+		const tokenAuth = 'TDVCQWxNUEE1Z19HTkZGVWU2MjlHbmgwS0c4YTpUSENUcGxpdnR4TW1KVU9PX2xKbnpTbE1YU2Nh';
+
+		const link_servicio = "https://wsqa.invextarjetas.com.mx/portal/1.0.0/validarToken";
+		const tokenGenerado = 'CAAA4A4B29F921007B9CE033DCC734E3D163B4AE638B65D7235A3334C652DE51BA3362E6C6AD8A4A26CCDDB7186839EC';
+
+		const url_string_invex = window.location.href;
+		const url_invex = new URL(url_string_invex);
+		const token_invex = url_invex.searchParams.get("token");
+		console.log(token_invex);
+
+    var app = new Vue({
+      el: '#app',
+			delimiters: ['${', '}'],
+      data: {
+        resultado: null,
+      },
+      mounted: function() {
+		this.getListaOperacion();
+	  },
+      methods: {
+			getListaOperacion: function () {
+				console.log('getListaOperacion...');
+				var self = this;
+				
+				var data = JSON.stringify({
+    				"token": token_invex
+				});
+				
+				const axios_api = axios.create({ //0972vjesll  - t1zs0fmctk
+					baseURL: 'https://wsqa.invextarjetas.com.mx/token',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+				  data : data
+				});
+				  
+				const injectToken = async (config) => {
+					try {
+					  const params = {
+						grant_type: 'client_credentials',
+					  };
+					  const data = Object.keys(params)
+						.map((key) => `${key}=${encodeURIComponent(params[key])}`)
+						.join('&');
+					  const response = await axios.post(`${urltokeninvex}`, data, {
+						headers: {
+						  'Content-Type': 'application/x-www-form-urlencoded',
+						  Authorization: `Basic ${tokenAuth}`,
+						},
+					  });
+					  const newConfig = config;
+					  newConfig.headers.authorization = `Bearer ${response.data.access_token}`;
+					  return newConfig;
+					} catch (error) {
+					  throw new Error('Unauthorized');
+					}
+				};
+
+				axios_api.interceptors.request.use(injectToken);
+				axios_api.post(link_servicio, data).then(function (response) {
+					console.log(response);
+					self.resultado = response.data.data;
+				});
+			}
+			// end getListaOperacion
+        }
+    })
+  </script>
+{% endbody %}
+
+{% endhtml5 %}

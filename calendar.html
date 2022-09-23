@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='x-ua-compatible' content='ie=edge'>
+  </head>
+  <body>
+    <div id='app'>
+      <v-calendar></v-calendar>
+      <v-date-picker v-model='selectedDate' />
+    </div>
+    <!--2. Link Vue Javascript-->
+    <script src='https://unpkg.com/vue@2.5.16/dist/vue.js'></script>
+    <!--3. Link VCalendar Javascript (Plugin automatically installed)-->
+    <script src='https://unpkg.com/v-calendar'></script> <!-- v-calendar 2.4.1 -->
+    
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+          selectedDate: '',
+          // Data used by the date picker
+        }
+      })
+    </script>
+  </body>
+</html>
