@@ -12,12 +12,18 @@
 
             <!-- Main Content -->
             <div id="content">
-
-                {% snippet "navbar_html" %}
+               
+                {%if request.url contains 'prueba'%}
+                  {% snippet "navbar_html" %}
+                {% else  %}
+                 {% snippet "navbar_servicio_html" %}
+                {% endif  %}
 
                 <div class="container-fluid box-contenido">
 										<!--  <h1 class="mb-4 title-widget">Operaciones FX</h1> -->
+									  <span class="screen-darken"></span>
 										{{ content_for_layout }}
+									  {% snippet "modal_contacto_html" %}
                 </div>
 
             </div>
@@ -27,6 +33,7 @@
         <!-- End of Content Wrapper -->
 
 </div>
+
 <script>
 	{% snippet "main_js" %}
 </script>
