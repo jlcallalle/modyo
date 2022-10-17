@@ -1,0 +1,195 @@
+<script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<nav class="navbar navbar-expand bg-brand topbar mb-md-4 static-top">
+
+    <!-- Sidebar Toggle (Topbar) -->
+
+    <a class="sidebar-brand bg-brand d-flex align-items-center justify-content-center d-md-none" href="https://invex.modyo.be/{{ vars.hostname }}">
+        <div class="sbar-brand-icon">
+            <img src="https://d2ra1qv4p9we6t.cloudfront.net/uploads/380e929f-b6be-4fc0-bd54-2984012aef86/original/logo-invex.svg" alt="invex">
+        </div>
+    </a>
+
+    <!-- Topbar Navbar -->
+    <ul id="wrapper-header" class="navbar-nav pr-md-4">
+
+        {% snippet "nav_soporte_html" %}
+			
+			  {% snippet "nav_actividad_html" %}
+       
+			  {% snippet "nav_alerta_html" %}
+
+		    {% snippet "nav_perfil_html" %}
+			
+			  {% snippet "nav_cerrar_html" %}
+
+    </ul>
+
+</nav>
+<div class="row-menu  d-md-none">
+      <!-- Sidebar Toggle (Topbar) -->
+      <button data-trigger="navbar_main" id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+        <img class="icon-hamburger" src="https://d2ra1qv4p9we6t.cloudfront.net/uploads/9f622b90-7be4-44d5-a87d-4c24186e8cd4/original/icon-hamburger.svg" alt="">
+    </button>
+</div>
+
+<script>
+const externalApiBase = 'https://wsqa.invextarjetas.com.mx';
+const urltokeninvex = 'https://wsqa.invextarjetas.com.mx/token';
+const tokenAuth = 'TDVCQWxNUEE1Z19HTkZGVWU2MjlHbmgwS0c4YTpUSENUcGxpdnR4TW1KVU9PX2xKbnpTbE1YU2Nh';
+ 
+const link_servicio = "https://wsqa.invextarjetas.com.mx/portal/1.0.0/consultaHistorial";
+const link_logout = "https://wsqa.invextarjetas.com.mx/portal/1.0.0/LogOut"
+
+const statusDic = {
+	Captured: 'Pendiente',
+	Pending: 'Pendiente',
+	Executed: 'Ejecutada',
+	Completed: 'Ejecutada',
+	Rejected: 'Rechazado',
+    Cancelled: 'Rechazado',
+	default: 'Desconocido'
+};
+
+const meses = [
+	'Ene',
+	'Feb',
+	'Mar',
+	'Abr',
+	'May',
+	'Jun',
+	'Jul',
+	'Ago',
+	'Sep',
+	'Oct',
+	'Nov',
+	'Dic',
+];
+
+const date = new Date();
+
+var vm = new Vue({
+	delimiters: ['${', '}'],
+	data: function() {
+		return {
+			resultado: null,
+		};
+	},
+	mounted: function() {
+		if (localStorage.getItem('userData') === null) {
+			console.log('userData vacio');
+			this.user = {
+				data: {
+					user360T: 'INVEXCOMP1.TEST',
+					internetFolio: '9254',
+				},
+			};
+		} else {
+			this.user = JSON.parse(localStorage.getItem('userData'));
+			console.log('userData con dato');
+			console.log('test user360a', this.user.data.user360T);
+			console.log('test userInterfolio', this.user.data.internetFolio);
+		}
+		this.getListaOperacion();
+	},
+	computed: {
+		fechaFormato () {
+			const formatDate = new Date();
+			return formatDate.toISOString().split('T')[0];
+		},
+	},
+	methods: {
+		createAxiosInstance() {
+			var data = JSON.stringify({
+				"fromDate": this.fechaFormato, // '2022-08-09',
+				"toDate": this.fechaFormato, // '2022-08-09',
+				"user360T": this.user.data.user360T,  //"INVEXCOMP1.TEST",
+				"internetFolio": this.user.data.internetFolio, // 9254,
+				"origin": "P"
+			});
+			const axios_api = axios.create({ //0972vjesll  - t1zs0fmctk
+				baseURL: 'https://wsqa.invextarjetas.com.mx/token',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				data : data
+			});
+			const injectToken = async (config) => {
+				try {
+					const params = {
+						grant_type: 'client_credentials',
+					};
+					const data = Object.keys(params)
+					.map((key) => `${key}=${encodeURIComponent(params[key])}`)
+					.join('&');
+					const response = await axios.post(`${urltokeninvex}`, data, {
+						headers: {
+							'Content-Type': 'application/x-www-form-urlencoded',
+							Authorization: `Basic ${tokenAuth}`,
+						},
+					});
+					const newConfig = config;
+					newConfig.headers.authorization = `Bearer ${response.data.access_token}`;
+					return newConfig;
+				} catch (error) {
+					throw new Error('Unauthorized');
+				}
+			};
+			axios_api.interceptors.request.use(injectToken);
+			return axios_api;
+		},
+		getListaOperacion: function () {
+			var self = this;
+			var data = JSON.stringify({
+				"fromDate": this.fechaFormato, // '2022-08-09',
+				"toDate": this.fechaFormato, // '2022-08-09',
+				"user360T": this.user.data.user360T,  //"INVEXCOMP1.TEST",
+				"internetFolio": this.user.data.internetFolio, // 9254,
+				"origin": "P"
+			});
+			let axios_api = this.createAxiosInstance();
+			axios_api.post(link_servicio, data).then(function (response) {
+				console.log(response);
+				if (response.data.status === 'OK' && response.data.data.catalogList) {
+					self.resultado = response.data.data.catalogList;
+				} else {
+					const boxActividad = document.getElementById("box-actividad");
+					const noEncontrado = document.getElementById("no-encontrado");
+					boxActividad.classList.add("hide");
+					noEncontrado.classList.remove("hide");
+				}
+			});
+		},
+		regresandoStatus(status) {
+			return statusDic[status] || statusDic.default;
+		},
+		regresarFecha(fecha) {
+			const fechaFormateada = new Date(fecha);
+			let dia = fechaFormateada.getDate();
+			if (dia < 10) dia = `0${dia}`;
+			const mes = meses[fechaFormateada.getMonth()];
+			const anio = fechaFormateada.getFullYear().toString().slice(2);
+			return `${dia} ${mes} ${anio}`;
+		},
+		async logout() {
+			const axios_api = this.createAxiosInstance();
+			const body = {
+				internetFolio: this.user.data.internetFolio,
+			};
+			const token_storage = localStorage.getItem('token_storage');
+			const respuesta = await axios_api.post(link_logout, body);
+			if (respuesta) {
+				console.log(respuesta);
+				localStorage.clear();
+				localStorage.setItem('token_storage', token_storage);
+				localStorage.setItem('logout_action', true);
+				window.location.href = 'https://cdincom03.invexgf.com/';
+			}
+		},
+		// end getListaOperacion
+	}
+}).$mount('#wrapper-header');
+
+</script>
